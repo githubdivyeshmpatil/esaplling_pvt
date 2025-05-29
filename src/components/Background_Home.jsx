@@ -5,8 +5,7 @@ import home3 from '../assets/images/home_bg3.jpeg';
 import home4 from '../assets/images/home_bg4.jpeg';
 import home5 from '../assets/images/home_bg5.jpeg';
 
-
-const images = [home1, home2, home3,home4,home5];
+const images = [home1, home2, home3, home4, home5];
 
 function Background_Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,14 +34,18 @@ function Background_Home() {
   }, [direction]);
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-auto sm:h-auto md:h-[500px] overflow-hidden">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((src, index) => (
           <div key={index} className="min-w-full h-full">
-            <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+            <img
+              src={src}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-contain md:object-cover"
+            />
           </div>
         ))}
       </div>
@@ -50,7 +53,9 @@ function Background_Home() {
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-3 h-3 rounded-full cursor-pointer ${index === currentIndex ? 'bg-gray-700' : 'bg-gray-300'}`}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              index === currentIndex ? 'bg-gray-700' : 'bg-gray-300'
+            }`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}

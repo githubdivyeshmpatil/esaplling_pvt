@@ -5,13 +5,14 @@ import ab from "../assets/images/home_ab.png";
 import Heading from '../components/Heading';
 import FeatureS from '../components/FeatureS';
 import StatsCounter from '../components/StatsCounter';
+import YouTubeLayout from '../components/YouTubeLayout';
 
 
 function Home() {
   return (
     <>
     <Navbar/>
-      <div className="pt-16">
+      <div className="pt-20">
         <Background_Home/>
         <section className="w-full px-4 py-10 bg-white md:flex items-center justify-between max-w-7xl mx-auto">
           {/* Left Image */}
@@ -96,19 +97,29 @@ function Home() {
             </div>
           </div>
         </section>
-        <div className="p-4">
-        <Heading text="Industries We Serve" />
-        <div className="flex items-center w-full  p-14">
-          <p className="text-xl md:text-3xl font-semibold whitespace-nowrap rajdhani-font">
-            FEATURED SERVICES
-          </p>
-          <div className="flex-1 h-[2px] bg-gray-500 ml-4"></div>
-        </div>
+       <div className="px-4 pt-2 sm:pt-4">
+  <Heading text="Industries We Serve" />
+
+  <div className="flex items-center w-full px-4 sm:px-6 md:px-10 lg:px-14 py-4 sm:py-6 md:py-8 lg:py-10">
+    <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold rajdhani-font">
+      FEATURED SERVICES
+    </p>
+    <div className="flex-1 h-[2px] bg-gray-500 ml-4" />
+  </div>
+</div>
+
          <FeatureS />
-        </div>
-        <StatsCounter/>
+      
+      
           <Heading text="Behind the Scenes: Manufacturing at Esaplling" />
           </div>
+          
+          <YouTubeLayout/>
+                    <Heading text="Client Satisfaction Overview" />
+  <div className="mt-4 sm:mt-6 md:mt-10 lg:mt-16">
+  <StatsCounter />
+</div>
+
     
     </>
   )
