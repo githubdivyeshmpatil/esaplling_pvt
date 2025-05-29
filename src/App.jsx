@@ -4,7 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
+import Consumer_Electronics from './pages/Consumer_Electronics'
+import MakeInIndiaBanner from './components/MakeInIndiaBanner'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +16,17 @@ function App() {
   return (
     <>
      {/* <Navbar/> */}
-     <Home/>
-      <Footer/> 
-     
+     {/* <Home/>
+     */}
+      <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+       <Route path="/consumer-Electronics" element={<Consumer_Electronics />}/>
+       
+      </Routes>
+    </Router>
+    <MakeInIndiaBanner/>
+    <Footer/>
      
     </>
   )
