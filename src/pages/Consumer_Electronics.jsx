@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import BackgroundTilte from '../components/BackgroundTilte'
 import electronics from '../assets/images/electronic.jpg'
@@ -6,6 +6,9 @@ import Scroll_page from '../components/Scroll_page'
  
 
 function Consumer_Electronics() {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
    <>
     <Navbar/>

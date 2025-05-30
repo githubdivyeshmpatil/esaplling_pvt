@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import YourComponent from "../components/YourComponent";
 import Ac from "../components/Ac";
@@ -443,6 +443,7 @@ const ProductCard = ({ product }) => {
 
 // Main ProductPage component
 function ProductPage() {
+   
   const { category } = useParams();
   const categoryData = productsData[category];
 

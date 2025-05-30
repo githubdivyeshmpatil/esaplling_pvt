@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Background_Home from '../components/Background_Home'
 import ab from "../assets/images/home_ab.png";
@@ -9,6 +9,9 @@ import YouTubeLayout from '../components/YouTubeLayout';
 import MakeInIndiaBanner from '../components/MakeInIndiaBanner';
 
 function Home() {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

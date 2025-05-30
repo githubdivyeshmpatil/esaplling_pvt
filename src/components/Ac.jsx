@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Ac(props) {
+      useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
    <section className="bg-white py-10 px-4 text-center">
   <h2 className="text-2xl md:text-3xl font-semibold mb-4">{props.Ac}</h2>
