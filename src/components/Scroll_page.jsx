@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ScrollPage() {
   const images = [
@@ -8,25 +9,29 @@ function ScrollPage() {
   ];
 
   const imageTexts = [
-    'Televisions', 'Air Conditioners', 'Cooler', 'Laptop',
-    'Kitchen Appliances', 'Refrigerators', 'Washing Machines', 'Water Purifiers',
-    'Geysers',
+    'televisions', 'air-conditioners', 'cooler', 'laptop',
+    'kitchen-appliances', 'refrigerators', 'washing-machines', 'water-purifiers',
+    'geysers',
   ];
 
   return (
     <div className="w-full flex justify-center mt-16 sm:mt-28 px-4">
       <div className="flex overflow-x-auto space-x-6 sm:space-x-4 scrollbar-hide">
         {images.map((src, index) => (
-          <div key={index} className="flex flex-col items-center flex-shrink-0 text-center">
+          <Link
+            key={index}
+            to={`/products/${imageTexts[index]}`}
+            className="flex flex-col items-center flex-shrink-0 text-center"
+          >
             <img
               src={src}
               alt={imageTexts[index]}
-              className="w-[160px] h-[160px] sm:w-[120px] sm:h-[120px] xs:w-[90px] xs:h-[90px] object-contain"
+              className="w-[90px] h-[90px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] object-contain"
             />
-            <p className="mt-2 text-[16px] font-medium sm:text-[13px] xs:text-[12px]">
-              {imageTexts[index]}
+            <p className="mt-1 sm:mt-2 text-[12px] sm:text-[13px] md:text-[16px] font-medium capitalize">
+              {imageTexts[index].replace(/-/g, ' ')}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

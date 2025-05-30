@@ -22,7 +22,8 @@ export default function Navbar() {
         isScrolled ? "bg-white shadow-md" : "bg-transparent md:bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+      {/* Main container padding thoda kam kiya px-3 sm:px-4 lg:px-6 */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-between items-center h-20">
         {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-16 w-16 object-contain" />
@@ -57,8 +58,8 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile Menu Button with thoda right padding (pr-3) for inset */}
+        <div className="md:hidden pr-3 overflow-hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-black focus:outline-none"
@@ -70,9 +71,9 @@ export default function Navbar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white z-40 transform ${
+        className={`fixed top-0 left-0 h-full bg-white z-40 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out md:hidden shadow-lg`}
+        } transition-transform duration-300 ease-in-out md:hidden shadow-lg w-56`}  // Reduced width from w-64 to w-56
       >
         <div className="flex justify-between items-center p-4 border-b">
           <img src={logo} alt="Logo" className="h-12 w-12 object-contain" />

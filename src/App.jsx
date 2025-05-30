@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import Consumer_Electronics from './pages/Consumer_Electronics'
-import MakeInIndiaBanner from './components/MakeInIndiaBanner'
+import ProductPage from './RouterProduct/ProductPage'
 
 
 function App() {
@@ -22,12 +22,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
        <Route path="/consumer-Electronics" element={<Consumer_Electronics />}/>
-       
+         <Route path="/products/:category" element={<ProductPage />} />
       </Routes>
     </Router>
-    <MakeInIndiaBanner/>
-    <Footer/>
-     
+ 
+    <Footer/> 
+      
     </>
   )
 }
