@@ -87,7 +87,6 @@ export default function Navbar() {
         <ul className="p-4 space-y-4 text-sm font-medium text-gray-700">
           <li><Link to="/" className="hover:text-gray-500">HOME</Link></li>
           <li><Link to="/consumer-Electronics" className="hover:text-gray-500">Consumer Electronics</Link></li>
-          <li><Link to="/" className="hover:text-gray-500">Consumer Electronics</Link></li>
           <li><Link to="/" className="hover:text-gray-500">HVAC</Link></li>
           <li><Link to="/about-us" className="hover:text-gray-500">Automotive</Link></li>
           <li><Link to="/services" className="hover:text-gray-500">Biomedical</Link></li>
