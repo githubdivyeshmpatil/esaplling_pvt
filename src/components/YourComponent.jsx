@@ -27,7 +27,7 @@ function YourComponent({ category, categoryData, isTelevision, formatSubCategory
     <div className=" sm:px-6 md:px-8 lg:px-10">
       {/* NAVBAR fixed, visible only on scroll */}
       <nav
-        className={`fixed top-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-white text-white rounded-b-md shadow-md z-50 transition-transform duration-300 ${
+        className={`fixed top-0  left-0 right-0 flex items-center justify-between px-4 py-3 bg-white text-white rounded-b-md shadow-md z-50 transition-transform duration-300 ${
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >

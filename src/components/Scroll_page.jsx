@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 function ScrollPage() {
   const images = [
-    'img/tv.png', 'img/ac.png', 'img/cooler.png', 'img/laptop.png',
-    'img/kichen.png', 'img/refrige.png', 'img/washing.png', 'img/water.png',
+    'img/tv.png', 'img/ac.png', 'img/cooler.png',
+    'img/kichen.png', 'img/refrige.png', 'img/washing.png',
     'img/geser.png',
   ];
 
   const imageTexts = [
-    'televisions', 'air-conditioners', 'cooler', 'laptop',
-    'kitchen-appliances', 'refrigerators', 'washing-machines', 'water-purifiers',
+    'televisions', 'air-conditioners', 'cooler',
+    'kitchen-appliances', 'refrigerators', 'washing',
     'geysers',
   ];
 
