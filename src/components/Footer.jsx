@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaGoogle ,FaPinterest,FaVimeoV,FaSnapchatGhost,FaSkype ,FaAndroid , FaDribbble ,FaTumblr,FaWifi} from "react-icons/fa";
 import logo from "../assets/images/logo.png";
 
 const Footer = () => {
-   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     
 <footer
@@ -24,7 +21,7 @@ const Footer = () => {
             <ul className="space-y-2 font-robo">
               <li><a href="/about" className="hover:text-gray-300">About Us</a></li>
               <li><a href="/vison" className="hover:text-gray-300">Vision Mission</a></li>
-              <li><a href="/eva" className="hover:text-gray-300">Acquisition</a></li>
+              <li><a href="/acquisition" className="hover:text-gray-300">Acquisition</a></li>
               <li><a href="/certification" className="hover:text-gray-300">Certification</a></li>
               <li><a href="/quality" className="hover:text-gray-300">Quality Assurance</a></li>
               <li><a href="/managment" className="hover:text-gray-300">Management</a></li>
@@ -51,12 +48,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">Auto Air Conditioning</h3>
             <ul className="space-y-2 font-robo">
-              <li><a href="/automotive/autoaircondition" className="hover:text-gray-300">Coach Airconditioning</a></li>
-              <li><a href="/automotive/autoaircondition" className="hover:text-gray-300">Bus</a></li>
-              <li><a href="/automotive/autoaircondition" className="hover:text-gray-300">Truck Chiller</a></li>
-              <li><a href="/automotive/autoaircondition" className="hover:text-gray-300">Frost on the Wheels</a></li>
-              <li><a href="/automotive/autoaircondition" className="hover:text-gray-300">Cabin AirConditioning</a></li>
-              <li><a href="/automotive/autoaircondition" className="hover:text-gray-300">DC Airconditioning</a></li>
+              <li><a href="#" className="hover:text-gray-300">Coach Airconditioning</a></li>
+              <li><a href="#" className="hover:text-gray-300">Bus</a></li>
+              <li><a href="#" className="hover:text-gray-300">Truck Chiller</a></li>
+              <li><a href="#" className="hover:text-gray-300">Frost on the Wheels</a></li>
+              <li><a href="#" className="hover:text-gray-300">Cabin AirConditioning</a></li>
+              <li><a href="#" className="hover:text-gray-300">DC Airconditioning</a></li>
             </ul>
           </div>
 
@@ -64,16 +61,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">HVAC</h3>
             <ul className="space-y-2 font-robo">
-              <li><a href="/heating/server_airconditioning" className="hover:text-gray-300">Server Airconditioning</a></li>
-              <li><a href="/heating/elavator_airconditionning" className="hover:text-gray-300">Elevator Airconditioning</a></li>
-              <li><a href="/hvac/chillerDis" className="hover:text-gray-300">Chiller</a></li>
-              <li><a href="/hvac/dehumidifier" className="hover:text-gray-300">Dehumidifier</a></li>
-              <li><a href="/hvac/airhandling" className="hover:text-gray-300">Air Handling Unit</a></li>
+              <li><a href="#" className="hover:text-gray-300">Server Airconditioning</a></li>
+              <li><a href="#" className="hover:text-gray-300">Elevator Airconditioning</a></li>
+              <li><a href="#" className="hover:text-gray-300">Chiller</a></li>
+              <li><a href="#" className="hover:text-gray-300">Dehumidifier</a></li>
+              <li><a href="#" className="hover:text-gray-300">Air Handling Unit</a></li>
               <li><a href="#" className="hover:text-gray-300">Ventilation System</a></li>
               <li><a href="#" className="hover:text-gray-300">Evaporative Cooler</a></li>
               <li><a href="#" className="hover:text-gray-300">Industrial Water Chiller</a></li>
-              <li><a href="/hvac/aircontamination_pro" className="hover:text-gray-300">Air Contamination Protection</a></li>
-              <li><a href="/hvac/hvac_om" className="hover:text-gray-300">HVAC O & M</a></li>
+              <li><a href="#" className="hover:text-gray-300">Air Contamination Protection</a></li>
+              <li><a href="#" className="hover:text-gray-300">HVAC O & M</a></li>
             </ul>
           </div>
 
@@ -81,24 +78,23 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">HVAC O & M</h3>
             <ul className="space-y-2 font-robo">
-              <li><a href="/services/energymanagment" className="hover:text-gray-300">Energy Management</a></li>
-              <li><a href="/services/eletrical_and_lv" className="hover:text-gray-300">Electrical and LV</a></li>
-              <li><a href="/services/plumbing" className="hover:text-gray-300">Plumbing</a></li>
-              <li><a href="/services/fireprotection" className="hover:text-gray-300">Fire Protection</a></li>
-              <li><a href="/hvac/hvac_om" className="hover:text-gray-300">O & M</a></li>
+              <li><a href="#" className="hover:text-gray-300">Energy Management</a></li>
+              <li><a href="#" className="hover:text-gray-300">Electrical and LV</a></li>
+              <li><a href="#" className="hover:text-gray-300">Plumbing</a></li>
+              <li><a href="#" className="hover:text-gray-300">Fire Protection</a></li>
+              <li><a href="#" className="hover:text-gray-300">O & M</a></li>
             </ul>
-
           </div>
 
           {/* Harness Column */}
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">Harness</h3>
             <ul className="space-y-2 font-robo">
-              <li><a href="/automotive/automotive_page" className="hover:text-gray-300">Automotive</a></li>
-              <li><a href="/automotive/automotive_page" className="hover:text-gray-300">Multi purpose AC DC</a></li>
-              <li><a href="/automotive/automotive_page" className="hover:text-gray-300">Generator & Transmission</a></li>
-              <li><a href="/automotive/automotive_page" className="hover:text-gray-300">Consumer Electronics & Telecom</a></li>
-              <li><a href="/automotive/automotive_page" className="hover:text-gray-300">Power System</a></li>
+              <li><a href="#" className="hover:text-gray-300">Automotive</a></li>
+              <li><a href="#" className="hover:text-gray-300">Multi purpose AC DC</a></li>
+              <li><a href="#" className="hover:text-gray-300">Generator & Transmission</a></li>
+              <li><a href="#" className="hover:text-gray-300">Consumer Electronics & Telecom</a></li>
+              <li><a href="#" className="hover:text-gray-300">Power System</a></li>
             </ul>
           </div>
         </div>
@@ -125,7 +121,8 @@ const Footer = () => {
     <a href="#" className="text-gray-400 hover:text-white text-xl"><FaTumblr /></a>
     <a href="#" className="text-gray-400 hover:text-white text-xl"> <FaWifi /></a>
 
-  
+    
+    {/* Repeat icons if needed, but ideally avoid redundancy */}
   </div>
 </div></div>
 
