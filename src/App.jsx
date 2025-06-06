@@ -54,6 +54,7 @@ import Plantsetup from "./components/Plantsetup";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import Acquisition from "./components/Acquisition";
+import TawkMessenger from "./components/TawkMessenger";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -161,6 +162,7 @@ function App() {
         </Routes>
          <Footer/>
       </Router>
+        <TawkMessenger />
      
     </>
   );
