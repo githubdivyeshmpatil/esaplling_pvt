@@ -1,13 +1,21 @@
+
+
+
+
+
+
+
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Ac from '../components/Ac';
 import BackgroundSection from '../components/BackgroundSection';
 
 function NewdesertCooler() {
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const products = [
+
+   const products = [
     {
       id: 1,
       name: "Cool Plus",
@@ -96,16 +104,32 @@ function NewdesertCooler() {
       <Navbar />
       <BackgroundSection bgImage="/img/coolerbanner.jpg" />
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">Desert Cooler Products</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center">
+          Desert Cooler Products
+        </h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map(product => (
+          {products.map((product) => (
             <div
               key={product.id}
               className="p-4 bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow flex flex-col"
             >
-              {/* Content above */}
-              <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
-              <p className="text-sm text-gray-600 text-justify mb-4">
+              {/* Image at the top */}
+              <div className="w-full overflow-hidden rounded bg-white mb-4">
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  className="w-full object-contain"
+                  style={{ maxHeight: '220px' }}
+                />
+              </div>
+
+              {/* Product Name */}
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
+                {product.name}
+              </h2>
+
+              {/* Description with Read More toggle */}
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 text-justify mb-4">
                 {expandedDescriptions[product.id]
                   ? product.dis
                   : `${product.dis.slice(0, 80)}...`}
@@ -116,20 +140,16 @@ function NewdesertCooler() {
                   {expandedDescriptions[product.id] ? 'Read less' : 'Read more'}
                 </button>
               </p>
-              <div className="flex items-center justify-between text-sm mb-4">
-                <span className="text-lg font-bold text-green-600">₹{product.price.toLocaleString()}</span>
-                <span className="text-gray-500 line-through ml-2">₹{product.cutPrice.toLocaleString()}</span>
-                <span className="text-red-500 font-semibold ml-2">{product.offer}</span>
-              </div>
 
-              {/* Image below */}
-              <div className="w-full overflow-hidden rounded bg-white">
-                <img
-                  src={product.img}
-                  alt={product.name}
-                  className="w-full object-contain"
-                  style={{ maxHeight: '220px' }}
-                />
+              {/* Price and Offer */}
+              <div className="flex items-center justify-between text-xs sm:text-sm md:text-base mb-4">
+                <span className="text-green-600 font-bold">
+                  ₹{product.price.toLocaleString()}
+                </span>
+                <span className="text-gray-500 line-through ml-2">
+                  ₹{product.cutPrice.toLocaleString()}
+                </span>
+                <span className="text-red-500 font-semibold ml-2">{product.offer}</span>
               </div>
             </div>
           ))}

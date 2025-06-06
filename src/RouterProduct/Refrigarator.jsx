@@ -1,12 +1,14 @@
+
 import React, { useEffect, useState } from 'react';
 import Ac from '../components/Ac';
 import Navbar from '../components/Navbar';
 import BackgroundSection from '../components/BackgroundSection';
 
 function Refrigarator() {
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const products = [
     {
       id: 1,
@@ -94,41 +96,60 @@ function Refrigarator() {
   return (
     <>
       <Navbar />
-            <BackgroundSection bgImage="/img/Fridge_banner.jpeg" />
+      <BackgroundSection bgImage="/img/Fridge_banner.jpeg" />
 
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center font-os">Refrigerator Products</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center font-os">
+          Refrigerator Products
+        </h1>
+
+        {/* 2 products per row on all screen sizes */}
+        <div className="grid grid-cols-2 gap-6">
           {products.map((product) => (
-            <div key={product.id} className="p-4 hover:shadow-lg transition bg-white rounded">
-              <div className="w-full mb-4 overflow-hidden rounded bg-white">
+            <div
+              key={product.id}
+              className="p-4 bg-white rounded shadow hover:shadow-lg transition duration-300 flex flex-col"
+            >
+              <div className="w-full mb-4 overflow-hidden rounded bg-white flex justify-center">
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="w-full object-contain"
-                  style={{ maxHeight: '220px' }}
+                  className="max-h-48 w-auto object-contain"
                 />
               </div>
-              <h2 className="text-lg font-os">{product.name}</h2>
-              <p className="text-sm text-gray-600 mt-1 text-justify font-robo">
+
+              <h2 className="text-lg font-os font-semibold mb-1">{product.name}</h2>
+
+              <p
+                className="text-sm text-gray-600 mt-1 text-justify font-robo flex-grow"
+                id={`desc-${product.id}`}
+              >
                 {expandedDescriptions[product.id]
                   ? product.dis
                   : `${product.dis.slice(0, 80)}...`}
                 <button
                   onClick={() => toggleReadMore(product.id)}
                   className="text-blue-600 ml-1 underline cursor-pointer"
+                  aria-expanded={expandedDescriptions[product.id] ? 'true' : 'false'}
+                  aria-controls={`desc-${product.id}`}
                 >
                   {expandedDescriptions[product.id] ? 'Read less' : 'Read more'}
                 </button>
               </p>
-              <div className="flex items-center justify-between mt-2 text-sm font-os">
-                <span className="text-lg text-green-600">₹{product.price.toLocaleString()}</span>
-                <span className="text-gray-500 line-through ml-2">₹{product.cutPrice.toLocaleString()}</span>
-                <span className="text-red-500 ml-2">{product.offer}</span>
+
+              <div className="flex items-center justify-between mt-4 text-sm font-os">
+                <span className="text-lg text-green-600 font-semibold">
+                  ₹{product.price.toLocaleString()}
+                </span>
+                <span className="text-gray-500 line-through ml-2">
+                  ₹{product.cutPrice.toLocaleString()}
+                </span>
+                <span className="text-red-500 ml-2 font-semibold">{product.offer}</span>
               </div>
             </div>
           ))}
         </div>
+
         <Ac />
       </div>
     </>
