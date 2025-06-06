@@ -7,7 +7,6 @@ import FeatureS from '../components/FeatureS';
 import StatsCounter from '../components/StatsCounter';
 import YouTubeLayout from '../components/YouTubeLayout';
 import MakeInIndiaBanner from '../components/MakeInIndiaBanner';
-import Footer from '../components/Footer';
 
 function Home() {
     useEffect(() => {
@@ -102,7 +101,7 @@ function Home() {
         </div>
       </div>
       <MakeInIndiaBanner/>
-      <Footer/>
+     
     </>
   );
 }
