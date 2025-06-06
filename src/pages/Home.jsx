@@ -102,7 +102,7 @@ function Home() {
         </div>
       </div>
       <MakeInIndiaBanner/>
-         <Footer/>
+      <Footer/>
     </>
   );
 }
