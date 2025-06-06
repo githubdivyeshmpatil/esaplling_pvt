@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import BackgroundSection from './BackgroundSection'
 import Ac from './Ac'
 
 function Autoaircondition() {
+   useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
   return (
     <>
       <Navbar />

@@ -53,12 +53,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">Auto Air Conditioning</h3>
             <ul className="space-y-2 font-robo">
-              <li><Link to="#" className="hover:text-gray-300">Coach Airconditioning</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Bus</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Truck Chiller</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Frost on the Wheels</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Cabin AirConditioning</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">DC Airconditioning</Link></li>
+              <li><Link to="/automotive/autoaircondition" className="hover:text-gray-300">Coach Airconditioning</Link></li>
+              <li><Link to="/automotive/autoaircondition" className="hover:text-gray-300">Bus</Link></li>
+              <li><Link to="/automotive/autoaircondition" className="hover:text-gray-300">Truck Chiller</Link></li>
+              <li><Link to="/automotive/autoaircondition" className="hover:text-gray-300">Frost on the Wheels</Link></li>
+              <li><Link to="/automotive/autoaircondition" className="hover:text-gray-300">Cabin AirConditioning</Link></li>
+              <li><Link to="/automotive/autoaircondition" className="hover:text-gray-300">DC Airconditioning</Link></li>
             </ul>
           </div>
 
@@ -66,16 +66,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">HVAC</h3>
             <ul className="space-y-2 font-robo">
-              <li><Link to="#" className="hover:text-gray-300">Server Airconditioning</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Elevator Airconditioning</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Chiller</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Dehumidifier</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Air Handling Unit</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Ventilation System</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Evaporative Cooler</Link></li>
+              <li><Link to="/heating/server_airconditioning" className="hover:text-gray-300">Server Airconditioning</Link></li>
+              <li><Link to="/heating/elavator_airconditionning" className="hover:text-gray-300">Elevator Airconditioning</Link></li>
+              <li><Link to="/consumer-electronics/chiller" className="hover:text-gray-300">Chiller</Link></li>
+              <li><Link to="/hvac/dehumidifier" className="hover:text-gray-300">Dehumidifier</Link></li>
+              <li><Link to="/hvac/airhandling" className="hover:text-gray-300">Air Handling Unit</Link></li>
+              <li><Link to="/hvac/ventilation" className="hover:text-gray-300">Ventilation System</Link></li>
+              <li><Link to="/hvac/evaporative" className="hover:text-gray-300">Evaporative Cooler</Link></li>
               <li><Link to="#" className="hover:text-gray-300">Industrial Water Chiller</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Air Contamination Protection</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">HVAC O & M</Link></li>
+              <li><Link to="/hvac/aircontamination_pro" className="hover:text-gray-300">Air Contamination Protection</Link></li>
+              <li><Link to="/hvac/hvac_om" className="hover:text-gray-300">HVAC O & M</Link></li>
             </ul>
           </div>
 
@@ -83,11 +83,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">HVAC O & M</h3>
             <ul className="space-y-2 font-robo">
-              <li><Link to="#" className="hover:text-gray-300">Energy Management</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Electrical and LV</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Plumbing</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Fire Protection</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">O & M</Link></li>
+              <li><Link to="/services/energymanagment" className="hover:text-gray-300">Energy Management</Link></li>
+              <li><Link to="/services/eletrical_and_lv" className="hover:text-gray-300">Electrical and LV</Link></li>
+              <li><Link to="/services/plumbing" className="hover:text-gray-300">Plumbing</Link></li>
+              <li><Link to="/services/fireprotection" className="hover:text-gray-300">Fire Protection</Link></li>
+              <li><Link to="/hvac/hvac_om" className="hover:text-gray-300">O & M</Link></li>
             </ul>
           </div>
 
@@ -95,8 +95,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">Harness</h3>
             <ul className="space-y-2 font-robo">
-              <li><Link to="#" className="hover:text-gray-300">Automotive</Link></li>
-              <li><Link to="#" className="hover:text-gray-300">Multi purpose AC DC</Link></li>
+              <li><Link to="/automotive/automotive_page" className="hover:text-gray-300">Automotive</Link></li>
+              <li><Link to="/services/eletrical_and_lv" className="hover:text-gray-300">Multi purpose AC DC</Link></li>
               <li><Link to="#" className="hover:text-gray-300">Generator & Transmission</Link></li>
               <li><Link to="#" className="hover:text-gray-300">Consumer Electronics & Telecom</Link></li>
               <li><Link to="#" className="hover:text-gray-300">Power System</Link></li>

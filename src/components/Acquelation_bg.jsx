@@ -6,7 +6,9 @@ function Acquelation_bg() {
   const [showSecond, setShowSecond] = useState(false);
 
   useEffect(() => {
-  
+   useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
     const firstTimer = setTimeout(() => {
       setShowFirst(true);
     }, 500); // Show first after 0.5s

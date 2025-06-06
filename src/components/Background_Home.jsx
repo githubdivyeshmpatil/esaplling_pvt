@@ -8,6 +8,9 @@ import home5 from '../assets/images/home_bg5.jpeg';
 const images = [home1, home2, home3, home4, home5];
 
 function Background_Home() {
+   useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('forward');
 

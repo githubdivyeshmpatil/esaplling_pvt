@@ -52,8 +52,8 @@ import Plumbing from "./components/Plumbing";
 import Fireprotection from "./components/Fireprotection";
 import Plantsetup from "./components/Plantsetup";
 import Blog from "./components/Blog";
-import Acqu_se from "./components/Acqu_se";
 import Footer from "./components/Footer";
+import Acquisition from "./components/Acquisition";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -76,7 +76,9 @@ function App() {
           <Route path="/hvac/airhandling" element={<Airhandling />} />
           <Route path="/hvac/ventilation" element={<Ventilation />} />
           <Route path="/hvac/evaporative" element={<Evaporative />} />
-                    <Route path="/eva" element={<Acqu_se />} />
+                    <Route path="/acquisition" element={<Acquisition />} />
+
+        
 
 
           

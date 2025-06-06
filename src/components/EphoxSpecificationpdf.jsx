@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function EphoxSpecificationpdf() {
+   useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
   return (
     <section className="max-w-6xl mx-auto px-4 py-10">
       <div className="text-center mb-8">

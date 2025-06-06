@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import BackgroundSection from './BackgroundSection'
 import EphoxSpecificationpdf from './EphoxSpecificationpdf'
 
 function Filter_aphox() {
+   useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
   return (
    <>
     <Navbar />
