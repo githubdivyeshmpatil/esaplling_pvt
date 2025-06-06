@@ -53,7 +53,6 @@ import Fireprotection from "./components/Fireprotection";
 import Plantsetup from "./components/Plantsetup";
 import Blog from "./components/Blog";
 import Acqu_se from "./components/Acqu_se";
-import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -155,9 +154,10 @@ function App() {
           />
           <Route path="/consumer-electronics/washing" element={<Washing />} />
           <Route path="/consumer-electronics/geysers" element={<Geysers />} />
+       
         </Routes>
       </Router>
-     <Footer/>
+     
     </>
   );
 }
