@@ -69,7 +69,7 @@ function Home() {
               {/* CTA Button */}
               <div>
                 <a
-                  href="#about"
+                  href="/about"
                   className="inline-block bg-[#FFD700] text-white px-6 font-robo py-3 shadow hover:bg-amber-700 transition duration-300"
                 >
                   Explore The Success Story
