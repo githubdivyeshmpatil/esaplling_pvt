@@ -70,7 +70,7 @@ function Home() {
               <div>
                 <a
                   href="#about"
-                  className="inline-block bg-blue-600 text-white px-6 font-robo py-3 shadow hover:bg-amber-700 transition duration-300"
+                  className="inline-block bg-[#FFD700] text-white px-6 font-robo py-3 shadow hover:bg-amber-700 transition duration-300"
                 >
                   Explore The Success Story
                 </a>
