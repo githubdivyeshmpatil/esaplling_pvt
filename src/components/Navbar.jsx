@@ -511,6 +511,27 @@ export default function Navbar() {
         ],
       },
     },
+    {
+      name: "Contact",
+      link: "/",
+      dropdown: {
+        title: "ESAPLLING® Contact",
+        columns: [
+          {
+            title: "contact-us",
+            items: [
+              { name: "Contact-us", link: "/contact/contact_us" },
+          
+            ],
+          },
+         
+         
+         
+         
+         
+        ],
+      },
+    },
   ];
 
   // Function to get grid columns class based on count & item name
@@ -525,7 +546,8 @@ export default function Navbar() {
       itemName === "Innovation" ||
       itemName === "Innovation" ||
       itemName === "Support" ||
-      itemName === "Carrier"
+      itemName === "Carrier"||
+       itemName === "Contact"
     ) {
       return "grid-cols-6";
     }
@@ -563,7 +585,7 @@ export default function Navbar() {
               onMouseEnter={() => item.dropdown && setActiveDropdown(index)}
               onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
             >
-              <Link to={item.link} className="hover:text-gray-500 py-2 block">
+              <Link to={item.link} className="hover:text-blue-900 py-2 block">
                 {item.name}
               </Link>
 
