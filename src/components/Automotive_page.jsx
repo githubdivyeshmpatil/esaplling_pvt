@@ -92,6 +92,7 @@ function Automotive_page() {
           />
         </div>
       </section>
+     
     </>
   )
 }
