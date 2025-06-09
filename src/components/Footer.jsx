@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   FaFacebook,
   FaTwitter,
@@ -23,19 +23,41 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+import { motion, useInView } from "framer-motion";
+
+// Animation variants for staggered links
+const linkVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.07 + 0.2,
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  })
+};
 
 const Footer = () => {
+  const footerRef = useRef(null);
+  const inView = useInView(footerRef, { once: true, amount: 0.2 });
+
   return (
     <footer
       className="relative bg-[#000066] bg-cover bg-center bg-no-repeat text-white pt-12 pb-4 px-4 sm:px-6 lg:px-8"
       style={{ backgroundImage: `url('/img/footer_newbg.png')` }}
+      ref={footerRef}
     >
       <div className="container mx-auto">
         <div className="flex items-center space-x-1 mb-8">
-          <img
+          <motion.img
             src={logo}
             alt="Logo"
             className="h-20 w-20 sm:h-24 sm:w-24 object-contain"
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           />
         </div>
 
@@ -47,51 +69,29 @@ const Footer = () => {
               About Us
             </h3>
             <ul className="space-y-2 font-robo">
-              <li>
-                <Link to="/about" className="hover:text-gray-300">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/vison" className="hover:text-gray-300">
-                  Vision Mission
-                </Link>
-              </li>
-              <li>
-                <Link to="/acquisition" className="hover:text-gray-300">
-                  Acquisition
-                </Link>
-              </li>
-              <li>
-                <Link to="/certification" className="hover:text-gray-300">
-                  Certification
-                </Link>
-              </li>
-              <li>
-                <Link to="/quality" className="hover:text-gray-300">
-                  Quality Assurance
-                </Link>
-              </li>
-              <li>
-                <Link to="/managment" className="hover:text-gray-300">
-                  Management
-                </Link>
-              </li>
-              <li>
-                <Link to="/recognition" className="hover:text-gray-300">
-                  Recognition
-                </Link>
-              </li>
-              <li>
-                <Link to="/corporate" className="hover:text-gray-300">
-                  Corporate
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="hover:text-gray-300">
-                  Facility
-                </Link>
-              </li>
+              {[
+                { to: "/about", label: "About Us" },
+                { to: "/vison", label: "Vision Mission" },
+                { to: "/acquisition", label: "Acquisition" },
+                { to: "/certification", label: "Certification" },
+                { to: "/quality", label: "Quality Assurance" },
+                { to: "/managment", label: "Management" },
+                { to: "/recognition", label: "Recognition" },
+                { to: "/corporate", label: "Corporate" },
+                { to: "#", label: "Facility" },
+              ].map((item, i) => (
+                <motion.li
+                  key={item.to}
+                  custom={i}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={linkVariants}
+                >
+                  <Link to={item.to} className="hover:text-gray-300">
+                    {item.label}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </div>
 
@@ -101,54 +101,29 @@ const Footer = () => {
               Consumer Electronics
             </h3>
             <ul className="space-y-2 font-robo">
-              <li>
-                <Link
-                  to="/consumer-electronics/led"
-                  className="hover:text-gray-300"
+              {[
+                { to: "/consumer-electronics/led", label: "LED TV" },
+                { to: "/consumer-electronics/split-ac", label: "Air Conditioner" },
+                { to: "/consumer-electronics/washing", label: "Washing Machine" },
+                { to: "/consumer-electronics/new-desert", label: "Cooler" },
+                { to: "/consumer-electronics/refrigerators", label: "Refrigerator" },
+                { to: "/consumer-electronics/geysers", label: "Geysers" },
+              ].map((item, i) => (
+                <motion.li
+                  key={item.to}
+                  custom={i}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={linkVariants}
                 >
-                  LED TV
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consumer-electronics/split-ac"
-                  className="hover:text-gray-300"
-                >
-                  Air Conditioner
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consumer-electronics/washing"
-                  className="hover:text-gray-300"
-                >
-                  Washing Machine
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consumer-electronics/new-desert"
-                  className="hover:text-gray-300"
-                >
-                  Cooler
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consumer-electronics/refrigerators"
-                  className="hover:text-gray-300"
-                >
-                  Refrigerator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consumer-electronics/geysers"
-                  className="hover:text-gray-300"
-                >
-                  Geysers
-                </Link>
-              </li>
+                  <Link
+                    to={item.to}
+                    className="hover:text-gray-300"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </div>
 
@@ -158,54 +133,29 @@ const Footer = () => {
               Auto Air Conditioning
             </h3>
             <ul className="space-y-2 font-robo">
-              <li>
-                <Link
-                  to="/automotive/autoaircondition"
-                  className="hover:text-gray-300"
+              {[
+                { to: "/automotive/autoaircondition", label: "Coach Airconditioning" },
+                { to: "/automotive/autoaircondition", label: "Bus" },
+                { to: "/automotive/autoaircondition", label: "Truck Chiller" },
+                { to: "/automotive/autoaircondition", label: "Frost on the Wheels" },
+                { to: "/automotive/autoaircondition", label: "Cabin AirConditioning" },
+                { to: "/automotive/autoaircondition", label: "DC Airconditioning" },
+              ].map((item, i) => (
+                <motion.li
+                  key={item.to}
+                  custom={i}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={linkVariants}
                 >
-                  Coach Airconditioning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/automotive/autoaircondition"
-                  className="hover:text-gray-300"
-                >
-                  Bus
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/automotive/autoaircondition"
-                  className="hover:text-gray-300"
-                >
-                  Truck Chiller
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/automotive/autoaircondition"
-                  className="hover:text-gray-300"
-                >
-                  Frost on the Wheels
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/automotive/autoaircondition"
-                  className="hover:text-gray-300"
-                >
-                  Cabin AirConditioning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/automotive/autoaircondition"
-                  className="hover:text-gray-300"
-                >
-                  DC Airconditioning
-                </Link>
-              </li>
+                  <Link
+                    to={item.to}
+                    className="hover:text-gray-300"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </div>
 
@@ -215,68 +165,33 @@ const Footer = () => {
               HVAC
             </h3>
             <ul className="space-y-2 font-robo">
-              <li>
-                <Link
-                  to="/heating/server_airconditioning"
-                  className="hover:text-gray-300"
+              {[
+                { to: "/heating/server_airconditioning", label: "Server Airconditioning" },
+                { to: "/heating/elavator_airconditionning", label: "Elevator Airconditioning" },
+                { to: "/consumer-electronics/chiller", label: "Chiller" },
+                { to: "/hvac/dehumidifier", label: "Dehumidifier" },
+                { to: "/hvac/airhandling", label: "Air Handling Unit" },
+                { to: "/hvac/ventilation", label: "Ventilation System" },
+                { to: "/hvac/evaporative", label: "Evaporative Cooler" },
+                { to: "#", label: "Industrial Water Chiller" },
+                { to: "/hvac/aircontamination_pro", label: "Air Contamination Protection" },
+                { to: "/hvac/hvac_om", label: "HVAC O & M" },
+              ].map((item, i) => (
+                <motion.li
+                  key={item.to}
+                  custom={i}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={linkVariants}
                 >
-                  Server Airconditioning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/heating/elavator_airconditionning"
-                  className="hover:text-gray-300"
-                >
-                  Elevator Airconditioning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consumer-electronics/chiller"
-                  className="hover:text-gray-300"
-                >
-                  Chiller
-                </Link>
-              </li>
-              <li>
-                <Link to="/hvac/dehumidifier" className="hover:text-gray-300">
-                  Dehumidifier
-                </Link>
-              </li>
-              <li>
-                <Link to="/hvac/airhandling" className="hover:text-gray-300">
-                  Air Handling Unit
-                </Link>
-              </li>
-              <li>
-                <Link to="/hvac/ventilation" className="hover:text-gray-300">
-                  Ventilation System
-                </Link>
-              </li>
-              <li>
-                <Link to="/hvac/evaporative" className="hover:text-gray-300">
-                  Evaporative Cooler
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="hover:text-gray-300">
-                  Industrial Water Chiller
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/hvac/aircontamination_pro"
-                  className="hover:text-gray-300"
-                >
-                  Air Contamination Protection
-                </Link>
-              </li>
-              <li>
-                <Link to="/hvac/hvac_om" className="hover:text-gray-300">
-                  HVAC O & M
-                </Link>
-              </li>
+                  <Link
+                    to={item.to}
+                    className="hover:text-gray-300"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </div>
 
@@ -286,40 +201,28 @@ const Footer = () => {
               HVAC O & M
             </h3>
             <ul className="space-y-2 font-robo">
-              <li>
-                <Link
-                  to="/services/energymanagment"
-                  className="hover:text-gray-300"
+              {[
+                { to: "/services/energymanagment", label: "Energy Management" },
+                { to: "/services/eletrical_and_lv", label: "Electrical and LV" },
+                { to: "/services/plumbing", label: "Plumbing" },
+                { to: "/services/fireprotection", label: "Fire Protection" },
+                { to: "/hvac/hvac_om", label: "O & M" },
+              ].map((item, i) => (
+                <motion.li
+                  key={item.to}
+                  custom={i}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={linkVariants}
                 >
-                  Energy Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/eletrical_and_lv"
-                  className="hover:text-gray-300"
-                >
-                  Electrical and LV
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/plumbing" className="hover:text-gray-300">
-                  Plumbing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/fireprotection"
-                  className="hover:text-gray-300"
-                >
-                  Fire Protection
-                </Link>
-              </li>
-              <li>
-                <Link to="/hvac/hvac_om" className="hover:text-gray-300">
-                  O & M
-                </Link>
-              </li>
+                  <Link
+                    to={item.to}
+                    className="hover:text-gray-300"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </div>
 
@@ -329,37 +232,28 @@ const Footer = () => {
               Harness
             </h3>
             <ul className="space-y-2 font-robo">
-              <li>
-                <Link
-                  to="/automotive/automotive_page"
-                  className="hover:text-gray-300"
+              {[
+                { to: "/automotive/automotive_page", label: "Automotive" },
+                { to: "/services/eletrical_and_lv", label: "Multi purpose AC DC" },
+                { to: "#", label: "Generator & Transmission" },
+                { to: "#", label: "Consumer Electronics & Telecom" },
+                { to: "#", label: "Power System" },
+              ].map((item, i) => (
+                <motion.li
+                  key={item.to}
+                  custom={i}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={linkVariants}
                 >
-                  Automotive
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services/eletrical_and_lv"
-                  className="hover:text-gray-300"
-                >
-                  Multi purpose AC DC
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="hover:text-gray-300">
-                  Generator & Transmission
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="hover:text-gray-300">
-                  Consumer Electronics & Telecom
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="hover:text-gray-300">
-                  Power System
-                </Link>
-              </li>
+                  <Link
+                    to={item.to}
+                    className="hover:text-gray-300"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </div>
         </div>

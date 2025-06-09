@@ -2,7 +2,18 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo-re.png";
+import home_ab from "../assets/images/home_ab.png"
+
 import { useTranslation } from 'react-i18next';
+import ctmri from '../assets/images/ctmri.png'
+import t1 from "../assets/images/nav_led.png";
+import t2 from "../assets/images/nav2.png";
+import t3 from "../assets/images/nav4.png";
+import t4 from "../assets/images/nav6.png";
+import t5 from "../assets/images/nav5.png";
+import T6 from "../assets/images/nav3.png";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 
 export default function Navbar() {
@@ -16,6 +27,9 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
+  const footerRef = useRef(null);
+  const inView = useInView(footerRef, { once: true, amount: 0.2 });
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -25,7 +39,65 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: "HOME", link: "/" },
+    {
+      name: "HOME",
+      link: "/",
+      dropdown: {
+        title: "Home Menu",
+        columns: [
+          {
+            
+            items: [
+              { name: "Know Us", link: "/consumer-electronics/led" },
+             
+              {
+                name: "About us",
+                link: "/about",
+              },
+              {
+                name: "Vison Mission",
+                link: "/vison",
+              },
+              {
+                name: "Acquisition",
+                link: "/acquisition",
+              },
+              {
+                name: "Certification",
+                link: "/certification",
+              },{
+                name: "Quality Assurance",
+                link: "/quality",
+              },{
+                name: "Management",
+                link: "/managment",
+              },{
+                name: "Recognition",
+                link: "/recognition",
+              },{
+                name: "Coporate",
+                link: "/corporate",
+              },{
+                name: "Facility",
+                link: "/",
+              },{
+                name: "Industry",
+                link: "/",
+              },
+              {
+                name: "Expansions",
+                link: "/",
+              },
+              {
+                name: "Collabration",
+                link: "/",
+              },
+            ],
+          },
+          
+        ],
+      },
+    },
     {
       name: "Consumer Electronics",
       link: "/",
@@ -95,9 +167,11 @@ export default function Navbar() {
       link: "/",
       dropdown: {
         title: "HVAC",
+        titleLink: "/hvac",
         columns: [
           {
             title: "Product",
+            titleLink: "/hvac/product",
             items: [
               { name: "New Ac Product", link: "/chiller" },
               { name: "Solar", link: "/server-airconditioning" },
@@ -107,6 +181,7 @@ export default function Navbar() {
           },
           {
             title: "HVAC",
+            titleLink: "/hvac/new_hvac",
             items: [
               { name: "Chiler", link: "/hvac/chillerDis" },
               { name: "Dehumidifier", link: "/hvac/dehumidifier" },
@@ -127,6 +202,7 @@ export default function Navbar() {
           },
           {
             title: "Heating",
+            titleLink: "/hvac/heating",
             items: [
               {
                 name: "Server Airconditioning",
@@ -589,44 +665,272 @@ export default function Navbar() {
                 {item.name}
               </Link>
 
-              {item.dropdown && (
-                <div
-                  className={`fixed left-0 w-full bg-white  shadow-lg border-t border-gray-200 transition-opacity duration-300 ease-in-out transform origin-top ${
-                    activeDropdown === index
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-5 pointer-events-none"
-                  }`}
-                >
-                  <div className="max-w-7xl mx-auto py-4 px-6">
-                    <h3 className="text-lg font-bold mb-4 font-os">
-                      {item.dropdown.title}
-                    </h3>
-                    <div
-                      className={`grid ${getGridColsClass(
-                        item.dropdown.columns.length,
-                        item.name
-                      )} gap-8`}
-                    >
-                      {item.dropdown.columns.map((column, colIndex) => (
-                        <div key={colIndex}>
-                          <h4 className="  mb-3 font-os">{column.title}</h4>
-                          <ul className="space-y-2">
-                            {column.items.map((subItem, subIndex) => (
-                              <li key={subIndex}>
-                                <Link
-                                  to={subItem.link}
-                                  className="text-gray-600 hover:text-gray-900 font-robo"
-                                >
-                                  {subItem.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+              {item.dropdown && item.name === "HOME" ? (
+                <div className={`fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 transform origin-top transition-all duration-500 ease-in-out ${activeDropdown === index ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-5 pointer-events-none"}`}>
+                  <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
+                    {/* Logo on the left */}
+                    <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
+                      <img src={home_ab} alt="Logo" className="h-64 w-64 object-contain mb-2" />
+                    </div>
+                    {/* Links grid on the right */}
+                    <div className="grid grid-cols-3 gap-x-10 gap-y-2 flex-1">
+                      {item.dropdown.columns[0].items.map((subItem, subIndex) => (
+                        !subItem.isContact ? (
+                          <Link key={subIndex} to={subItem.link} className="text-black hover:text-blue-700 font-robo text-base">
+                            {subItem.name}
+                          </Link>
+                        ) : null
                       ))}
+                      {/* Contact Email with icon */}
+                      
                     </div>
                   </div>
                 </div>
+              ) : (
+                item.dropdown && item.name === "Biomedical" ? (
+                  <AnimatePresence>
+                    {activeDropdown === index && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -40 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                      >
+                        <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
+                          {/* Logo on the left */}
+                          <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
+                            <img src={ctmri} alt="Biomedical Logo" className="h-96 w-96 object-contain mb-2" />
+                          </div>
+                          {/* Columns grid on the right */}
+                          <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8 flex-1`}>
+                            {item.dropdown.columns.map((column, colIndex) => (
+                              <div key={colIndex}>
+                                {/* If column has a title, render as a link if first item has a link */}
+                                {column.title ? (
+                                  column.titleLink ? (
+                                    <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
+                                      {column.title}
+                                    </Link>
+                                  ) : (
+                                    <h4 className="mb-3 font-os">{column.title}</h4>
+                                  )
+                                ) : null}
+                                <ul className="space-y-2">
+                                  {column.items.map((subItem, subIndex) => (
+                                    <li key={subIndex}>
+                                      <Link
+                                        to={subItem.link}
+                                        className="text-gray-600 hover:text-gray-900 font-robo"
+                                      >
+                                        {subItem.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                ) : (
+                  item.dropdown && item.name === "Automotive" ? (
+                    <AnimatePresence>
+                      {activeDropdown === index && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -40 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -40 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                        >
+                          <div className="max-w-7xl mx-auto py-4 px-6">
+                            <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
+                            <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
+                              {item.dropdown.columns.map((column, colIndex) => (
+                                <div key={colIndex}>
+                                  {/* If column has a title, render as a link if first item has a link */}
+                                  {column.title ? (
+                                    column.titleLink ? (
+                                      <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
+                                        {column.title}
+                                      </Link>
+                                    ) : (
+                                      <h4 className="font-medium mb-1">{column.title}</h4>
+                                    )
+                                  ) : null}
+                                  <ul className="space-y-2">
+                                    {column.items.map((subItem, subIndex) => (
+                                      <li key={subIndex}>
+                                        <Link
+                                          to={subItem.link}
+                                          className="text-gray-600 hover:text-gray-900 font-robo"
+                                        >
+                                          {subItem.name}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  ) : (
+                    item.dropdown && item.name === "HVAC" ? (
+                      <AnimatePresence>
+                        {activeDropdown === index && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -40 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                          >
+                            <div className="max-w-7xl mx-auto py-4 px-6">
+                              <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
+                              <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
+                                {item.dropdown.columns.map((column, colIndex) => (
+                                  <div key={colIndex}>
+                                    {/* If column has a title, render as a link if first item has a link */}
+                                    {column.title ? (
+                                      column.titleLink ? (
+                                        <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
+                                          {column.title}
+                                        </Link>
+                                      ) : (
+                                        <h4 className="font-medium mb-1">{column.title}</h4>
+                                      )
+                                    ) : null}
+                                    <ul className="space-y-2">
+                                      {column.items.map((subItem, subIndex) => (
+                                        <li key={subIndex}>
+                                          <Link
+                                            to={subItem.link}
+                                            className="text-gray-600 hover:text-gray-900 font-robo"
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    ) : (
+                      item.dropdown && ["Services", "Innovation", "News", "Investor", "Support", "Carrier", "Contact"].includes(item.name) ? (
+                        <AnimatePresence>
+                          {activeDropdown === index && (
+                            <motion.div
+                              initial={{ opacity: 0, y: -40 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: -40 }}
+                              transition={{ duration: 0.5, ease: "easeInOut" }}
+                              className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                            >
+                              <div className="max-w-7xl mx-auto py-4 px-6">
+                                <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
+                                <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
+                                  {item.dropdown.columns.map((column, colIndex) => (
+                                    <div key={colIndex}>
+                                      {/* If column has a title, render as a link if first item has a link */}
+                                      {column.title ? (
+                                        column.titleLink ? (
+                                          <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
+                                            {column.title}
+                                          </Link>
+                                        ) : (
+                                          <h4 className="font-medium mb-1">{column.title}</h4>
+                                        )
+                                      ) : null}
+                                      <ul className="space-y-2">
+                                        {column.items.map((subItem, subIndex) => (
+                                          <li key={subIndex}>
+                                            <Link
+                                              to={subItem.link}
+                                              className="text-gray-600 hover:text-gray-900 font-robo"
+                                            >
+                                              {subItem.name}
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      ) : (
+                        <AnimatePresence>
+                          {activeDropdown === index && (
+                            <motion.div
+                              initial={{ opacity: 0, y: -40 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: -40 }}
+                              transition={{ duration: 0.5, ease: "easeInOut" }}
+                              className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                            >
+                              <div className="max-w-7xl mx-auto py-4 px-6">
+                                <h3 className="text-lg font-bold mb-4 font-os">
+                                  {item.dropdown.title}
+                                </h3>
+                                <div
+                                  className={`grid ${getGridColsClass(
+                                    item.dropdown.columns.length,
+                                    item.name
+                                  )} gap-8`}
+                                >
+                                  {item.dropdown.columns.map((column, colIndex) => (
+                                    <div key={colIndex}>
+                                      {/* Replace title with specific images for certain columns */}
+                                      {(item.name === "Consumer Electronics" && column.title === "televisions") ? (
+                                        <img src={t1} alt="Televisions" className="h-16 w-16 object-contain mb-3" />
+                                      ) : (item.name === "Consumer Electronics" && column.title === "air conditioners") ? (
+                                        <img src={t2} alt="Air Conditioners" className="h-16 w-16 object-contain mb-3" />
+                                      ) : (item.name === "Consumer Electronics" && column.title === "cooler") ? (
+                                        <img src={t3} alt="Cooler" className="h-16 w-16 object-contain mb-3" />
+                                      ) : (item.name === "Consumer Electronics" && column.title === "refrigerators") ? (
+                                        <img src={t4} alt="Refrigerators" className="h-16 w-16 object-contain mb-3" />
+                                      ) : (item.name === "Consumer Electronics" && column.title === "washing") ? (
+                                        <img src={t5} alt="Washing" className="h-16 w-16 object-contain mb-3" />
+                                      ) : (item.name === "Consumer Electronics" && column.title === "geysers") ? (
+                                        <img src={T6} alt="Geysers" className="h-16 w-16 object-contain mb-3" />
+                                      ) : (
+                                        <h4 className="  mb-3 font-os">{column.title}</h4>
+                                      )}
+                                      <ul className="space-y-2">
+                                        {column.items.map((subItem, subIndex) => (
+                                          <li key={subIndex}>
+                                            <Link
+                                              to={subItem.link}
+                                              className="text-gray-600 hover:text-gray-900 font-robo"
+                                            >
+                                              {subItem.name}
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      )
+                    )
+                  )
+                )
               )}
             </li>
           ))}
@@ -680,7 +984,22 @@ export default function Navbar() {
                   <h4 className="font-semibold mb-2">{item.dropdown.title}</h4>
                   {item.dropdown.columns.map((column, colIndex) => (
                     <div key={colIndex} className="mb-3">
-                      <h5 className="font-medium mb-1">{column.title}</h5>
+                      {/* Replace title with specific images for certain columns */}
+                      {(item.name === "Consumer Electronics" && column.title === "televisions") ? (
+                        <img src={t1} alt="Televisions" className="h-12 w-12 object-contain mb-1" />
+                      ) : (item.name === "Consumer Electronics" && column.title === "air conditioners") ? (
+                        <img src={t2} alt="Air Conditioners" className="h-12 w-12 object-contain mb-1" />
+                      ) : (item.name === "Consumer Electronics" && column.title === "cooler") ? (
+                        <img src={t3} alt="Cooler" className="h-12 w-12 object-contain mb-1" />
+                      ) : (item.name === "Consumer Electronics" && column.title === "refrigerators") ? (
+                        <img src={t4} alt="Refrigerators" className="h-12 w-12 object-contain mb-1" />
+                      ) : (item.name === "Consumer Electronics" && column.title === "washing") ? (
+                        <img src={t5} alt="Washing" className="h-12 w-12 object-contain mb-1" />
+                      ) : (item.name === "Consumer Electronics" && column.title === "geysers") ? (
+                        <img src={T6} alt="Geysers" className="h-12 w-12 object-contain mb-1" />
+                      ) : (
+                        <h5 className="font-medium mb-1">{column.title}</h5>
+                      )}
                       <ul className="pl-2 space-y-1">
                         {column.items.map((subItem, subIndex) => (
                           <li key={subIndex}>

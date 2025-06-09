@@ -29,7 +29,7 @@ function Contact() {
               <p className="text-gray-800 font-robo">
                 513, Floor 5, Impetech Global Business Centre,<br />
                 Rainbow Plaza, Pimple Saudagar,<br />
-                Pune - 411 027, Maharashtra
+                Pune - 411027, Maharashtra
               </p>
             </div>
 

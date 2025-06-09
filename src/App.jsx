@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './i18n';
 
 import "./App.css";
 
@@ -56,6 +57,7 @@ import Footer from "./components/Footer";
 import Acquisition from "./components/Acquisition";
 import TawkMessenger from "./components/TawkMessenger";
 import Contact from "./pages/Contact";
+import New_hvac from "./components/New_hvac";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -123,7 +125,7 @@ function App() {
           <Route path="/services/fireprotection" element={<Fireprotection />} />
           <Route path="/innovation/plant_setup" element={<Plantsetup />} />
           <Route path="/news/blog" element={<Blog />} />
-
+          <Route path="/hvac/new_hvac" element={<New_hvac />} />
           <Route path="/consumer-electronics/led" element={<LEDPage />} />
           <Route path="/consumer-electronics/iptv" element={<Iptv />} />
           <Route

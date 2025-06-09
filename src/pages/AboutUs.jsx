@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import BackgroundSection from "../components/BackgroundSection";
+import { useTranslation } from 'react-i18next';
 
 const AboutUs = () => {
-   useEffect(() => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
@@ -15,7 +18,7 @@ const AboutUs = () => {
       <div className="bg-white text-black p-4 sm:p-8 max-w-7xl mx-auto">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 font-os">
-          About Us
+          {t('about.title')}
         </h1>
 
         {/* Founding Story */}
@@ -29,7 +32,7 @@ const AboutUs = () => {
             solutions that solve real-world problems.Being ESAPLLING, we apply
             innovative techniques and ideas in an ever changing industry, one of
             our major strength is our capability and confidence to provide
-            value-added service � product installation, site commissioning, to
+            value-added service product installation, site commissioning, to
             handle any project, regardless of size or complexity, from
             inspection, through budgeting, to design, execution, validation and
             transfer. Understanding the market challenge and enabling the
@@ -53,7 +56,7 @@ const AboutUs = () => {
               cutting-edge solutions that solve real-world problems.Being
               ESAPLLING, we apply innovative techniques and ideas in an ever
               changing industry, one of our major strength is our capability and
-              confidence to provide value-added service � product installation,
+              confidence to provide value-added service product installation,
               site commissioning, to handle any project, regardless of size or
               complexity, from inspection, through budgeting, to design,
               execution, validation and transfer. Understanding the market
