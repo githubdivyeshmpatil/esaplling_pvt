@@ -973,51 +973,47 @@ export default function Navbar() {
         </div>
         <ul className="p-4 space-y-2 text-base font-robo text-black overflow-y-auto h-[calc(100%-60px)]">
           {navItems.map((item, index) => (
-            <li key={index} className="border-b border-gray-100 pb-2 font-robo">
+            <li key={index} className="border-b border-gray-100 pb-2">
               <Link
                 to={item.link}
-                className="hover:text-gray-500 py-2 block font-robo text-base"
+                className="hover:text-blue-600 py-2 block font-robo text-base"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
-
               {item.dropdown && (
-                <div className="pl-4 py-2">
-                  <h4 className="font-semibold mb-2 font-robo text-lg">{item.dropdown.title}</h4>
-                  {item.dropdown.columns.map((column, colIndex) => (
-                    <div key={colIndex} className="mb-3">
-                      {/* Replace title with specific images for certain columns */}
-                      {(item.name === "Consumer Electronics" && column.title === "televisions") ? (
-                        <img src={t1} alt="Televisions" className="h-12 w-12 object-contain mb-1" />
-                      ) : (item.name === "Consumer Electronics" && column.title === "air conditioners") ? (
-                        <img src={t2} alt="Air Conditioners" className="h-12 w-12 object-contain mb-1" />
-                      ) : (item.name === "Consumer Electronics" && column.title === "cooler") ? (
-                        <img src={t3} alt="Cooler" className="h-12 w-12 object-contain mb-1" />
-                      ) : (item.name === "Consumer Electronics" && column.title === "refrigerators") ? (
-                        <img src={t4} alt="Refrigerators" className="h-12 w-12 object-contain mb-1" />
-                      ) : (item.name === "Consumer Electronics" && column.title === "washing") ? (
-                        <img src={t5} alt="Washing" className="h-12 w-12 object-contain mb-1" />
-                      ) : (item.name === "Consumer Electronics" && column.title === "geysers") ? (
-                        <img src={T6} alt="Geysers" className="h-12 w-12 object-contain mb-1" />
-                      ) : (
-                        <h5 className="font-medium mb-1">{column.title}</h5>
-                      )}
-                      <ul className="pl-2 space-y-1">
-                        {column.items.map((subItem, subIndex) => (
-                          <li key={subIndex}>
-                            <Link
-                              to={subItem.link}
-                              className="text-gray-600 hover:text-gray-900 text-sm font-robo"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {subItem.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                <div className="mt-2">
+                  <h3 className="text-lg font-semibold mb-2 text-blue-700">{item.dropdown.title}</h3>
+                  <div className="space-y-4">
+                    {item.dropdown.columns.map((column, colIndex) => (
+                      <div key={colIndex}>
+                        {column.title && (
+                          <h4 className="font-medium mb-2 text-blue-600">
+                            {column.titleLink ? (
+                              <Link to={column.titleLink} onClick={() => setIsOpen(false)}>
+                                {column.title}
+                              </Link>
+                            ) : (
+                              column.title
+                            )}
+                          </h4>
+                        )}
+                        <ul className="pl-2 space-y-1">
+                          {column.items.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <Link
+                                to={subItem.link}
+                                className="text-gray-600 hover:text-blue-600 text-sm font-robo block py-1"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </li>
@@ -1027,19 +1023,26 @@ export default function Navbar() {
             <p className="text-xs text-gray-500 font-robo">Select Language</p>
             <ul className="space-y-2 mt-2">
               <li>
-                <Link to="#" className="hover:text-gray-500 font-robo">
+                <button 
+                  onClick={() => {
+                    changeLanguage('en');
+                    setIsOpen(false);
+                  }}
+                  className="hover:text-blue-600 font-robo w-full text-left"
+                >
                   English
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="#" className="hover:text-gray-500 font-robo">
-                  Hindi
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="hover:text-gray-500 font-robo">
-                  Spanish
-                </Link>
+                <button 
+                  onClick={() => {
+                    changeLanguage('hi');
+                    setIsOpen(false);
+                  }}
+                  className="hover:text-blue-600 font-robo w-full text-left"
+                >
+                  हिन्दी
+                </button>
               </li>
             </ul>
           </div>
