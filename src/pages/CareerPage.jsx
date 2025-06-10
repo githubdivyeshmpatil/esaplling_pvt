@@ -20,10 +20,10 @@ const CarrierPage = () => {
       <section className="grid md:grid-cols-2 gap-8 mb-12">
         <div className="bg-white p-6 rounded-2xl shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-blue-600 font-os">Need of Skill Development</h2>
-          <p className="mb-4 font-robo text-black">
+          <p className="mb-4 font-robo text-black text-base sm:text-base md:text-lg lg:text-lg">
             Soft & Tech skills training brings transformation and confidence in a person. It is crucial for all organizations across sectors. From communication to strategic planning, our training program — Dimension — covers all, addressing institutional and organizational needs through structured schedules.
           </p>
-          <ul className="list-disc list-inside space-y-2 font-robo">
+          <ul className="list-disc list-inside space-y-2 font-robo text-base sm:text-base md:text-lg lg:text-lg">
             <li>Communication skills</li>
             <li>Leadership training</li>
             <li>Personality development</li>
@@ -44,7 +44,7 @@ const CarrierPage = () => {
           <h2 className="text-2xl font-semibold mb-4 text-green-600 font-os">Transformation via ATS (Advanced Technical Skills)</h2>
 
           <h3 className="text-lg font-semibold mt-2 font-os">ELECTRONICS ENGINEERING</h3>
-          <ul className="list-disc list-inside ml-4 font-robo">
+          <ul className="list-disc list-inside ml-4 font-robo text-base sm:text-base md:text-lg lg:text-lg">
             <li>PCB & Circuit Design</li>
             <li>ibMS, BMS, Scada, PID Systems</li>
             <li>Product Development & Smart Appliances</li>
@@ -52,7 +52,7 @@ const CarrierPage = () => {
           </ul>
 
           <h3 className="text-lg font-semibold mt-4 font-os">MECHANICAL ENGINEERING</h3>
-          <ul className="list-disc list-inside ml-4 font-robo">
+          <ul className="list-disc list-inside ml-4 font-robo text-base sm:text-base md:text-lg lg:text-lg">
             <li>Mechatronics, Thermodynamics</li>
             <li>CAD Design, MEMS, FSW, Composites</li>
             <li>Finite Element & Fluid Dynamics</li>
@@ -70,7 +70,7 @@ const CarrierPage = () => {
       <section className="grid md:grid-cols-2 gap-8 mb-12">
         <div className="bg-white p-6 rounded-2xl shadow-md">
           <h2 className="text-2xl font-semibold text-purple-600 mb-4 font-os">Global - Campus Connect</h2>
-          <ul className="list-disc list-inside space-y-2 font-robo">
+          <ul className="list-disc list-inside space-y-2 font-robo text-base sm:text-base md:text-lg lg:text-lg">
             <li>Dimension: Student career spark with placement & project guidance</li>
             <li>Corporate student expectation program for placement readiness</li>
             <li>On & Off campus placement assistance</li>

@@ -30,7 +30,7 @@ function Home() {
             </div>
             {/* Right Content */}
             <div className="md:w-1/2 w-full flex flex-col justify-center space-y-4">
-              <h2 className="text-md md:text-xl font-semibold text-blue-900 font-os">
+              <h2 className="text-lg md:text-2xl font-semibold text-blue-900 font-robo">
                 Welcome to Our Company
               </h2>
               <p className="text-black text-base md:text-lg text-justify font-robo">
@@ -40,12 +40,12 @@ function Home() {
                 Biomedical devices, OEM components, and Wiring Harness systems.
                 With a commitment to innovation, quality, and customized
                 manufacturing services, we empower businesses by transforming
-                ideas into high-performance, real-world products. Whether it’s
+                ideas into high-performance, real-world products. Whether it's
                 complex electronic assemblies, biomedical integrations, or
                 precision wiring harnesses, ESAPLLING is your trusted partner in
                 progress.
               </p>
-              <h2 className="text-md md:text-xl font-semibold text-blue-900 font-os">
+              <h2 className="text-lg md:text-2xl font-semibold text-blue-900 font-robo">
                 Mission Statement
               </h2>
               <p className="text-gray-700 text-base md:text-lg text-justify font-robo">

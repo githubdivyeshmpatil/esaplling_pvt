@@ -15,9 +15,9 @@ function Certification() {
 
      <section className="bg-white py-10 px-4 sm:px-8 lg:px-16">
        <div className="max-w-7xl mx-auto text-justify">
-         <h2 className="text-3xl font-bold text-[#000066] mb-6 font-os">Certification</h2>
+         <h2 className="text-3xl md:text-4xl font-bold text-[#000066] mb-6 font-os">Certification</h2>
          
-         <p className="text-base text-gray-800 mb-6 font-robo">
+         <p className="text-base sm:text-lg text-gray-800 mb-6 font-robo">
            ESAPLLING holds a complete range of state-of-the-art facilities along with compliance certifications for the manufacturing of goods in the Automobile, Electronics, Medical Equipment, and Healthcare domains. We are certified by the world's leading quality assurance and certification authorities and affiliated bodies.
          </p>
 

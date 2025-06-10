@@ -11,7 +11,7 @@ const YouTubeLayout = () => {
 
 
   return (
-    <div className="p-6 space-y-10  min-h-screen ">
+    <div className="p-2 md:p-6 space-y-10 min-h-screen ">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row gap-6 bg-white rounded-2xl p-6">
         <div className="md:w-1/2 w-full aspect-video">
@@ -24,21 +24,21 @@ const YouTubeLayout = () => {
 ></iframe>
 
         </div>
-        <div className="md:w-1/2 w-full text-black-800 text-justify ">
-          <h2 className="text-2xl font-bold mb-4 font-os">Next-Gen HVAC: Sustainable Engineering, Smart Controls, and Energy Optimization
-
-</h2>
-          <p className="mb-2 text-gray-700 text-justify" >
-            <strong className='text-blue-700 font-os'>Expertise in Sustainable Solutions:</strong> ESAPLLING brings a wealth of expertise in sustainable HVAC solutions. With a team of engineers and experts who understand the principles of energy efficiency and environmental responsibility, ESAPLLING ensures that their HVAC systems are designed to minimize energy consumption and reduce the carbon footprint. Their knowledge extends to the latest industry standards, green building certifications, and energy codes, enabling them to create HVAC systems that meet and exceed these requirements.
+        <div className="md:w-1/2 w-full text-black text-justify font-robo">
+          <h2 className="text-base sm:text-base md:text-2xl lg:text-2xl font-bold mb-4">
+            Next-Gen HVAC: Sustainable Engineering, Smart Controls, and Energy Optimization
+          </h2>
+          <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
+            <strong className='text-blue-700'>Expertise in Sustainable Solutions:</strong> ESAPLLING brings a wealth of expertise in sustainable HVAC solutions. With a team of engineers and experts who understand the principles of energy efficiency and environmental responsibility, ESAPLLING ensures that their HVAC systems are designed to minimize energy consumption and reduce the carbon footprint. Their knowledge extends to the latest industry standards, green building certifications, and energy codes, enabling them to create HVAC systems that meet and exceed these requirements.
           </p>
-          <p className="mb-2  text-gray-700 text-justify">
-            <strong className='text-blue-700 font-os'>Innovative Design and Engineering:</strong> They leverage state-of-the-art tools and simulation techniques...
+          <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
+            <strong className='text-blue-700'>Innovative Design and Engineering:</strong> They leverage state-of-the-art tools and simulation techniques...
           </p>
-          <p className="mb-2  text-gray-700 text-justify">
-            <strong className='text-blue-700 font-os'>Smart HVAC Technology:</strong> Embracing IoT and analytics for better energy efficiency and comfort...
+          <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
+            <strong className='text-blue-700'>Smart HVAC Technology:</strong> Embracing IoT and analytics for better energy efficiency and comfort...
           </p>
-          <p className="mb-2  text-gray-700 text-justify">
-            <strong className='text-blue-700 font-os'>Energy Management:</strong> Advanced energy management systems help reduce cost and carbon footprint.
+          <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
+            <strong className='text-blue-700'>Energy Management:</strong> Advanced energy management systems help reduce cost and carbon footprint.
           </p>
  <div>
             <a

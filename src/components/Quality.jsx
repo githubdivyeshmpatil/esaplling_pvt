@@ -13,15 +13,13 @@ function Quality() {
        <BackgroundSection bgImage="/img/banner-quality.jpg" />
      </div>
      <div className="max-w-7xl mx-auto text-justify">
-         <h2 className="text-3xl font-bold text-[#000066] mb-6 font-os">Quality Assurance:
-</h2>
+         <h2 className="text-3xl font-bold text-[#000066] mb-6 font-os">Quality Assurance:</h2>
          
-         <p className="text-base text-gray-800 mb-6 font-robo">
-We are focused on Quality assurance and quality control parameters for all our products and services, We do conduct Inspection is the process of measuring, examining, and testing to gauge one or more characteristics of a product or services in every pahse of activity to ensure the Quality Assurance and Audit Functions are in tact in each stage of production.
-
+         <p className="text-base text-gray-800 mb-6 font-robo text-base sm:text-base md:text-lg lg:text-lg">
+           We are focused on Quality assurance and quality control parameters for all our products and services. We do conduct inspection as the process of measuring, examining, and testing to gauge one or more characteristics of a product or service in every phase of activity to ensure the Quality Assurance and Audit Functions are intact in each stage of production.
          </p>
-         </div>
-         <div className="container mx-auto px-4 py-8">
+     </div>
+     <div className="container mx-auto px-4 py-8">
        <img
          src="/img/certification2.png"
          alt="Sample"

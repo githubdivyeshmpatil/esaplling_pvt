@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8">
           {/* About Us */}
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-robo">
               About Us
             </h3>
             <ul className="space-y-2 font-robo">
@@ -97,7 +97,7 @@ const Footer = () => {
 
           {/* Consumer Electronics */}
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-robo">
               Consumer Electronics
             </h3>
             <ul className="space-y-2 font-robo">
@@ -129,7 +129,7 @@ const Footer = () => {
 
           {/* Auto Air Conditioning */}
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-robo">
               Auto Air Conditioning
             </h3>
             <ul className="space-y-2 font-robo">
@@ -161,7 +161,7 @@ const Footer = () => {
 
           {/* HVAC */}
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-robo">
               HVAC
             </h3>
             <ul className="space-y-2 font-robo">
@@ -197,7 +197,7 @@ const Footer = () => {
 
           {/* HVAC O & M */}
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-robo">
               HVAC O & M
             </h3>
             <ul className="space-y-2 font-robo">
@@ -228,7 +228,7 @@ const Footer = () => {
 
           {/* Harness */}
           <div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-os">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 uppercase font-robo">
               Harness
             </h3>
             <ul className="space-y-2 font-robo">

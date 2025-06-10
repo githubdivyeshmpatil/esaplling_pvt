@@ -17,7 +17,7 @@ function Ctscan() {
           <h1 className="text-3xl md:text-4xl font-bold text-blue-700 mb-4 font-os">
             CT Scanner Types & Buying Guide
           </h1>
-          <p>
+          <p className="text-base sm:text-lg">
             CT scanners are a popular imaging modality that come in many sizes,
             slice counts, accessories, and price ranges. Choosing the right CT scanner depends
             on your clinical requirements, throughput, and budget.
@@ -112,7 +112,7 @@ function Ctscan() {
       <p className="text-sm md:text-base">Stay updated with our latest offers and updates.</p>
       <form className="flex flex-col sm:flex-row gap-3">
         <input
-          type="biomedical@esaplling.com"
+          type="email"
           placeholder="biomedical@esaplling.com"
           className="w-full px-4 py-2 rounded-lg text-white focus:outline-none"
         />

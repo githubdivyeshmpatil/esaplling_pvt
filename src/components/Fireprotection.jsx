@@ -68,7 +68,9 @@ function Fireprotection() {
                 <img src={item.image} alt={item.title} className="w-full h-auto object-cover" />
                 <div className="p-5 space-y-3">
                   <h3 className="text-xl font-os font-semibold text-blue-600">{item.title}</h3>
-                  <p className="text-gray-700 font-robo text-justify whitespace-pre-line">{item.content}</p>
+                  <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo text-gray-700 text-justify whitespace-pre-line">
+                    {item.content}
+                  </p>
                 </div>
               </div>
             ))}

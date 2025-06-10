@@ -17,7 +17,7 @@ function Plantsetup() {
         PSA Oxygen Plant
       </h1>
 
-      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed">
+      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         In the intricate tapestry of life on Earth, few elements are as
         essential as oxygen. It is the very breath of life, the element that
         sustains not only human existence but also that of countless other
@@ -33,7 +33,7 @@ function Plantsetup() {
         infrastructure.
       </p>
 
-      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed">
+      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         As we embark on this exploration of oxygen plants, we venture into the
         heart of a technology that plays a pivotal role in preserving and
         enhancing human life. We will delve into the science behind oxygen
@@ -48,7 +48,7 @@ function Plantsetup() {
         accessibility.
       </p>
 
-      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed">
+      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         Join us as we navigate the fascinating world of oxygen plants, where the
         quest to harness this vital element is not merely a matter of science
         and engineering, but a lifeline that connects us all. Together, we will
@@ -60,11 +60,11 @@ function Plantsetup() {
       <h2 className="text-2xl sm:text-3xl font-os font-semibold mt-12 mb-6 text-gray-900">
         Model
       </h2>
-      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed">
+      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         100 / 200 / 500 / 1000 / 2000 LPM
       </p>
 
-      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed">
+      <p className="font-robo text-justify text-gray-700 mb-6 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         Pressure swing adsorption (PSA) oxygen generating plants are a source of
         medical-grade oxygen. Through the Pressure Swing Adsorption (PSA)
         technology and adsorption media developed in-house, the atmospheric air
@@ -77,7 +77,7 @@ function Plantsetup() {
         Technical Specifications
       </h2>
 
-      <ul className="font-robo text-gray-700 list-disc list-inside space-y-2 leading-relaxed">
+      <ul className="font-robo text-gray-700 list-disc list-inside space-y-2 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         <li>Oxygen purity: 93% (+/-) 2 %</li>
         <li>Inlet air pressure: 7.5 kg/cm²g</li>
         <li>Outlet gas pressure: 5 kg/cm²g</li>
@@ -96,7 +96,7 @@ function Plantsetup() {
         <li>Duty: Continuous & Fully Automatic Skid mounted</li>
       </ul>
 
-      <p className="font-robo text-justify text-gray-700 mt-12 leading-relaxed">
+      <p className="font-robo text-justify text-gray-700 mt-12 leading-relaxed text-base sm:text-base md:text-lg lg:text-lg">
         For Institutional Orders Please email{" "}
         <a
           href="mailto:sales@esaplling.com"

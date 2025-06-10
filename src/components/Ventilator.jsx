@@ -20,7 +20,7 @@ function Ventilator() {
         <h2 className="text-xl md:text-2xl font-semibold text-black font-os">
           Technical Specification | Catalogue | Certification
         </h2>
-        <p>
+        <p className="text-base sm:text-base md:text-lg lg:text-lg">
           Venomo is derived from a German word, which means Computer defined.
           As Intensive Care Unit (ICU) is always dependent on highly monitored
           and systematic data, the name itself signifies the accuracy. The same
@@ -34,56 +34,56 @@ function Ventilator() {
           <div>
             <h3 className="font-os text-lg font-semibold mb-2">Ventilator Modes</h3>
             <ul className="list-disc list-inside space-y-1">
-              <li>PCV (Pressure Control Ventilation)</li>
-              <li>APCV (Assist Pressure Control Ventilation)</li>
-              <li>PCV - SIMV</li>
-              <li>VCV/s (Assist Volume Control Ventilation)</li>
-              <li>VCV/SIMV</li>
-              <li>CPAP (Continuous Positive Airway Pressure)</li>
-              <li>CPAP/PSV (Pressure Support)</li>
-              <li>PRVC (Pressure Regulated Volume Control)</li>
-              <li>HFNT (High Flow Nasal Therapy)</li>
-              <li>VCV-PSV (Volume Control with Pressure Support)</li>
+              <li className="font-robo">PCV (Pressure Control Ventilation)</li>
+              <li className="font-robo">APCV (Assist Pressure Control Ventilation)</li>
+              <li className="font-robo">PCV - SIMV</li>
+              <li className="font-robo">VCV/s (Assist Volume Control Ventilation)</li>
+              <li className="font-robo">VCV/SIMV</li>
+              <li className="font-robo">CPAP (Continuous Positive Airway Pressure)</li>
+              <li className="font-robo">CPAP/PSV (Pressure Support)</li>
+              <li className="font-robo">PRVC (Pressure Regulated Volume Control)</li>
+              <li className="font-robo">HFNT (High Flow Nasal Therapy)</li>
+              <li className="font-robo">VCV-PSV (Volume Control with Pressure Support)</li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-os text-lg font-semibold mb-2">Control Parameters</h3>
             <ul className="list-disc list-inside space-y-1">
-              <li>Tidal Volume: 40 to 1200 ml</li>
-              <li>PIP: 1 to 50 CmH₂O</li>
-              <li>CPAP: 1 to 30 CmH₂O</li>
-              <li>Inspiratory Flow: 55 Ltr continuous, 120 Ltr Peak</li>
-              <li>FIO₂: 21% to 100%</li>
-              <li>Breath Rate: 10 to 60 BPM</li>
-              <li>I TIME: 0.1 to 12 sec</li>
-              <li>Pressure Trigger: 1 to (-)15 CmH₂O</li>
-              <li>Pressure Support: 0 to 60 CmH₂O</li>
-              <li>Flow Trigger: off, 1 to 20 lpm</li>
-              <li>Peak Flow: 1 to 180 lpm</li>
+              <li className="font-robo">Tidal Volume: 40 to 1200 ml</li>
+              <li className="font-robo">PIP: 1 to 50 CmH₂O</li>
+              <li className="font-robo">CPAP: 1 to 30 CmH₂O</li>
+              <li className="font-robo">Inspiratory Flow: 55 Ltr continuous, 120 Ltr Peak</li>
+              <li className="font-robo">FIO₂: 21% to 100%</li>
+              <li className="font-robo">Breath Rate: 10 to 60 BPM</li>
+              <li className="font-robo">I TIME: 0.1 to 12 sec</li>
+              <li className="font-robo">Pressure Trigger: 1 to (-)15 CmH₂O</li>
+              <li className="font-robo">Pressure Support: 0 to 60 CmH₂O</li>
+              <li className="font-robo">Flow Trigger: off, 1 to 20 lpm</li>
+              <li className="font-robo">Peak Flow: 1 to 180 lpm</li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-os text-lg font-semibold mb-2">Special Functions</h3>
             <ul className="list-disc list-inside space-y-1">
-              <li>Manual Breath</li>
-              <li>Screen Lock</li>
-              <li>Inspiratory Hold</li>
-              <li>Night Mode</li>
-              <li>Pneumatic Nebulizer</li>
-              <li>Tidal Volume (Delivered & Exhaled)</li>
-              <li>Minute Volume</li>
-              <li>Peak Inspiratory Pressure (PIP)</li>
-              <li>CPAP & MAP</li>
-              <li>Peak Flow</li>
-              <li>Real Time Flow</li>
-              <li>Breathe Rate / Spontaneous Rate</li>
-              <li>I Time, I:E Ratio, FIO₂</li>
-              <li>Real Time Waveform: Pressure, Flow, Volume</li>
-              <li>Loops: PV Loop, FV Loop</li>
-              <li>Trends: up to 12 hrs</li>
-              <li>Plateau Pressure</li>
+              <li className="font-robo">Manual Breath</li>
+              <li className="font-robo">Screen Lock</li>
+              <li className="font-robo">Inspiratory Hold</li>
+              <li className="font-robo">Night Mode</li>
+              <li className="font-robo">Pneumatic Nebulizer</li>
+              <li className="font-robo">Tidal Volume (Delivered & Exhaled)</li>
+              <li className="font-robo">Minute Volume</li>
+              <li className="font-robo">Peak Inspiratory Pressure (PIP)</li>
+              <li className="font-robo">CPAP & MAP</li>
+              <li className="font-robo">Peak Flow</li>
+              <li className="font-robo">Real Time Flow</li>
+              <li className="font-robo">Breathe Rate / Spontaneous Rate</li>
+              <li className="font-robo">I Time, I:E Ratio, FIO₂</li>
+              <li className="font-robo">Real Time Waveform: Pressure, Flow, Volume</li>
+              <li className="font-robo">Loops: PV Loop, FV Loop</li>
+              <li className="font-robo">Trends: up to 12 hrs</li>
+              <li className="font-robo">Plateau Pressure</li>
             </ul>
           </div>
         </div>

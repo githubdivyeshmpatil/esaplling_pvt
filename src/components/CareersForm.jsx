@@ -34,14 +34,14 @@ const CareersForm = () => {
       onSubmit={sendEmail}
       className="space-y-4 p-4 max-w-md mx-auto bg-white shadow-md rounded-md mt-10"
     >
-      <h2 className="text-2xl font-bold text-center mb-4">Careers Form</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 font-robo">Careers Form</h2>
 
       <input
         type="text"
         name="name"
         placeholder="Full Name"
         required
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded font-robo"
       />
 
       <input
@@ -49,7 +49,7 @@ const CareersForm = () => {
         name="email"
         placeholder="Email Address"
         required
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded font-robo"
       />
 
       <input
@@ -57,22 +57,21 @@ const CareersForm = () => {
         name="position"
         placeholder="Position Applying For"
         required
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded font-robo"
       />
 
       <textarea
         name="message"
         placeholder="Cover Letter / Message"
         rows="4"
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded font-robo"
       />
 
       <button
         type="submit"
         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
       >
-        Sub
-        
+        Submit
       </button>
     </form>
   );

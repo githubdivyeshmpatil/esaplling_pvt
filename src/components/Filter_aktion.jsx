@@ -22,31 +22,31 @@ function Filter_aktion() {
 
         {/* Description */}
         <div className="bg-gray-100 p-6 md:p-10 rounded-xl shadow-md text-gray-800 font-robo space-y-4">
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             <strong className="font-os text-black">Aktion</strong> is a powerful air purification technology that disinfects the air by emitting UV rays using Ultra Violet Germicidal Irradiation technology by emitting UV rays in the range of 254 nm (UV-C band). Designed and developed by ESAPLLING, these rays disrupt the DNA of the micro-organisms, preventing them from reproducing, and thereby killing germicides.
           </p>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Several options are available for its implementation in projects, such as standalone units, on coil, in-duct or in-room.
           </p>
 
           {/* Features Heading */}
           <h2 className="text-xl font-semibold mt-6 mb-4 font-os">Specifications & Features</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>Control Infection</li>
-            <li>Cost Effective</li>
-            <li>Ready to Use</li>
-            <li>Saves Energy</li>
-            <li>Proven Technology</li>
-            <li>Designed in accordance with ASHRAE recommendation for COVID</li>
-            <li>Ultraviolet Air and Surface Treatment standards</li>
-            <li>Ultra Violet Germicidal Irradiation</li>
-            <li>Dual lamp & dual ended lamp holder for enhanced safety and vibration protection</li>
-            <li>Inbuilt electronic type ballast with life rated for more than 15000 starts</li>
-            <li>Automatically regulate the UV Lamps when the airflow is detected</li>
-            <li>Laboratories</li>
-            <li>Food & Beverage Industry</li>
-            <li>Clean Room Applications</li>
-            <li>Offices</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Control Infection</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Cost Effective</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Ready to Use</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Saves Energy</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Proven Technology</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Designed in accordance with ASHRAE recommendation for COVID</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Ultraviolet Air and Surface Treatment standards</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Ultra Violet Germicidal Irradiation</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Dual lamp & dual ended lamp holder for enhanced safety and vibration protection</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Inbuilt electronic type ballast with life rated for more than 15000 starts</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Automatically regulate the UV Lamps when the airflow is detected</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Laboratories</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Food & Beverage Industry</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Clean Room Applications</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Offices</li>
           </ul>
         </div>
       </section>

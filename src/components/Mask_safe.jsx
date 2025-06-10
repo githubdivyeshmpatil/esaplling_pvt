@@ -21,27 +21,27 @@ function Mask_safe() {
           </h2>
 
           {/* Model Info */}
-          <p className="mb-4 text-gray-700 font-robo text-justify">
+          <p className="mb-4 text-gray-700 font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
             <span className="font-semibold">Specification:</span> Model : N95 4210 / 4210V || N95 6200 / 6200V || N95 9210 / 9210V || 3Ply
           </p>
 
           {/* Intro */}
-          <p className="mb-4 font-robo text-justify">
+          <p className="mb-4 font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
             <span className="font-semibold">Breath Safe</span>, an <span className="font-semibold">ESAPLLING</span> brand, intends to support the national effort and #fightagainstCOVID-19 pandemic. This product serves multiple industrial applications.
           </p>
 
           {/* Description */}
-          <p className="mb-4 font-robo text-justify">
+          <p className="mb-4 font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
             An N95 respirator is a protective device designed for a tight facial fit and highly efficient airborne particle filtration. The respirator's edges form a seal around the nose and mouth. Surgical N95 respirators, a subset of N95 Filtering Facepiece Respirators (FFRs), are commonly used in healthcare environments.
           </p>
 
           {/* Mask Testing Info */}
-          <p className="mb-4 font-robo text-justify">
+          <p className="mb-4 font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
             Surgical masks and N95s are tested for fluid resistance, particulate and bacterial filtration efficiency, flammability, and biocompatibility. These masks should not be shared or reused.
           </p>
 
           {/* WHO Recommendations */}
-          <p className="mb-4 font-robo text-justify">
+          <p className="mb-4 font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
             WHO recommends FFP2 or FFP3 masks during infectious outbreaks like SARS, Avian Flu, and COVID-19.
           </p>
 
@@ -51,13 +51,13 @@ function Mask_safe() {
               These Masks are Generally Used in:
             </h3>
             <ul className="list-disc pl-5 space-y-1 text-gray-700 font-robo text-justify">
-              <li><span className="font-semibold">Pharmaceuticals:</span> Material handling, protection against COVID-19</li>
-              <li><span className="font-semibold">Agriculture:</span> Pesticides, grain dust, pollen, insecticide handling</li>
-              <li><span className="font-semibold">Construction:</span> Sanding, drilling, cutting, carpentry</li>
-              <li><span className="font-semibold">Ceramics:</span> Material handling, molding, raw material storage</li>
-              <li><span className="font-semibold">Mining:</span> Drilling, material handling</li>
-              <li><span className="font-semibold">Textiles:</span> Spinning, weaving</li>
-              <li><span className="font-semibold">Food & Beverages:</span> Food processing and raw material handling</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Pharmaceuticals:</span> Material handling, protection against COVID-19</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Agriculture:</span> Pesticides, grain dust, pollen, insecticide handling</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Construction:</span> Sanding, drilling, cutting, carpentry</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Ceramics:</span> Material handling, molding, raw material storage</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Mining:</span> Drilling, material handling</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Textiles:</span> Spinning, weaving</li>
+              <li className="text-base sm:text-base md:text-lg lg:text-lg"><span className="font-semibold">Food & Beverages:</span> Food processing and raw material handling</li>
             </ul>
           </div>
 

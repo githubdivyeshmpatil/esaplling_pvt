@@ -39,23 +39,23 @@ function Blog() {
       </div>
 
       <div className="px-4 py-10 md:px-16 bg-gray-50 text-gray-800">
-        <h1 className="text-3xl font-bold text-center mb-10">Our Latest Blogs</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 font-robo">Our Latest Blogs</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog, index) => (
             <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
               <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
+                <h2 className="text-xl md:text-2xl font-semibold mb-2 font-robo">{blog.title}</h2>
                 {index === 0 ? (
                   <a
                     href={blog.pdf}
                     download
-                    className="text-blue-600 hover:underline"
+                    className="text-blue-600 hover:underline font-robo"
                   >
                     {blog.description}
                   </a>
                 ) : (
-                  <p className="text-gray-600">{blog.description}</p>
+                  <p className="text-gray-600 font-robo">{blog.description}</p>
                 )}
               </div>
             </div>

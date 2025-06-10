@@ -6,9 +6,7 @@ function Acquelation_bg() {
   const [showSecond, setShowSecond] = useState(false);
 
   useEffect(() => {
-   useEffect(() => {
-          window.scrollTo(0, 0);
-        }, []);
+    window.scrollTo(0, 0);
     const firstTimer = setTimeout(() => {
       setShowFirst(true);
     }, 500); // Show first after 0.5s
@@ -58,16 +56,17 @@ function Acquelation_bg() {
           left: "50%",
           transform: "translate(-50%, -50%)",
           textAlign: "center",
-          fontSize: "2.5rem",
-          fontWeight: "bold",
-          color: "white",
         }}
       >
         <div
           style={{
             opacity: showFirst ? 1 : 0,
             transition: "opacity 0.5s ease-in",
+            fontSize: "2.5rem", // You can adjust this for responsiveness
+            fontWeight: "bold",
+            color: "white",
           }}
+          className="font-robo text-base sm:text-base md:text-2xl lg:text-3xl"
         >
           ACQUISITION
         </div>
@@ -76,7 +75,11 @@ function Acquelation_bg() {
             opacity: showSecond ? 1 : 0,
             transition: "opacity 0.5s ease-in",
             marginTop: "0.5rem",
+            fontSize: "2.5rem", // You can adjust this for responsiveness
+            fontWeight: "bold",
+            color: "white",
           }}
+          className="font-robo text-base sm:text-base md:text-2xl lg:text-3xl"
         >
           ESAPLLING
         </div>

@@ -255,7 +255,7 @@ const boxes = [
 ,
 {
   title: "EXECUTION",
-  image: "/img/execution.png",
+  image: "/img/exuca.jpg",
   content: (
     <div className="text-justify space-y-4 text-sm sm:text-base leading-relaxed">
       <p>
@@ -298,7 +298,7 @@ const boxes = [
 }
 ,  {
   title: "VALIDATION",
-  image: "/img/validation.png",
+  image: "/img/validation.jpg",
   content: (
     <div className="text-justify space-y-4 text-sm sm:text-base leading-relaxed">
       <p>
@@ -336,7 +336,7 @@ const boxes = [
 ,
 {
   title: "O&M",
-  image: "/img/om.png",
+  image: "/img/oandm.jpg",
   content: (
     <div className="text-justify space-y-4 text-sm sm:text-base leading-relaxed">
       <p>

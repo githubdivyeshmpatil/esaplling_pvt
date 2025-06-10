@@ -19,13 +19,13 @@ function ElevatorAirConditioning() {
           Elevator AC
         </h1>
 
-        <p className="mb-6 text-gray-700 leading-relaxed text-justify font-robo">
+        <p className="mb-6 text-gray-700 leading-relaxed text-justify font-robo text-base sm:text-lg">
           Air Conditioning for lifts is an essential requirement to keep an ambient temperature and to circulate fresh air in the confined space of the cab. Air conditioning for lifts and air conditioning for elevators ensures the cab will be cool in summer months and warm in the winter time, keeping fresh air circulating. The air conditioning for lifts should not be a marked difference to the building temperature. Air conditioning for elevators can be remote controlled in many instances by the building facilities management team, keeping the air stable. The air conditioning of elevators causes heat from the cooling process to dissipate into the lift shaft. The lift cab is not air tight so some heat can return into the cab reducing the cooling effect.
         </p>
 
         <h2 className="text-2xl font-semibold mb-4 font-os">Elevator Air Conditioner Main Features</h2>
 
-        <ul className="list-disc list-inside space-y-4 text-gray-700 text-justify font-robo">
+        <ul className="list-disc list-inside space-y-4 text-gray-700 text-justify font-robo text-base sm:text-lg">
           <li>
             <strong className='font-os text-black'>No Water Drop:</strong> No electricity heating in vaporizing the condensation water, safe and electricity saving; Multiple protection from water spilling over; Efficient heat-insulation soft duct, ensuring no frost on the surface; High quality anti-rust bottom water pan.
           </li>
@@ -41,7 +41,7 @@ function ElevatorAirConditioning() {
         </ul>
 
         <h3 className="text-xl font-semibold mt-8 mb-4 font-os">Features:</h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 text-justify font-robo">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-justify font-robo text-base sm:text-lg">
           <li>Lightweight, I03-1b. Unit mounts easily in any position on top of the elevator.</li>
           <li>Self-contained, packaged design for easy installation.</li>
           <li>Compact rotary compressor saves space and weight.</li>

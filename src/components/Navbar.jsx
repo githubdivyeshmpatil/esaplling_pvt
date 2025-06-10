@@ -166,7 +166,7 @@ export default function Navbar() {
       name: "HVAC",
       link: "/",
       dropdown: {
-        title: "HVAC",
+        title: "ESAPLLING® HVAC",
         titleLink: "/hvac",
         columns: [
           {
@@ -233,6 +233,7 @@ export default function Navbar() {
           },
           {
             title: "Filter",
+            titleLink: "/filter/filter_ephox",
             items: [
               { name: "Filter Ephox", link: "/filter/filter_ephox" },
               { name: "Filter Afox", link: "/filter/filter_aphox" },
@@ -247,7 +248,7 @@ export default function Navbar() {
       name: "Automotive",
       link: "/",
       dropdown: {
-        title: "Automotive",
+        title: "ESAPLLING® Automotive",
         columns: [
           {
             title: "Product",
@@ -264,6 +265,7 @@ export default function Navbar() {
           },
           {
             title: "Harness",
+            titleLink: "/automotive/automotive_page",
             items: [
               { name: "Automotive", link: "/automotive/automotive_page" },
               {
@@ -277,6 +279,7 @@ export default function Navbar() {
           },
           {
             title: "Auto Air Conditioning",
+              titleLink: "/automotive/autoaircondition",
             items: [
               {
                 name: "Coach Airconditioning",
@@ -299,7 +302,7 @@ export default function Navbar() {
       name: "Biomedical",
       link: "/",
       dropdown: {
-        title: "Biomedical",
+        title: "ESAPLLING® Biomedical",
         columns: [
           {
             title: "Life Science devices",
@@ -343,7 +346,7 @@ export default function Navbar() {
       name: "OEM",
       link: "/",
       dropdown: {
-        title: "OEM",
+        title: "ESAPLLING® OEM",
         columns: [
           {
             title: "Products",
@@ -361,7 +364,7 @@ export default function Navbar() {
       name: "Services",
       link: "/",
       dropdown: {
-        title: "Services",
+        title: "ESAPLLING® Services",
         columns: [
           {
             title: "Featured",
@@ -403,7 +406,7 @@ export default function Navbar() {
       name: "Innovation",
       link: "/",
       dropdown: {
-        title: "Innovation",
+        title: "ESAPLLING® Innovation",
         columns: [
           {
             items: [
@@ -437,7 +440,7 @@ export default function Navbar() {
       name: "News",
       link: "/",
       dropdown: {
-        title: "News",
+        title: "ESAPLLING® News",
         columns: [
           {
             items: [
@@ -469,7 +472,7 @@ export default function Navbar() {
       name: "Investor",
       link: "/",
       dropdown: {
-        title: "Investor",
+        title: "ESAPLLING® Investor",
         columns: [
           {
             title: "Investor",
@@ -482,7 +485,7 @@ export default function Navbar() {
       name: "Support",
       link: "/",
       dropdown: {
-        title: "Support",
+        title: "ESAPLLING® Support",
         columns: [
           {
             title: "Support",
@@ -538,7 +541,7 @@ export default function Navbar() {
         title: "ESAPLLING® carrier",
         columns: [
           {
-            title: "carrier",
+            title: "Carrier",
             items: [
               { name: "Carrier-Portls", link: "/carrier" },
               { name: "Campus Connect", link: "/carrier" },
@@ -594,7 +597,7 @@ export default function Navbar() {
         title: "ESAPLLING® Contact",
         columns: [
           {
-            title: "contact-us",
+            title: "Contact-us",
             items: [
               { name: "Contact-us", link: "/contact/contact_us" },
           
@@ -653,7 +656,7 @@ export default function Navbar() {
           <img src={logo} alt="Logo" className="h-16 w-16 object-contain" />
         </div>
 
-        <ul className="hidden md:flex items-center space-x-6 text-sm font-medium font-robo">
+        <ul className="hidden md:flex items-center space-x-6 text-base font-robo">
           {navItems.map((item, index) => (
             <li
               key={index}
@@ -661,7 +664,7 @@ export default function Navbar() {
               onMouseEnter={() => item.dropdown && setActiveDropdown(index)}
               onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
             >
-              <Link to={item.link} className="hover:text-blue-900 py-2 block">
+              <Link to={item.link} className="hover:text-blue-900 py-2 block text-base font-robo">
                 {item.name}
               </Link>
 
@@ -676,7 +679,7 @@ export default function Navbar() {
                     <div className="grid grid-cols-3 gap-x-10 gap-y-2 flex-1">
                       {item.dropdown.columns[0].items.map((subItem, subIndex) => (
                         !subItem.isContact ? (
-                          <Link key={subIndex} to={subItem.link} className="text-black hover:text-blue-700 font-robo text-base">
+                          <Link key={subIndex} to={subItem.link} className="text-gray-600 hover:text-gray-900 font-robo text-sm">
                             {subItem.name}
                           </Link>
                         ) : null
@@ -709,11 +712,11 @@ export default function Navbar() {
                                 {/* If column has a title, render as a link if first item has a link */}
                                 {column.title ? (
                                   column.titleLink ? (
-                                    <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
+                                    <Link to={column.titleLink} className="font-medium mb-1 text-lg text-blue-700 hover:underline block">
                                       {column.title}
                                     </Link>
                                   ) : (
-                                    <h4 className="mb-3 font-os">{column.title}</h4>
+                                    <h4 className="mb-3 font-os text-lg">{column.title}</h4>
                                   )
                                 ) : null}
                                 <ul className="space-y-2">
@@ -721,7 +724,7 @@ export default function Navbar() {
                                     <li key={subIndex}>
                                       <Link
                                         to={subItem.link}
-                                        className="text-gray-600 hover:text-gray-900 font-robo"
+                                        className="text-gray-600 hover:text-gray-900 font-robo text-sm"
                                       >
                                         {subItem.name}
                                       </Link>
@@ -937,12 +940,12 @@ export default function Navbar() {
 
           <li className="relative group cursor-pointer">
             <select
-      onChange={(e) => changeLanguage(e.target.value)}
-      className="p-2 border rounded"
-    >
-      <option value="en">English</option>
-      <option value="hi">हिन्दी</option>
-    </select>
+              onChange={(e) => changeLanguage(e.target.value)}
+              className="p-2 border rounded font-robo text-base"
+            >
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+            </select>
           </li>
         </ul>
 
@@ -968,12 +971,12 @@ export default function Navbar() {
             <X size={28} />
           </button>
         </div>
-        <ul className="p-4 space-y-2 text-sm font-medium text-black overflow-y-auto h-[calc(100%-60px)]">
+        <ul className="p-4 space-y-2 text-base font-robo text-black overflow-y-auto h-[calc(100%-60px)]">
           {navItems.map((item, index) => (
-            <li key={index} className="border-b border-gray-100 pb-2 font-os ">
+            <li key={index} className="border-b border-gray-100 pb-2 font-robo">
               <Link
                 to={item.link}
-                className="hover:text-gray-500 py-2 block"
+                className="hover:text-gray-500 py-2 block font-robo text-base"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -981,7 +984,7 @@ export default function Navbar() {
 
               {item.dropdown && (
                 <div className="pl-4 py-2">
-                  <h4 className="font-semibold mb-2">{item.dropdown.title}</h4>
+                  <h4 className="font-semibold mb-2 font-robo text-lg">{item.dropdown.title}</h4>
                   {item.dropdown.columns.map((column, colIndex) => (
                     <div key={colIndex} className="mb-3">
                       {/* Replace title with specific images for certain columns */}
@@ -1005,7 +1008,7 @@ export default function Navbar() {
                           <li key={subIndex}>
                             <Link
                               to={subItem.link}
-                              className="text-gray-600 hover:text-gray-900 text-sm"
+                              className="text-gray-600 hover:text-gray-900 text-sm font-robo"
                               onClick={() => setIsOpen(false)}
                             >
                               {subItem.name}
@@ -1021,20 +1024,20 @@ export default function Navbar() {
           ))}
 
           <div className="pt-4 border-t">
-            <p className="text-xs text-gray-500">Select Language</p>
+            <p className="text-xs text-gray-500 font-robo">Select Language</p>
             <ul className="space-y-2 mt-2">
               <li>
-                <Link to="#" className="hover:text-gray-500">
+                <Link to="#" className="hover:text-gray-500 font-robo">
                   English
                 </Link>
               </li>
               <li>
-                <Link to="#" className="hover:text-gray-500">
+                <Link to="#" className="hover:text-gray-500 font-robo">
                   Hindi
                 </Link>
               </li>
               <li>
-                <Link to="#" className="hover:text-gray-500">
+                <Link to="#" className="hover:text-gray-500 font-robo">
                   Spanish
                 </Link>
               </li>

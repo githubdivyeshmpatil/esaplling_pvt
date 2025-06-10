@@ -25,8 +25,8 @@ function Automotive_page() {
             <span className="font-medium">Medical Equipment</span>, and{" "}
             <span className="font-medium">Healthcare</span> domains.
           </p>
-          <p className="text-gray-600 text-base md:text-lg mt-4 leading-relaxed text-justify">
-            We are certified by the world’s leading quality assurance and certification authorities and affiliated bodies.
+          <p className="text-gray-600 text-base md:text-lg mt-4 leading-relaxed text-justify font-robo">
+            We are certified by the world's leading quality assurance and certification authorities and affiliated bodies.
           </p>
         </div>
 

@@ -16,7 +16,7 @@ function Autoaircondition() {
 
       <div className="min-h-screen bg-gray-50 p-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-blue-700 mb-6 font-os">
+          <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-6 font-os">
             Automobile Air Conditioning System
           </h1>
 
@@ -29,7 +29,7 @@ function Autoaircondition() {
             {/* Card 1 */}
             <div className="bg-blue-500 shadow-md rounded-2xl p-5">
               <h2 className="text-xl font-semibold text-black mb-2 font-os">Cooling & Cleaning</h2>
-              <p className="text-white font-robo">
+              <p className="text-white font-robo text-base sm:text-base md:text-base lg:text-base">
                 The system cools the incoming air and removes dust and other pollutants,
                 improving the comfort and health of vehicle occupants.
               </p>
@@ -38,7 +38,7 @@ function Autoaircondition() {
             {/* Card 2 */}
             <div className="bg-blue-500 shadow-md rounded-2xl p-5">
               <h2 className="text-xl font-semibold text-black mb-2 font-os">Humidity Control</h2>
-              <p className="text-white font-robo">
+              <p className="text-white font-robo text-base sm:text-base md:text-base lg:text-base">
                 Reduces moisture content in the air, preventing fogging and improving overall comfort.
               </p>
             </div>
@@ -46,7 +46,7 @@ function Autoaircondition() {
             {/* Card 3 */}
             <div className="bg-blue-500 shadow-md rounded-2xl p-5">
               <h2 className="text-xl font-semibold text-black mb-2 font-os">Air Circulation</h2>
-              <p className="text-white font-robo">
+              <p className="text-white font-robo text-base sm:text-base md:text-base lg:text-base">
                 Circulates air within the cabin to maintain consistent temperature and quality.
               </p>
             </div>
@@ -54,7 +54,7 @@ function Autoaircondition() {
             {/* Card 4 */}
             <div className="bg-blue-500 shadow-md rounded-2xl p-5">
               <h2 className="text-xl font-semibold text-black mb-2 font-os">Performance Assessment</h2>
-              <p className="text-white font-robo">
+              <p className="text-white font-robo text-base sm:text-base md:text-base lg:text-base">
                 Uses manifold and hand valves to purge refrigerant, remove moisture, and recharge the system.
               </p>
             </div>
@@ -62,7 +62,7 @@ function Autoaircondition() {
             {/* Card 5 */}
             <div className="bg-blue-500 shadow-md rounded-2xl p-5">
               <h2 className="text-xl font-semibold text-black mb-2 font-os">Gauge Monitoring</h2>
-              <p className="text-white font-robo">
+              <p className="text-white font-robo text-base sm:text-base md:text-base lg:text-base">
                 Modern systems use two or more gauges for pressure monitoring and precise control.
               </p>
             </div>

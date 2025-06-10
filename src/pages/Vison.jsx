@@ -19,7 +19,7 @@ function Vison() {
               {t('vision.title')}
             </h2>
             <div className="text-gray-800 text-md sm:text-lg space-y-6 font-robo">
-              <p>
+              <p className="text-base sm:text-base md:text-lg lg:text-lg">
                 <span className="font-semibold text-[#000066]">{t('vision.esaplling')}</span>, a
                 leading firm that optimizes technology and solutions through
                 electronics, aims to be part of everyone's life. The company's
@@ -28,13 +28,13 @@ function Vison() {
                 establishing a landmark of success in critical sectors.
               </p>
 
-              <p>
+              <p className="text-base sm:text-base md:text-lg lg:text-lg">
                 ESAPLLING started its <strong>{t('vision.biomedicalVertical')}</strong> during
                 the 2020 pandemic to support global innovation and produce
                 Biomedical and Personal Protective Equipment.
               </p>
 
-              <p>
+              <p className="text-base sm:text-base md:text-lg lg:text-lg">
                 The company provides quality <strong>{t('vision.consumerElectronics')}</strong>{" "}
                 at affordable prices, targeting low and middle-income groups. Despite
                 its rapid growth, ESAPLLING maintains its core philosophy:{" "}
@@ -43,14 +43,14 @@ function Vison() {
                 </em>
               </p>
 
-              <p>
+              <p className="text-base sm:text-base md:text-lg lg:text-lg">
                 Success is driven by their clients' satisfaction. With established
                 resources, strong industry knowledge, and solid supplier
                 relationships, ESAPLLING offers cost-effective solutions for
                 electronics manufacturing needs across India.
               </p>
 
-              <p>
+              <p className="text-base sm:text-base md:text-lg lg:text-lg">
                 By implementing <strong>{t('vision.electronicSolutions')}</strong> in domestic
                 engineering industries, corporate and retail businesses, ESAPLLING
                 has overcome challenges through a{" "}
@@ -58,7 +58,7 @@ function Vison() {
                 product-centric model.
               </p>
 
-              <p>
+              <p className="text-base sm:text-base md:text-lg lg:text-lg">
                 They pioneered the highest-ever <strong>{t('vision.warrantyPeriods')}</strong> in
                 all product categories to enhance customer satisfaction. With a{" "}
                 <strong>{t('vision.panIndiaServiceNetwork')}</strong> and toll-free support,

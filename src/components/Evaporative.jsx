@@ -20,7 +20,7 @@ function Evaporative() {
       <div className="space-y-8">
         <div>
           <h2 className="text-xl font-semibold mb-2 font-os">Cooling Capacity:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Industrial settings often require a significant amount of cooling
             capacity. It's essential to choose an evaporative cooler with the
             appropriate cooling capacity to meet the needs of your facility.
@@ -30,7 +30,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Ducted Systems:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             In industrial environments, ducted evaporative cooling systems are
             often used. These systems distribute cooled air through a network
             of ducts, allowing for even cooling across large areas. Ducted
@@ -41,7 +41,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Water Source:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Evaporative coolers require a reliable source of water. Depending
             on the size of your industrial facility, you may need access to a
             significant amount of water. Make sure you have the necessary
@@ -51,7 +51,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Maintenance:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Regular maintenance is crucial to keep industrial evaporative
             coolers operating efficiently. This includes cleaning and
             replacing pads, checking the water distribution system, and
@@ -61,7 +61,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Air Quality:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Evaporative coolers work by drawing in outdoor air and passing it
             through water-saturated pads. This process can introduce outdoor
             pollutants and allergens into the indoor environment. Consider air
@@ -72,7 +72,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Climate Considerations:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Evaporative coolers are most effective in dry, arid climates with
             low humidity. They may be less efficient in areas with high
             humidity because the cooling effect depends on the evaporation of
@@ -84,7 +84,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Energy Efficiency:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Evaporative coolers are known for their energy efficiency compared
             to traditional air conditioning systems. They consume less
             electricity, which can lead to cost savings in industrial settings
@@ -94,7 +94,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Control Systems:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Some industrial evaporative coolers come with advanced control
             systems that allow you to adjust settings remotely, set timers, and
             monitor performance. These features can help you optimize cooling
@@ -104,7 +104,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Compliance and Regulations:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             Check local regulations and environmental standards to ensure
             compliance when using evaporative coolers in industrial settings.
             There may be water usage restrictions or environmental guidelines
@@ -114,7 +114,7 @@ function Evaporative() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2  font-os">Backup Cooling:</h2>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             In extremely hot or humid conditions, evaporative coolers may not
             provide sufficient cooling. Consider having backup cooling
             solutions in place, such as air conditioning or additional cooling

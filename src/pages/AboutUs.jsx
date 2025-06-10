@@ -23,10 +23,10 @@ const AboutUs = () => {
 
         {/* Founding Story */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-2 text-blue-700  font-os">
+          <h2 className="text-2xl font-semibold mb-2 text-blue-700 font-os">
             🔹Innovation from the day of inception{" "}
           </h2>
-          <p className="text-base font-md text-black text-justify">
+          <p className="text-base font-md text-black text-justify font-robo">
             Our journey began with a vision to innovate and impact the industry.
             Founded by passionate individuals, we aimed to bring cutting-edge
             solutions that solve real-world problems.Being ESAPLLING, we apply
@@ -48,9 +48,9 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row items-center p-4 max-w-7xl mx-auto  md:space-x-8 space-y-6 md:space-y-0">
           {/* Left Column - Text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl font-semibold mb-2 text-blue-700  font-os">🔹 Founding Story</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-blue-700 font-os">🔹 Founding Story</h2>
 
-            <p className="text-base text-black text-justify">
+            <p className="text-base text-black text-justify font-robo">
               Our journey began with a vision to innovate and impact the
               industry. Founded by passionate individuals, we aimed to bring
               cutting-edge solutions that solve real-world problems.Being
@@ -97,14 +97,14 @@ const AboutUs = () => {
   <div className="w-full md:w-1/2 md:text-left">
     <h2 className="text-2xl font-bold text-[#000066] mb-2 font-os">ESAPLLING Pvt Ltd</h2>
     <h3 className="text-xl font-semibold text-black mb-1 font-robo">The CEO. Satya Patri | Director | </h3>
-    <p className="text-sm text-gray-500 mb-4">Head of Operations</p>
+    <p className="text-sm text-gray-500 mb-4 font-robo">Head of Operations</p>
     <p className="text-base text-gray-800 text-justify font-robo">
 At ESAPLLING Pvt. Ltd., we are driven by a singular vision — to understand real-world market challenges and transform them through innovative and accessible technology. Our mission is to bring cutting-edge solutions into the lives of everyday people by making them affordable, scalable, and efficient.
 
 We go beyond conventional design services. ESAPLLING is a Design, Build, Operate, and Transfer (DBOT) enabler. Our end-to-end approach empowers businesses by engineering sustainable, high-performing systems, products, and infrastructure.    </p>
       <h3 className="text-xl font-semibold text-black mt-3 font-os">Our focus lies in: </h3>
 
- <ul className="list-disc text-[#000066] mt-3 font-medium pl-5 space-y-2">
+ <ul className="list-disc text-[#000066] mt-3 font-medium pl-5 space-y-2 font-robo">
  
   <li>Reimagining and optimizing product-service frameworks</li>
   <li>Automating operations through AI, IoT, and modern tools
@@ -129,8 +129,8 @@ We go beyond conventional design services. ESAPLLING is a Design, Build, Operate
   
         {/* Core Values */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-2">🔹 Core Values</h2>
-          <ul className="list-disc pl-5 text-gray-600 space-y-1">
+          <h2 className="text-2xl font-semibold mb-2 font-robo">🔹 Core Values</h2>
+          <ul className="list-disc pl-5 text-gray-600 space-y-1 font-robo">
             <li>Innovation</li>
             <li>Integrity</li>
             <li>Customer-Centric</li>
@@ -140,8 +140,8 @@ We go beyond conventional design services. ESAPLLING is a Design, Build, Operate
 
         {/* Company Culture */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-2">🔹 Company Culture</h2>
-          <p className="text-base text-gray-600">
+          <h2 className="text-2xl font-semibold mb-2 font-robo">🔹 Company Culture</h2>
+          <p className="text-base text-gray-600 font-robo">
             We nurture a collaborative and inclusive culture where creativity
             and teamwork thrive. Our team is empowered to learn, lead, and grow
             every day.

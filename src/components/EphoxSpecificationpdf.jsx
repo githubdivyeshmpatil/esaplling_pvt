@@ -13,15 +13,15 @@ function EphoxSpecificationpdf() {
       </div>
 
       <div className="bg-gray-100 p-6 md:p-10 rounded-xl shadow-md">
-        <p className="text-gray-800 mb-4">
+        <p className="text-gray-800 mb-4 font-robo">
           <strong className='text-black font-os' >Ephox</strong>, is a filter powered by ESAPLLING with Oxidation, technically defined as the losing or the giving up of an electron...
         </p>
-        <p className="text-gray-800 mb-4">
+        <p className="text-gray-800 mb-4 font-robo">
           Ephox is a hybrid active air purification technology that produces a family of highly Reactive Oxygen Species...
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-4 font-os">Features</h2>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 font-robo">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 font-robo text-base sm:text-lg">
           <li>Highly effective against Microbes (Bacteria, Virus, Mold, Allergens)</li>
           <li>VOCs & Gasses (Formaldehyde, etc.)</li>
           <li>Particles (Dust, Dander, Pollen)</li>

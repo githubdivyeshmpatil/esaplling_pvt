@@ -6,8 +6,8 @@ function Ac(props) {
   }, []);
   return (
    <section className="bg-white py-10 px-4 text-center">
-  <h2 className="text-2xl md:text-3xl font-semibold mb-4">{props.Ac}</h2>
-  <p className="max-w-4xl mx-auto text-gray-700 mb-10 text-justify font-robo">
+  <h2 className="text-base sm:text-base md:text-2xl lg:text-3xl font-semibold mb-4">{props.Ac}</h2>
+  <p className="max-w-4xl mx-auto text-gray-700 mb-10 text-justify font-robo text-base sm:text-base md:text-base lg:text-base">
     ESAPLLING  are designed to meet all kinds of  needs for
     the hosing segment. Whether it is an expansive living space, small urban
     room, an outdoor area, a shop, office, showroom or banquet hall. We have
@@ -21,7 +21,7 @@ function Ac(props) {
         alt="Best in Class Quality"
         className="w-20 h-20 mb-4"
       />
-      <p className="font-medium font-os">Best in Class Quality</p>
+      <p className="font-medium font-robo text-base sm:text-base md:text-base lg:text-base">Best in Class Quality</p>
     </div>
     {/* Item 2 */}
     <div className="flex flex-col items-center">
@@ -30,7 +30,7 @@ function Ac(props) {
         alt="Warranty"
         className="w-20 h-20 mb-4"
       />
-      <p className="font-medium font-os">Warranty &amp; Door Step Service</p>
+      <p className="font-medium font-robo text-base sm:text-base md:text-base lg:text-base">Warranty &amp; Door Step Service</p>
     </div>
     {/* Item 3 */}
     <div className="flex flex-col items-center">
@@ -39,7 +39,7 @@ function Ac(props) {
         alt="Make in India"
         className="w-22 h-20 mb-4"
       />
-      <p className="font-medium font-os">Make in India</p>
+      <p className="font-medium font-robo text-base sm:text-base md:text-base lg:text-base">Make in India</p>
     </div>
     {/* Item 4 */}
     <div className="flex flex-col items-center">
@@ -48,7 +48,7 @@ function Ac(props) {
         alt="Help Desk"
         className="w-20 h-20 mb-4"
       />
-      <p className="font-medium font-os">Help Desk &amp; Contact Center</p>
+      <p className="font-medium font-robo text-base sm:text-base md:text-base lg:text-base">Help Desk &amp; Contact Center</p>
     </div>
   </div>
 </section>

@@ -21,7 +21,7 @@ const StatsCounter = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white py-6 px-4 sm:px-8 md:px-12 lg:px-16 font-os ">
+    <div className="bg-black text-white py-6 px-4 sm:px-8 md:px-12 lg:px-16 font-robo ">
       <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 lg:gap-24">
         {stats.map((stat, index) => (
           <div
@@ -38,7 +38,7 @@ const StatsCounter = () => {
               />
               {stat.suffix}
             </h2>
-            <p className="text-md sm:text-lg  font-rajdhani mb-2">{stat.label}</p>
+            <p className="text-md sm:text-lg  font-robo mb-2">{stat.label}</p>
           </div>
         ))}
       </div>

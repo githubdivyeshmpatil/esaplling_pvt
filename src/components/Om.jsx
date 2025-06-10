@@ -22,11 +22,11 @@ function Om() {
       </h2>
 
       <div className="text-base md:text-lg text-justify space-y-4 leading-relaxed text-gray-800 font-robo">
-        <p>
+        <p className="text-base sm:text-base md:text-lg lg:text-lg">
           Experience Of Repair
         </p>
-        <p>
-          Generally, water and sanitation projects experience their most serious problems with operation and maintenance and with cost recovery aspects. Hundreds of projects around the world demonstrate how the newly built infrastructure deteriorates after the project’s termination.
+        <p className="text-base sm:text-base md:text-lg lg:text-lg">
+          Generally, water and sanitation projects experience their most serious problems with operation and maintenance and with cost recovery aspects. Hundreds of projects around the world demonstrate how the newly built infrastructure deteriorates after the project's termination.
         </p>
       </div>
     </div>
@@ -42,14 +42,14 @@ function Om() {
       {/* Left side - Text content */}
       <div className="md:w-1/2 text-black">
         <h2 className="text-3xl font-bold mb-4 font-os">Expert Service By Best Technicians</h2>
-        <p className="mb-4 leading-relaxed font-robo text-justify">
+        <p className="mb-4 leading-relaxed font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
           We strive to provide quality products at an affordable price to support our customers every day operations. We value our customers and working partnerships to ensure they receive the full benefit of their PhySep supported equipment. We are dedicated to providing professional experienced technical and maintenance support to maximize productivity and optimize plant operations and processes.
         </p>
 
         <h3 className="text-2xl font-semibold mb-3 font-os">Question</h3>
 
         <h4 className="text-xl font-semibold mb-2 font-os">Highest Standard Of Repair</h4>
-        <p className="leading-relaxed font-robo text-justify">
+        <p className="leading-relaxed font-robo text-justify text-base sm:text-base md:text-lg lg:text-lg">
           Lack of operation and maintenance strategies to maintain building energy system performance leads to increased energy use and less healthy buildings. The first step towards improved practices to take advantage of potential energy savings is to identify the O&M practices routinely performed in buildings. Understanding O&M baseline practice have two major benefits. First, baseline is the benchmark from which to measure the success of improvements in O&M practices.
         </p>
       </div>

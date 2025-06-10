@@ -26,31 +26,31 @@ function Filter_muller() {
 
         {/* Description Content */}
         <div className="bg-gray-100 p-6 md:p-10 rounded-xl shadow-md text-gray-800 font-robo space-y-4">
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             <strong className="font-os text-black">Muller</strong> – The Central Air Muller are the Cleaner Series
             which offers very low airflow resistance with high filtration efficiency on PM 2.5 & bio-aerosols. The units are effective in reducing high concentration of airborne dust ranging from 0.1 - 10.0 µm in size.
           </p>
-          <p>
+          <p className="text-base sm:text-base md:text-lg lg:text-lg font-robo">
             They provide up to high filtration efficiency on PM2.5 by cleaning the air through the principles of impingement, polarization and agglomeration. The air cleaners can integrate with a wide range of air conditioning units to centrally capture and kill airborne contaminants. The filtration system includes advanced controls for ease of installation and maintenance.
           </p>
 
           {/* Features */}
           <h2 className="text-xl font-semibold mt-6 mb-4 font-os">Specifications & Features</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>High efficiency filtration system with very low airflow resistance.</li>
-            <li>Equivalent to MERV-11 efficiency in recirculating system.</li>
-            <li>Meets LEED standard for IEQ Credit 5.1 requirement.</li>
-            <li>Green Product Certified by IGBC.</li>
-            <li>Complies US EPA acceptable limit of Ozone (within 0.05ppm levels).</li>
-            <li>Complete air quality improvement (Dust particles, microbial, chemical gases reduction).</li>
-            <li>Designed in accordance with ASHRAE recommendation for SARS-CoV-2 (COVID-19) protection.</li>
-            <li>Kill rate of micro-organisms, tested in accordance with ASTM E2149 standards.</li>
-            <li>High dust collection efficiency: at pressure drop of less than 0.20” wg @ 2.5 m/s.</li>
-            <li>Tested in accordance with ASHRAE 52.2 2017 and ISO 16890 standards.</li>
-            <li>Tested according to AHAM AC-1 and GB/T 18801 Annex C.</li>
-            <li>Interlocks with AHU through a pneumatic sensor.</li>
-            <li>Built on trap and kill technology system.</li>
-            <li>Includes cleanable type filters having a long life resulting in an efficiency up to 99.88%.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">High efficiency filtration system with very low airflow resistance.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Equivalent to MERV-11 efficiency in recirculating system.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Meets LEED standard for IEQ Credit 5.1 requirement.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Green Product Certified by IGBC.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Complies US EPA acceptable limit of Ozone (within 0.05ppm levels).</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Complete air quality improvement (Dust particles, microbial, chemical gases reduction).</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Designed in accordance with ASHRAE recommendation for SARS-CoV-2 (COVID-19) protection.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Kill rate of micro-organisms, tested in accordance with ASTM E2149 standards.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">High dust collection efficiency: at pressure drop of less than 0.20" wg @ 2.5 m/s.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Tested in accordance with ASHRAE 52.2 2017 and ISO 16890 standards.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Tested according to AHAM AC-1 and GB/T 18801 Annex C.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Interlocks with AHU through a pneumatic sensor.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Built on trap and kill technology system.</li>
+            <li className="text-base sm:text-base md:text-lg lg:text-lg font-robo">Includes cleanable type filters having a long life resulting in an efficiency up to 99.88%.</li>
           </ul>
         </div>
       </section>

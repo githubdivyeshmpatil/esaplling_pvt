@@ -58,6 +58,7 @@ import Acquisition from "./components/Acquisition";
 import TawkMessenger from "./components/TawkMessenger";
 import Contact from "./pages/Contact";
 import New_hvac from "./components/New_hvac";
+import Heating from "./components/Heating";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -162,6 +163,8 @@ function App() {
           <Route path="/consumer-electronics/washing" element={<Washing />} />
           <Route path="/consumer-electronics/geysers" element={<Geysers />} />
                     <Route path="/contact/contact_us" element={<Contact />} />
+                                        <Route path="/hvac/heating" element={<Heating />} />
+
 
        
         </Routes>

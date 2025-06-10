@@ -29,7 +29,7 @@ const cards = [
     id: 5,
     image: "/img/ventilation5.jpg",
     title: "Spiral duct",
-    text: "spiral duct systems can keep filtering, heating, cooling, and distributing conditioned air to a minimum that includes round, oval, and flat oval configurations,which exhibits a very high level of air tightness.",
+    text: "Spiral duct systems can keep filtering, heating, cooling, and distributing conditioned air to a minimum that includes round, oval, and flat oval configurations, which exhibits a very high level of air tightness.",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const cards = [
   {
     id: 8,
     image: "/img/ventilation8.jpg",
-    title: "Industrial Blowers",
+    title: "Air handler",
     text: "Air handler is usually a large metal box containing a blower, heating or cooling elements, filter racks or chambers, sound attenuators, and dampers. Air handlers usually connect to a ductwork ventilation system that distributes the conditioned air through the building and returns it to the AHU.",
   },
   {
@@ -77,23 +77,24 @@ const cards = [
     id: 13,
     image: "/img/ventilation13.jpg",
     title: "FIRE & SMOKE DAMPERS",
-    text: "Dampers are designed to prevent fire and smoke from spreading from a fire source through the ventilation system and into other parts of the building. Depending on their application, fire dampers have different fire-resistance classes called fire-duration ratings and can be installed in concrete or masonry walls and in lightweight partition walls." ,
+    text: "Dampers are designed to prevent fire and smoke from spreading from a fire source through the ventilation system and into other parts of the building. Depending on their application, fire dampers have different fire-resistance classes called fire-duration ratings and can be installed in concrete or masonry walls and in lightweight partition walls.",
   },
 ];
 
 export default function CardGrid() {
-   useEffect(() => {
-          window.scrollTo(0, 0);
-        }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-justify">
         {cards.map(({ id, image, title, text }) => (
           <div
             key={id}
-            className="bg-white rounded-lg  overflow-hidden flex flex-col"
+            className="bg-white rounded-lg overflow-hidden flex flex-col"
           >
-            <div className=" flex items-center justify-center h-48">
+            <div className="flex items-center justify-center h-48">
               <img
                 src={image}
                 alt={title}
@@ -101,8 +102,8 @@ export default function CardGrid() {
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">
-              <h3 className="text-lg font-semibold mb-2 font-os">{title}</h3>
-              <p className="text-gray-600 flex-grow font-robo">{text}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 font-os">{title}</h3>
+              <p className="text-gray-600 flex-grow font-robo text-base sm:text-base md:text-lg">{text}</p>
             </div>
           </div>
         ))}

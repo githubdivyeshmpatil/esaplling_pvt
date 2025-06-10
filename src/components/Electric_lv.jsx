@@ -13,7 +13,7 @@ function Electric_lv() {
         <BackgroundSection bgImage="/img/electrical.jpg" />
       </div>
       
-      <section className="bg-white px-4 md:px-16 py-10 text-gray-800 font-sans">
+      <section className="bg-white px-4 md:px-16 py-10 text-gray-800 font-robo">
         <div className="max-w-6xl mx-auto space-y-10 text-justify">
 
           {/* Electrical Works - Residential */}
