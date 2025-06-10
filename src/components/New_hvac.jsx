@@ -4,7 +4,7 @@
 
 
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from './Navbar';
 import BackgroundSection from './BackgroundSection'; // Optional, depending on use
 import ParallaxSingle from "./ParallaxSingle";
@@ -366,6 +366,10 @@ const boxes = [
 ];
 
 export default function TabContentSwitcher() {
+   useEffect(() => {
+            window.scrollTo(0, 0);
+          }, []);
+
   const [active, setActive] = useState(0);
 
   return (

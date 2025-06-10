@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Example translations (add more as needed)
 const resources = {
@@ -18,7 +19,9 @@ const resources = {
       "Facility": "Facility",
       "Industry": "Industry",
       "Expansions": "Expansions",
-      "Collabration": "Collaboration"
+      "Collabration": "Collaboration",
+      "Welcome": "Welcome",
+      "Contact": "Contact"
     }
   },
   hi: {
@@ -36,7 +39,9 @@ const resources = {
       "Facility": "सुविधा",
       "Industry": "उद्योग",
       "Expansions": "विस्तार",
-      "Collabration": "सहयोग"
+      "Collabration": "सहयोग",
+      "Welcome": "स्वागत है",
+      "Contact": "संपर्क करें"
     }
   },
   es: {
@@ -61,6 +66,7 @@ const resources = {
 };
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,

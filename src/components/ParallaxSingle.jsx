@@ -1,5 +1,5 @@
 import React from 'react';
-import ctmriImg from '../assets/images/paralex.jpg'
+import ctmriImg from '../assets/images/paralex3.jpg'
 
 
 function ParallaxSingle() {
