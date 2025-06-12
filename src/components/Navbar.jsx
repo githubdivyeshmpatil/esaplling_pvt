@@ -17,12 +17,11 @@ import React, { useRef } from "react";
 
 
 export default function Navbar() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
-
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -40,66 +39,34 @@ export default function Navbar() {
 
   const navItems = [
     {
-      name: "HOME",
-      link: "/",
-      dropdown: {
-        title: "Home Menu",
-        columns: [
-          {
-            
-            items: [
-              { name: "Know Us", link: "/consumer-electronics/led" },
-             
-              {
-                name: "About us",
-                link: "/about",
-              },
-              {
-                name: "Vison Mission",
-                link: "/vison",
-              },
-              {
-                name: "Acquisition",
-                link: "/acquisition",
-              },
-              {
-                name: "Certification",
-                link: "/certification",
-              },{
-                name: "Quality Assurance",
-                link: "/quality",
-              },{
-                name: "Management",
-                link: "/managment",
-              },{
-                name: "Recognition",
-                link: "/recognition",
-              },{
-                name: "Coporate",
-                link: "/corporate",
-              },{
-                name: "Facility",
-                link: "/",
-              },{
-                name: "Industry",
-                link: "/",
-              },
-              {
-                name: "Expansions",
-                link: "/",
-              },
-              {
-                name: "Collabration",
-                link: "/",
-              },
-            ],
-          },
-          
+  name: t("home"),
+  link: "/",
+  dropdown: {
+    title: t("home_menu"),
+    columns: [
+      {
+        items: [
+          { name: t("know_us"), link: "/consumer-electronics/led" },
+          { name: t("about_us"), link: "/about" },
+          { name: t("vision_mission"), link: "/vison" },
+          { name: t("acquisition"), link: "/acquisition" },
+          { name: t("certification"), link: "/certification" },
+          { name: t("quality_assurance"), link: "/quality" },
+          { name: t("management"), link: "/managment" },
+          { name: t("recognition"), link: "/recognition" },
+          { name: t("corporate"), link: "/corporate" },
+          { name: t("facility"), link: "/" },
+          { name: t("industry"), link: "/" },
+          { name: t("expansions"), link: "/" },
+          { name: t("collaboration"), link: "/" },
         ],
       },
-    },
+    ],
+  },
+}
+,
     {
-      name: "Consumer Electronics",
+      name: t("Consumer Electronics"),
       link: "/",
       dropdown: {
         title: "ESAPLLING® Electronics",
@@ -107,57 +74,42 @@ export default function Navbar() {
           {
             title: "televisions",
             items: [
-              { name: "LED", link: "/consumer-electronics/led" },
-              { name: "IPTV", link: "/consumer-electronics/iptv" },
-              {
-                name: "Interactive Panel",
-                link: "/consumer-electronics/interactive-panel",
-              },
-              {
-                name: "Video Display System",
-                link: "/consumer-electronics/video-display-system",
-              },
-              {
-                name: "Large Format Display",
-                link: "/consumer-electronics/large-format-display",
-              },
-              {
-                name: "Board Room Solution",
-                link: "/consumer-electronics/board-room-solution",
-              },
+               { name: t("led"), link: "/consumer-electronics/led" },
+    { name: t("iptv"), link: "/consumer-electronics/iptv" },
+    { name: t("interactive_panel"), link: "/consumer-electronics/interactive-panel" },
+    { name: t("video_display"), link: "/consumer-electronics/video-display-system" },
+    { name: t("large_display"), link: "/consumer-electronics/large-format-display" },
+    { name: t("board_room"), link: "/consumer-electronics/board-room-solution" },
             ],
           },
           {
-            title: "air conditioners",
+            title: t("air conditioners"),
             items: [
-              { name: "Split AC", link: "/consumer-electronics/split-ac" },
-              { name: "VRF", link: "/consumer-electronics/vrf" },
-              { name: "CHILLER", link: "/consumer-electronics/chiller" },
+              { name: t("split_ac"), link: "/consumer-electronics/split-ac" },
+    { name: t("vrf"), link: "/consumer-electronics/vrf" },
+    { name: t("chiller"), link: "/consumer-electronics/chiller" },
             ],
           },
           {
             title: "cooler",
             items: [
-              { name: "Cooler", link: "/consumer-electronics/cooler" },
-              { name: "New Desert", link: "/consumer-electronics/new-desert" },
+              { name: t("cooler"), link: "/consumer-electronics/cooler" },
+    { name: t("new_desert"), link: "/consumer-electronics/new-desert" },
             ],
           },
           {
             title: "refrigerators",
             items: [
-              {
-                name: "Refrigerators",
-                link: "/consumer-electronics/refrigerators",
-              },
+                 { name: t("refrigerators"), link: "/consumer-electronics/refrigerators" },
             ],
           },
           {
             title: "washing",
-            items: [{ name: "Washing", link: "/consumer-electronics/washing" }],
+            items: [{ name: t("washing"), link: "/consumer-electronics/washing" },],
           },
           {
             title: "geysers",
-            items: [{ name: "Geysers", link: "/consumer-electronics/geysers" }],
+            items: [ { name: t("geysers"), link: "/consumer-electronics/geysers" },],
           },
         ],
       },
@@ -617,7 +569,7 @@ export default function Navbar() {
   // Function to get grid columns class based on count & item name
   const getGridColsClass = (count, itemName) => {
     if (
-      itemName === "Consumer Electronics" ||
+      itemName === t("Consumer Electronics") ||
       itemName === "HVAC" ||
       itemName === "Automotive" ||
       itemName === "Biomedical" ||
@@ -668,9 +620,12 @@ export default function Navbar() {
                 {item.name}
               </Link>
 
-              {item.dropdown && item.name === "HOME" ? (
-                <div className={`fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 transform origin-top transition-all duration-500 ease-in-out ${activeDropdown === index ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-5 pointer-events-none"}`}>
-                  <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
+              {item.dropdown && item.name === t("home") ? (
+ <div
+    className={`fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 ${
+      activeDropdown === index ? "block" : "hidden"
+    }`}
+  >                  <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
                     {/* Logo on the left */}
                     <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
                       <img src={home_ab} alt="Logo" className="h-64 w-64 object-contain mb-2" />
@@ -693,13 +648,9 @@ export default function Navbar() {
                 item.dropdown && item.name === "Biomedical" ? (
                   <AnimatePresence>
                     {activeDropdown === index && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -40 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
-                      >
+                     <motion.div
+                     className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                   >
                         <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
                           {/* Logo on the left */}
                           <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
@@ -742,13 +693,9 @@ export default function Navbar() {
                   item.dropdown && item.name === "Automotive" ? (
                     <AnimatePresence>
                       {activeDropdown === index && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -40 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -40 }}
-                          transition={{ duration: 0.5, ease: "easeInOut" }}
-                          className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
-                        >
+                       <motion.div
+                       className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                     >
                           <div className="max-w-7xl mx-auto py-4 px-6">
                             <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
                             <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
@@ -787,13 +734,9 @@ export default function Navbar() {
                     item.dropdown && item.name === "HVAC" ? (
                       <AnimatePresence>
                         {activeDropdown === index && (
-                          <motion.div
-                            initial={{ opacity: 0, y: -40 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -40 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
-                          >
+                         <motion.div
+                         className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                       >
                             <div className="max-w-7xl mx-auto py-4 px-6">
                               <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
                               <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
@@ -832,13 +775,9 @@ export default function Navbar() {
                       item.dropdown && ["Services", "Innovation", "News", "Investor", "Support", "Carrier", "Contact"].includes(item.name) ? (
                         <AnimatePresence>
                           {activeDropdown === index && (
-                            <motion.div
-                              initial={{ opacity: 0, y: -40 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: -40 }}
-                              transition={{ duration: 0.5, ease: "easeInOut" }}
-                              className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
-                            >
+                           <motion.div
+                           className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                         >
                               <div className="max-w-7xl mx-auto py-4 px-6">
                                 <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
                                 <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
@@ -876,13 +815,9 @@ export default function Navbar() {
                       ) : (
                         <AnimatePresence>
                           {activeDropdown === index && (
-                            <motion.div
-                              initial={{ opacity: 0, y: -40 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: -40 }}
-                              transition={{ duration: 0.5, ease: "easeInOut" }}
-                              className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
-                            >
+                           <motion.div
+                           className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 origin-top"
+                         >
                               <div className="max-w-7xl mx-auto py-4 px-6">
                                 <h3 className="text-lg font-bold mb-4 font-os">
                                   {item.dropdown.title}
@@ -896,17 +831,17 @@ export default function Navbar() {
                                   {item.dropdown.columns.map((column, colIndex) => (
                                     <div key={colIndex}>
                                       {/* Replace title with specific images for certain columns */}
-                                      {(item.name === "Consumer Electronics" && column.title === "televisions") ? (
+                                      {(item.name === t("Consumer Electronics") && column.title === "televisions") ? (
                                         <img src={t1} alt="Televisions" className="h-16 w-16 object-contain mb-3" />
-                                      ) : (item.name === "Consumer Electronics" && column.title === "air conditioners") ? (
+                                      ) : (item.name ===  t("Consumer Electronics")  && column.title === "air conditioners") ? (
                                         <img src={t2} alt="Air Conditioners" className="h-16 w-16 object-contain mb-3" />
-                                      ) : (item.name === "Consumer Electronics" && column.title === "cooler") ? (
+                                      ) : (item.name === t("Consumer Electronics") && column.title === "cooler") ? (
                                         <img src={t3} alt="Cooler" className="h-16 w-16 object-contain mb-3" />
-                                      ) : (item.name === "Consumer Electronics" && column.title === "refrigerators") ? (
+                                      ) : (item.name === t("Consumer Electronics") && column.title === "refrigerators") ? (
                                         <img src={t4} alt="Refrigerators" className="h-16 w-16 object-contain mb-3" />
-                                      ) : (item.name === "Consumer Electronics" && column.title === "washing") ? (
+                                      ) : (item.name === t("Consumer Electronics") && column.title === "washing") ? (
                                         <img src={t5} alt="Washing" className="h-16 w-16 object-contain mb-3" />
-                                      ) : (item.name === "Consumer Electronics" && column.title === "geysers") ? (
+                                      ) : (item.name === t("Consumer Electronics") && column.title === "geysers") ? (
                                         <img src={T6} alt="Geysers" className="h-16 w-16 object-contain mb-3" />
                                       ) : (
                                         <h4 className="  mb-3 font-os">{column.title}</h4>
@@ -939,13 +874,19 @@ export default function Navbar() {
           ))}
 
           <li className="relative group cursor-pointer">
-            <select
-              onChange={(e) => changeLanguage(e.target.value)}
-              className="p-2 border rounded font-robo text-base"
-            >
-              <option value="en">English</option>
-              <option value="hi">हिन्दी</option>
-            </select>
+          <select
+  onChange={(e) => changeLanguage(e.target.value)}
+  className="p-2 border rounded font-robo text-base"
+>
+  <option value="en">English</option>
+  <option value="hi">हिन्दी</option>
+  <option value="gu">ગુજરાતી</option>
+  <option value="mr">मराठी</option>
+  <option value="or">ଓଡ଼ିଆ (Odia)</option>
+ {/* ✅ Marathi added here */}
+</select>
+
+
           </li>
         </ul>
 

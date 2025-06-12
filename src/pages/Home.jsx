@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
-import Navbar from '../components/Navbar'
-import Background_Home from '../components/Background_Home'
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import Navbar from '../components/Navbar';
+import Background_Home from '../components/Background_Home';
 import ab from "../assets/images/home_ab.png";
 import Heading from '../components/Heading';
 import FeatureS from '../components/FeatureS';
@@ -9,51 +10,38 @@ import YouTubeLayout from '../components/YouTubeLayout';
 import MakeInIndiaBanner from '../components/MakeInIndiaBanner';
 
 function Home() {
-    useEffect(() => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <Navbar />
-      {/* Overflow-x hidden on mobile, visible on md+ */}
       <div className="overflow-x-hidden md:overflow-x-visible">
         <div className="pt-20">
           <Background_Home />
           <section className="w-full px-4 py-10 bg-white md:flex items-center justify-between max-w-7xl mx-auto">
-            {/* Left Image */}
             <div className="md:w-1/2 w-full mb-6 md:mb-0">
-              <img
-                src={ab}
-                alt="Company Image"
-                className="w-full h-auto rounded-xl "
-              />
+              <img src={ab} alt="Company Image" className="w-full h-auto rounded-xl" />
             </div>
-            {/* Right Content */}
             <div className="md:w-1/2 w-full flex flex-col justify-center space-y-4">
               <h2 className="text-lg md:text-2xl font-semibold text-blue-900 font-robo">
-                Welcome to Our Company
+                {t('welcome_title')}
               </h2>
               <p className="text-black text-base md:text-lg text-justify font-robo">
-                <span className="text-orange-600 font-bold">ESAPLLING</span> is a
-                forward-thinking manufacturing and engineering company delivering
-                cutting-edge solutions across Electronics, Consumer Products,
-                Biomedical devices, OEM components, and Wiring Harness systems.
-                With a commitment to innovation, quality, and customized
-                manufacturing services, we empower businesses by transforming
-                ideas into high-performance, real-world products. Whether it's
-                complex electronic assemblies, biomedical integrations, or
-                precision wiring harnesses, ESAPLLING is your trusted partner in
-                progress.
+                <span className="text-orange-600 font-bold">ESAPLLING</span> {t('welcome_text')}
               </p>
+
               <h2 className="text-lg md:text-2xl font-semibold text-blue-900 font-robo">
-                Mission Statement
+                {t('mission_title')}
               </h2>
               <p className="text-gray-700 text-base md:text-lg text-justify font-robo">
-                "To drive innovation and quality in manufacturing, delivering
-                future-ready solutions that enhance lives and empower industries
-                worldwide."
+                {t('mission_text')}
               </p>
-              {/* Rating Stars */}
+
+              {/* Stars */}
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <svg
@@ -66,23 +54,24 @@ function Home() {
                   </svg>
                 ))}
               </div>
+
               {/* CTA Button */}
               <div>
                 <a
                   href="/about"
                   className="inline-block bg-[#FFD700] text-white px-6 font-robo py-3 shadow hover:bg-amber-700 transition duration-300"
                 >
-                  Explore The Success Story
+                  {t('cta_button')}
                 </a>
               </div>
             </div>
           </section>
 
           <div className="px-4 pt-2 sm:pt-4">
-            <Heading text="Industries We Serve" />
+            <Heading text={t('industries_title')} />
             <div className="flex items-center w-full px-4 sm:px-6 md:px-10 lg:px-14 py-4 sm:py-6 md:py-8 lg:py-10">
               <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold font-robo">
-                FEATURED SERVICES
+                {t('featured_services')}
               </p>
               <div className="flex-1 h-[2px] bg-gray-500 ml-4" />
             </div>
@@ -90,18 +79,17 @@ function Home() {
 
           <FeatureS />
 
-          <Heading text="Behind the Scenes: Manufacturing at Esaplling" />
-
+          <Heading text={t('behind_scenes')} />
           <YouTubeLayout />
 
-          <Heading text="Client Satisfaction Overview" />
+          <Heading text={t('client_satisfaction')} />
           <div className="mt-4 sm:mt-6 md:mt-10 lg:mt-16">
             <StatsCounter />
           </div>
         </div>
       </div>
-      <MakeInIndiaBanner/>
-     
+
+      <MakeInIndiaBanner />
     </>
   );
 }
