@@ -8,6 +8,8 @@ import FeatureS from '../components/FeatureS';
 import StatsCounter from '../components/StatsCounter';
 import YouTubeLayout from '../components/YouTubeLayout';
 import MakeInIndiaBanner from '../components/MakeInIndiaBanner';
+import Youtube2 from '../components/Youtube2';
+import Youtube3 from '../components/Youtube3';
 
 function Home() {
   const { t } = useTranslation();
@@ -22,50 +24,41 @@ function Home() {
       <div className="overflow-x-hidden md:overflow-x-visible">
         <div className="pt-20">
           <Background_Home />
-          <section className="w-full px-4 py-10 bg-white md:flex items-center justify-between max-w-7xl mx-auto">
-            <div className="md:w-1/2 w-full mb-6 md:mb-0">
-              <img src={ab} alt="Company Image" className="w-full h-auto rounded-xl" />
-            </div>
-            <div className="md:w-1/2 w-full flex flex-col justify-center space-y-4">
-              <h2 className="text-lg md:text-2xl font-semibold text-blue-900 font-robo">
-                {t('welcome_title')}
-              </h2>
-              <p className="text-black text-base md:text-lg text-justify font-robo">
-                <span className="text-orange-600 font-bold">ESAPLLING</span> {t('welcome_text')}
-              </p>
+         <section className="w-full px-4 py-10 bg-white max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+  {/* Image Section */}
+  <div className="w-full md:w-1/2 flex justify-center">
+    <img
+      src={ab}
+      alt="Company Image"
+      className="w-full max-w-[400px] h-auto object-contain rounded-xl"
+    />
+  </div>
 
-              <h2 className="text-lg md:text-2xl font-semibold text-blue-900 font-robo">
-                {t('mission_title')}
-              </h2>
-              <p className="text-gray-700 text-base md:text-lg text-justify font-robo">
-                {t('mission_text')}
-              </p>
+  {/* Text Section */}
+  <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4">
+    <h2 className="text-lg md:text-2xl font-semibold text-black font-robo">
+      {t('welcome_title')}
+    </h2>
 
-              {/* Stars */}
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-6 h-6 text-yellow-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M10 15l-5.878 3.09L5.64 12.545.764 8.91l6.026-.873L10 2l3.21 6.037 6.026.873-4.877 3.635 1.518 5.545z" />
-                  </svg>
-                ))}
-              </div>
+    <span className="text-black text-2xl font-bold">
+      Innovation from the day of inception
+    </span>
 
-              {/* CTA Button */}
-              <div>
-                <a
-                  href="/about"
-                  className="inline-block bg-[#FFD700] text-white px-6 font-robo py-3 shadow hover:bg-amber-700 transition duration-300"
-                >
-                  {t('cta_button')}
-                </a>
-              </div>
-            </div>
-          </section>
+    <p className="text-black text-base md:text-lg text-justify font-robo">
+      {t('welcome_text')}
+    </p>
+
+    <div>
+      <a
+        href="/about"
+        className="inline-block bg-[#428aff] text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
+      >
+        {t('cta_button')}
+      </a>
+    </div>
+  </div>
+</section>
+
 
           <div className="px-4 pt-2 sm:pt-4">
             <Heading text={t('industries_title')} />
@@ -81,6 +74,7 @@ function Home() {
 
           <Heading text={t('behind_scenes')} />
           <YouTubeLayout />
+          <Youtube2/>
 
           <Heading text={t('client_satisfaction')} />
           <div className="mt-4 sm:mt-6 md:mt-10 lg:mt-16">
@@ -88,6 +82,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Youtube3/>
 
       <MakeInIndiaBanner />
     </>

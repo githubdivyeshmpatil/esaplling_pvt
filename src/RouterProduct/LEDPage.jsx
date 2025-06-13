@@ -98,7 +98,31 @@ function LEDPage() {
       <div className="w-full">
         <BackgroundSection bgImage="/img/tvbanner.png" />
       </div>
+ <section className="w-full px-4 py-10 bg-[#f0f4f8]">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        {/* Left Side Content */}
+        <div>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+            LED 4K TV
+          </h2>
+          <p className="text-gray-700 text-justify text-base md:text-lg leading-relaxed font-robo">
+            High-definition television (HDTV) is a television system providing an image resolution that is of substantially higher
+            resolution than that of standard-definition television. HDTV is the current standard video format used in most broadcasts:
+            terrestrial broadcast television, cable television, satellite television, DVDs, and streaming video.
+            <br /><br />
+            HDTV provides about five times as many pixels as SD. The increased resolution provides for a clearer, more detailed picture.
+            In addition, progressive scan and higher frame rates result in a picture with less flicker and better rendering of fast motion.
+          </p>
+        </div>
 
+        {/* Right Side (optional image or video placeholder) */}
+        <div className="w-full h-64 md:h-96 bg-gray-300 rounded-lg shadow-inner flex items-center justify-center">
+          <span className="text-gray-600 text-lg font-medium">Image or Video Placeholder</span>
+          {/* Aap yahan image ya iframe add kar sakte ho */}
+          {/* <img src="your-image.jpg" alt="4K TV" className="w-full h-full object-cover rounded-md" /> */}
+        </div>
+      </div>
+    </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center text-[#000066]">
           LED Products

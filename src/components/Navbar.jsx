@@ -85,31 +85,45 @@ export default function Navbar() {
           {
             title: t("air conditioners"),
             items: [
-              { name: t("split_ac"), link: "/consumer-electronics/split-ac" },
-    { name: t("vrf"), link: "/consumer-electronics/vrf" },
+              { name: t("Air Conditioner"), link: "/consumer-electronics/split-ac" },
+                 { name: t("Cassate"), link: "/consumer-electronics/split-ac" },
+    { name: t("Vrf"), link: "/consumer-electronics/vrf" },
+        { name: t("Elavator Ac"), link: "/consumer-electronics/chiller" },
     { name: t("chiller"), link: "/consumer-electronics/chiller" },
             ],
           },
           {
             title: "cooler",
             items: [
-              { name: t("cooler"), link: "/consumer-electronics/cooler" },
-    { name: t("new_desert"), link: "/consumer-electronics/new-desert" },
+              { name: t("Evaporative cooler"), link: "/consumer-electronics/cooler" },
+    { name: t("New_desert"), link: "/consumer-electronics/new-desert" },
+        { name: t("Personal Cooler"), link: "/consumer-electronics/new-desert" },
+                { name: t("Commercial Cooler"), link: "/consumer-electronics/new-desert" },
+
+
             ],
           },
           {
             title: "refrigerators",
             items: [
-                 { name: t("refrigerators"), link: "/consumer-electronics/refrigerators" },
+                 { name: t("Refrigerators"), link: "/consumer-electronics/refrigerators" },
+                                  { name: t("Visi Cooler"), link: "/consumer-electronics/refrigerators" },
+
             ],
           },
           {
             title: "washing",
-            items: [{ name: t("washing"), link: "/consumer-electronics/washing" },],
+            items: [{ name: t("washing Machine"), link: "/consumer-electronics/washing" },
+              { name: t("Automatic washing Machine"), link: "/consumer-electronics/washing" },
+            ],
           },
           {
             title: "geysers",
-            items: [ { name: t("geysers"), link: "/consumer-electronics/geysers" },],
+            items: [ { name: t("Insta Geyser - 2L"), link: "/consumer-electronics/geysers" },
+              { name: t("Geyser 5L-25L "), link: "/consumer-electronics/geysers" },
+               { name: t("Commerical Geyser 100L-500L "), link: "/consumer-electronics/geysers" },
+            ],
+            
           },
         ],
       },
