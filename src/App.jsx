@@ -59,6 +59,8 @@ import TawkMessenger from "./components/TawkMessenger";
 import Contact from "./pages/Contact";
 import New_hvac from "./components/New_hvac";
 import Heating from "./components/Heating";
+import Dataled from "./components/Dataled";
+import Smallappillinace from "./components/Smallappillinace";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -81,7 +83,11 @@ function App() {
           <Route path="/hvac/airhandling" element={<Airhandling />} />
           <Route path="/hvac/ventilation" element={<Ventilation />} />
           <Route path="/hvac/evaporative" element={<Evaporative />} />
-                    <Route path="/acquisition" element={<Acquisition />} />
+          <Route path="/acquisition" element={<Acquisition />} />
+          <Route path="/dataled" element={<Dataled />} />
+         <Route path="/consumer-electronics/small_appliances" element={<Smallappillinace />} />
+
+
 
         
 

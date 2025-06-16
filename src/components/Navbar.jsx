@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo-re.png";
+import logo from "../assets/images/logo.png";
 import home_ab from "../assets/images/home_ab.png"
 
 import { useTranslation } from 'react-i18next';
@@ -75,6 +75,10 @@ export default function Navbar() {
             title: "televisions",
             items: [
                { name: t("led"), link: "/consumer-electronics/led" },
+                { name: t("LED 65"), link: "/consumer-electronics/led" },
+                 { name: ("LED 75-85"), link: "/consumer-electronics/led" },
+                { name: ("Small Appliances"), link: "/consumer-electronics/small_appliances" },
+
     { name: t("iptv"), link: "/consumer-electronics/iptv" },
     { name: t("interactive_panel"), link: "/consumer-electronics/interactive-panel" },
     { name: t("video_display"), link: "/consumer-electronics/video-display-system" },
@@ -617,12 +621,15 @@ export default function Navbar() {
         isScrolled ? "bg-white shadow-md" : "bg-transparent md:bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-between items-center h-20">
-        <div className="flex items-center mt-[-12px]">
-          <img src={logo} alt="Logo" className="h-16 w-16 object-contain" />
+    <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 flex justify-between items-center h-16 sm:h-20 md:h-24">
+        <div className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Logo" 
+            className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain" 
+          />
         </div>
-
-        <ul className="hidden md:flex items-center space-x-6 text-base font-robo">
+        <ul className="hidden md:flex items-center space-x-2 lg:space-x-4 text-sm md:text-base lg:text-lg font-robo">
           {navItems.map((item, index) => (
             <li
               key={index}
@@ -630,7 +637,7 @@ export default function Navbar() {
               onMouseEnter={() => item.dropdown && setActiveDropdown(index)}
               onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
             >
-              <Link to={item.link} className="hover:text-blue-900 py-2 block text-base font-robo">
+              <Link to={item.link} className="hover:text-blue-900 py-1 md:py-2 block text-sm md:text-base lg:text-lg font-robo">
                 {item.name}
               </Link>
 
@@ -904,12 +911,12 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="md:hidden pr-3">
+        <div className="md:hidden pr-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-black focus:outline-none"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -920,13 +927,17 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden shadow-lg w-64`}
       >
-        <div className="flex justify-between items-center p-4 border-b">
-          <img src={logo} alt="Logo" className="h-12 w-12 object-contain" />
+        <div className="flex justify-between items-center p-3 border-b">
+          <img 
+            src={logo} 
+            alt="Logo" 
+            className="w-12 h-12 object-contain" 
+          />
           <button className="text-black" onClick={() => setIsOpen(false)}>
-            <X size={28} />
+            <X size={24} />
           </button>
         </div>
-        <ul className="p-4 space-y-2 text-base font-robo text-black overflow-y-auto h-[calc(100%-60px)]">
+        <ul className="p-3 space-y-1 text-sm font-robo text-black overflow-y-auto h-[calc(100%-60px)]">
           {navItems.map((item, index) => (
             <li key={index} className="border-b border-gray-100 pb-2">
               <Link
