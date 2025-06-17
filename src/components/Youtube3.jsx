@@ -22,9 +22,13 @@ function Youtube3() {
               the rooms that are in use.
             </p>
              <div className="mt-8 ">
-          <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium px-6 py-2 rounded-xl cursor-pointer  transition duration-300">
-            Read More
-          </button>
+          <a
+  href="/automotive/autoaircondition"
+  className="bg-blue-700 hover:bg-blue-800 text-white font-medium px-6 py-2 rounded-xl cursor-pointer transition duration-300 inline-block"
+>
+  Read More
+</a>
+
         </div>
           </div>
 

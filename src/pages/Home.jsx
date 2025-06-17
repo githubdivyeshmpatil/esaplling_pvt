@@ -5,7 +5,6 @@ import Background_Home from '../components/Background_Home';
 import ab from "../assets/images/home_ab.png";
 import Heading from '../components/Heading';
 import FeatureS from '../components/FeatureS';
-import StatsCounter from '../components/StatsCounter';
 import YouTubeLayout from '../components/YouTubeLayout';
 import MakeInIndiaBanner from '../components/MakeInIndiaBanner';
 import Youtube2 from '../components/Youtube2';
@@ -78,7 +77,7 @@ function Home() {
 
           <Heading text={t('client_satisfaction')} />
           <div className="mt-4 sm:mt-6 md:mt-10 lg:mt-16">
-            <StatsCounter />
+            
           </div>
         </div>
       </div>

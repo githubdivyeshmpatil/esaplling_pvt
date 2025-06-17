@@ -61,6 +61,7 @@ import New_hvac from "./components/New_hvac";
 import Heating from "./components/Heating";
 import Dataled from "./components/Dataled";
 import Smallappillinace from "./components/Smallappillinace";
+import AeroStar from "./components/AeroStar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -127,6 +128,8 @@ function App() {
             path="/services/energymanagment"
             element={<Energymanagement />}
           />
+                    <Route path="/hvac/aerostar" element={<AeroStar />} />
+
           <Route path="/services/eletrical_and_lv" element={<Electric_lv />} />
           <Route path="/services/plumbing" element={<Plumbing />} />
           <Route path="/services/fireprotection" element={<Fireprotection />} />

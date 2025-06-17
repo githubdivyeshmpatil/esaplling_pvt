@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import BackgroundSection from "../components/BackgroundSection";
 import { useTranslation } from 'react-i18next';
+import TechArticles from "../components/TechArticles";
+import TireCarousell from "../components/TireCarousell";
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -17,9 +19,7 @@ const AboutUs = () => {
       </div>
       <div className="bg-white text-black p-4 sm:p-8 max-w-7xl mx-auto">
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 font-os">
-          {t('about.title')}
-        </h1>
+        
 
         {/* Founding Story */}
         <section className="mb-10">
@@ -148,6 +148,86 @@ We go beyond conventional design services. ESAPLLING is a Design, Build, Operate
           </p>
         </section>
       </div>
+       <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-10 bg-white">
+      
+      {/* Left: Embedded Video */}
+     <div className="w-full md:w-1/2">
+  <div className="w-full h-96 md:h-[500px]">
+    <iframe
+      className="w-full h-full rounded-xl shadow-lg"
+      src="https://www.youtube.com/embed/JUeW7jRgsVg"
+      title="Biomedical Science"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
+
+      {/* Right: Text Content */}
+      <div className="w-full md:w-1/2 text-gray-800">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-700">
+          Exploring the Future of Biomedical Science
+        </h2>
+        <p className="text-base md:text-lg mb-4">
+          Developing cutting-edge technologies, and discovering novel therapies to combat diseases that have plagued humanity for centuries. This relentless pursuit of knowledge and innovation has led to a profound transformation in the way we diagnose, treat, and prevent illnesses.
+        </p>
+        <p className="text-base md:text-lg mb-4">
+          As we embark on this journey of exploring biomedical advancements, we will delve into the fascinating world where biology, technology, and medicine intersect. From decoding the intricacies of our genetic makeup to harnessing the power of artificial intelligence in medical diagnostics, the landscape of biomedical science is evolving at an unprecedented pace.
+        </p>
+        <p className="text-base md:text-lg mb-4">
+          These advancements not only promise to extend human life and enhance its quality but also have the potential to revolutionize the very foundations of healthcare as we know it.
+        </p>
+        <p className="text-base md:text-lg mb-4">
+          In this exploration, we will journey through the key domains of biomedical research, shedding light on breakthroughs in genomics, regenerative medicine, neurobiology, and more. We will also investigate the ethical and societal implications of these advancements, as well as the challenges that lie ahead.
+        </p>
+        <p className="text-base md:text-lg">
+          Join us on this enlightening expedition into the realm of biomedical science, where we will uncover the mysteries of life, witness the marvels of modern medicine, and envision a world where healthcare knows no bounds.
+        </p>
+      </div>
+    </section>
+    <TechArticles/>
+   <div className="container mx-auto px-4 py-8">
+      {/* Image Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <img src="/img/china2.jpg" alt="Image 1" className="w-full h-auto rounded-lg shadow-md" />
+        <img src="/img/china1.jpg" alt="Image 2" className="w-full h-auto rounded-lg shadow-md" />
+        <img src="/img/china3.jpg" alt="Image 3" className="w-full h-auto rounded-lg shadow-md" />
+        <img src="/img/china4.jpg" alt="Image 4" className="w-full h-auto rounded-lg shadow-md" />
+        <img src="/img/china5.jpg" alt="Image 5" className="w-full h-auto rounded-lg shadow-md" />
+      </div>
+
+      {/* Title Below */}
+      <div className="mt-8 text-center">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
+          Project Planning, Design, Build, Operation & Maintenance
+        </h2>
+      </div>
+    </div>
+<section className="bg-white px-4 py-10 md:px-12">
+      <div className="max-w-4xl mx-auto text-gray-800 space-y-6 text-justify">
+        <p>
+          We possess in-house design knowledge for Cleanrooms, HVAC, MEP, and Automation systems, supported by advanced 3D automatic MEP software. This enables us to produce highly accurate and coordinated designs.
+        </p>
+
+        <p>
+          Our designs strictly adhere to ASHRAE and Carrier standards. Ducting and drawing work is executed in compliance with SMACNA guidelines, enhanced by 3D capabilities for better planning and visualization.
+        </p>
+
+        <p>
+          Our team is focused on executing projects with complete compliance to approved design standards, ensuring every element is built exactly as envisioned.
+        </p>
+
+        <p>
+          We carry out effective commissioning, testing, and validation of systems according to approved Standard Operating Procedures (SOPs), ensuring full operational readiness.
+        </p>
+
+        <p>
+          Our Operations & Maintenance (O&M) team has a proven track record of success, providing dedicated support 24×7, 365 days a year, to ensure uninterrupted operations.
+        </p>
+      </div>
+    </section>
+    <TireCarousell/>
     </>
   );
 };
