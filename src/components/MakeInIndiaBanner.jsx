@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import makeInIndiaImage from '../assets/images/tiger.png'
+import makeInIndiaImage from '../assets/images/makere.png'
 
 const MakeInIndiaBanner = () => {
    useEffect(() => {
@@ -13,7 +13,7 @@ const MakeInIndiaBanner = () => {
           <img 
             src={makeInIndiaImage} 
             alt="Make in India Initiative"
-            className="w-full h-48 md:h-56 lg:h-64 rounded-lg shadow-md object-cover" // fixed height
+            className="w-full h-48 md:h-56 lg:h-64 object-cover" // fixed height
           />
         </div>
 
