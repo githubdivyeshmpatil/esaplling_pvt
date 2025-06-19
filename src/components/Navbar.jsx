@@ -29,6 +29,8 @@ export default function Navbar() {
   const footerRef = useRef(null);
   const inView = useInView(footerRef, { once: true, amount: 0.2 });
 
+  const timeoutRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -611,378 +613,112 @@ export default function Navbar() {
             <li
               key={index}
               className="relative group cursor-pointer"
-              onMouseEnter={() => item.dropdown && setActiveDropdown(index)}
+              onMouseEnter={() => {
+                if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                setActiveDropdown(index);
+              }}
               onMouseLeave={() => {
-                setTimeout(() => {
-                  if (activeDropdown === index) {
-                    setActiveDropdown(null);
-                  }
-                }, 200);
+                if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                timeoutRef.current = setTimeout(() => {
+                  setActiveDropdown(null);
+                }, 150);
               }}
             >
-              <Link to={item.link} className="hover:text-blue-900 py-1 xl:py-2 pb-4 block text-xs xl:text-sm 2xl:text-base font-robo whitespace-nowrap">
+              <Link to={item.link} className={`hover:text-blue-900 py-1 xl:py-2 pb-4 block text-xs xl:text-sm 2xl:text-base font-robo whitespace-nowrap ${activeDropdown === index ? "text-blue-900 font-bold" : ""}`}>
                 {item.name}
               </Link>
 
-              {item.dropdown && item.name === t("home") ? (
- <>
-    {/* Invisible bridge to prevent dropdown from closing */}
-    <div 
-      className={`absolute top-full left-0 w-full h-8 bg-transparent ${
-        activeDropdown === index ? "block" : "hidden"
-      }`}
-      onMouseEnter={() => setActiveDropdown(index)}
-      onMouseLeave={() => {
-        setTimeout(() => {
-          setActiveDropdown(null);
-        }, 150);
-      }}
-    />
-    <div
-      className={`fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 ${
-        activeDropdown === index ? "block" : "hidden"
-      }`}
-      onMouseEnter={() => setActiveDropdown(index)}
-      onMouseLeave={() => {
-        setTimeout(() => {
-          setActiveDropdown(null);
-        }, 150);
-      }}
-    >
-      <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
-        {/* Logo on the left */}
-        <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
-          <img src={home_ab} alt="Logo" className="h-64 w-64 object-contain mb-2" />
-        </div>
-        {/* Links grid on the right */}
-        <div className="grid grid-cols-3 gap-x-10 gap-y-2 flex-1">
-          {item.dropdown.columns[0].items.map((subItem, subIndex) => (
-            !subItem.isContact ? (
-              <Link key={subIndex} to={subItem.link} className="text-gray-600 hover:text-gray-900 font-robo text-sm">
-                {subItem.name}
-              </Link>
-            ) : null
-          ))}
-        </div>
-      </div>
-    </div>
- </>
-              ) : (
-                item.dropdown && item.name === "Biomedical" ? (
-                  <>
-                    {/* Invisible bridge to prevent dropdown from closing */}
-                    <div 
-                      className={`absolute top-full left-0 w-full h-8 bg-transparent ${
-                        activeDropdown === index ? "block" : "hidden"
-                      }`}
-                      onMouseEnter={() => setActiveDropdown(index)}
-                      onMouseLeave={() => {
-                        setTimeout(() => {
-                          setActiveDropdown(null);
-                        }, 150);
-                      }}
-                    />
-                    <AnimatePresence>
-                      {activeDropdown === index && (
-                       <motion.div
-                       className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 origin-top"
-                       onMouseEnter={() => setActiveDropdown(index)}
-                       onMouseLeave={() => setActiveDropdown(null)}
-                     >
-                          <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
-                            {/* Logo on the left */}
-                            <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
-                              <img src={ctmri} alt="Biomedical Logo" className="h-96 w-96 object-contain mb-2" />
-                            </div>
-                            {/* Columns grid on the right */}
-                            <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8 flex-1`}>
-                              {item.dropdown.columns.map((column, colIndex) => (
-                                <div key={colIndex}>
-                                  {/* If column has a title, render as a link if first item has a link */}
-                                  {column.title ? (
-                                    column.titleLink ? (
-                                      <Link to={column.titleLink} className="font-medium mb-1 text-lg text-blue-700 hover:underline block">
-                                        {column.title}
-                                      </Link>
-                                    ) : (
-                                      <h4 className="mb-3 font-os text-lg">{column.title}</h4>
-                                    )
-                                  ) : null}
-                                  <ul className="space-y-2">
-                                    {column.items.map((subItem, subIndex) => (
-                                      <li key={subIndex}>
-                                        <Link
-                                          to={subItem.link}
-                                          className="text-gray-600 hover:text-gray-900 font-robo text-sm"
-                                        >
-                                          {subItem.name}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </motion.div>
+              {item.dropdown ? (
+                <>
+                  {/* Invisible bridge */}
+                  <div 
+                    className={`absolute top-full left-0 w-full h-8 bg-transparent ${
+                      activeDropdown === index ? "block" : "hidden"
+                    }`}
+                    onMouseEnter={() => {
+                      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                      setActiveDropdown(index);
+                    }}
+                    onMouseLeave={() => {
+                      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                      timeoutRef.current = setTimeout(() => {
+                        setActiveDropdown(null);
+                      }, 150);
+                    }}
+                  />
+                  {/* Dropdown content for all nav items */}
+                  <div
+                    className={`fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 ${
+                      activeDropdown === index ? "block" : "hidden"
+                    }`}
+                    onMouseEnter={() => {
+                      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                      setActiveDropdown(index);
+                    }}
+                    onMouseLeave={() => {
+                      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+                      timeoutRef.current = setTimeout(() => {
+                        setActiveDropdown(null);
+                      }, 150);
+                    }}
+                  >
+                    <div className="max-w-7xl mx-auto py-4 px-6 flex items-start gap-8">
+                      {/* Optional: Logo on the left for home/biomedical, etc. */}
+                      {item.name === t("home") && (
+                        <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
+                          <img src={home_ab} alt="Logo" className="h-64 w-64 object-contain mb-2" />
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </>
-                ) : (
-                  item.dropdown && item.name === "Automotive" ? (
-                    <>
-                      {/* Invisible bridge to prevent dropdown from closing */}
-                      <div 
-                        className={`absolute top-full left-0 w-full h-8 bg-transparent ${
-                          activeDropdown === index ? "block" : "hidden"
-                        }`}
-                        onMouseEnter={() => setActiveDropdown(index)}
-                        onMouseLeave={() => {
-                          setTimeout(() => {
-                            setActiveDropdown(null);
-                          }, 150);
-                        }}
-                      />
-                      <AnimatePresence>
-                        {activeDropdown === index && (
-                         <motion.div
-                         className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 origin-top"
-                         onMouseEnter={() => setActiveDropdown(index)}
-                         onMouseLeave={() => {
-                           setTimeout(() => {
-                             setActiveDropdown(null);
-                           }, 150);
-                         }}
-                       >
-                            <div className="max-w-7xl mx-auto py-4 px-6">
-                              <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
-                              <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
-                                {item.dropdown.columns.map((column, colIndex) => (
-                                  <div key={colIndex}>
-                                    {/* If column has a title, render as a link if first item has a link */}
-                                    {column.title ? (
-                                      column.titleLink ? (
-                                        <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
-                                          {column.title}
-                                        </Link>
-                                      ) : (
-                                        <h4 className="font-medium mb-1">{column.title}</h4>
-                                      )
-                                    ) : null}
-                                    <ul className="space-y-2">
-                                      {column.items.map((subItem, subIndex) => (
-                                        <li key={subIndex}>
-                                          <Link
-                                            to={subItem.link}
-                                            className="text-gray-600 hover:text-gray-900 font-robo"
-                                          >
-                                            {subItem.name}
-                                          </Link>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
-                    item.dropdown && item.name === "HVAC" ? (
-                      <>
-                        {/* Invisible bridge to prevent dropdown from closing */}
-                        <div 
-                          className={`absolute top-full left-0 w-full h-8 bg-transparent ${
-                            activeDropdown === index ? "block" : "hidden"
-                          }`}
-                          onMouseEnter={() => setActiveDropdown(index)}
-                          onMouseLeave={() => {
-                            setTimeout(() => {
-                              setActiveDropdown(null);
-                            }, 150);
-                          }}
-                        />
-                        <AnimatePresence>
-                          {activeDropdown === index && (
-                           <motion.div
-                           className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 origin-top"
-                           onMouseEnter={() => setActiveDropdown(index)}
-                           onMouseLeave={() => {
-                             setTimeout(() => {
-                               setActiveDropdown(null);
-                             }, 150);
-                           }}
-                         >
-                              <div className="max-w-7xl mx-auto py-4 px-6">
-                                <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
-                                <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
-                                  {item.dropdown.columns.map((column, colIndex) => (
-                                    <div key={colIndex}>
-                                      {/* If column has a title, render as a link if first item has a link */}
-                                      {column.title ? (
-                                        column.titleLink ? (
-                                          <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
-                                            {column.title}
-                                          </Link>
-                                        ) : (
-                                          <h4 className="font-medium mb-1">{column.title}</h4>
-                                        )
-                                      ) : null}
-                                      <ul className="space-y-2">
-                                        {column.items.map((subItem, subIndex) => (
-                                          <li key={subIndex}>
-                                            <Link
-                                              to={subItem.link}
-                                              className="text-gray-600 hover:text-gray-900 font-robo"
-                                            >
-                                              {subItem.name}
-                                            </Link>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </>
-                    ) : (
-                      item.dropdown && ["Services", "Innovation", "News", "Investor", "Support", "Carrier"].includes(item.name) ? (
-                        <>
-                          {/* Invisible bridge to prevent dropdown from closing */}
-                          <div 
-                            className={`absolute top-full left-0 w-full h-8 bg-transparent ${
-                              activeDropdown === index ? "block" : "hidden"
-                            }`}
-                            onMouseEnter={() => setActiveDropdown(index)}
-                            onMouseLeave={() => {
-                              setTimeout(() => {
-                                setActiveDropdown(null);
-                              }, 150);
-                            }}
-                          />
-                          <AnimatePresence>
-                            {activeDropdown === index && (
-                             <motion.div
-                             className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 origin-top"
-                             onMouseEnter={() => setActiveDropdown(index)}
-                             onMouseLeave={() => {
-                               setTimeout(() => {
-                                 setActiveDropdown(null);
-                               }, 150);
-                             }}
-                           >
-                                <div className="max-w-7xl mx-auto py-4 px-6">
-                                  <h3 className="text-lg font-bold mb-4 font-os">{item.dropdown.title}</h3>
-                                  <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8`}>
-                                    {item.dropdown.columns.map((column, colIndex) => (
-                                      <div key={colIndex}>
-                                        {/* If column has a title, render as a link if first item has a link */}
-                                        {column.title ? (
-                                          column.titleLink ? (
-                                            <Link to={column.titleLink} className="font-medium mb-1 text-blue-700 hover:underline block">
-                                              {column.title}
-                                            </Link>
-                                          ) : (
-                                            <h4 className="font-medium mb-1">{column.title}</h4>
-                                          )
-                                        ) : null}
-                                        <ul className="space-y-2">
-                                          {column.items.map((subItem, subIndex) => (
-                                            <li key={subIndex}>
-                                              <Link
-                                                to={subItem.link}
-                                                className="text-gray-600 hover:text-gray-900 font-robo"
-                                              >
-                                                {subItem.name}
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </>
+                      {item.name === "Biomedical" && (
+                        <div className="flex-shrink-0 flex flex-col items-center justify-center" style={{minWidth: '180px'}}>
+                          <img src={ctmri} alt="Biomedical Logo" className="h-96 w-96 object-contain mb-2" />
+                        </div>
+                      )}
+                      {/* Links grid on the right for all dropdowns */}
+                      {item.name === t("home") ? (
+                        <div className="grid grid-cols-4 gap-x-10 gap-y-2 flex-1">
+                          {item.dropdown.columns[0].items.map((subItem, subIndex) => (
+                            !subItem.isContact ? (
+                              <Link key={subIndex} to={subItem.link} className="text-gray-600 hover:text-gray-900 font-robo text-sm">
+                                {subItem.name}
+                              </Link>
+                            ) : null
+                          ))}
+                        </div>
                       ) : (
-                        <>
-                          {/* Invisible bridge to prevent dropdown from closing */}
-                          <div 
-                            className={`absolute top-full left-0 w-full h-8 bg-transparent ${
-                              activeDropdown === index ? "block" : "hidden"
-                            }`}
-                            onMouseEnter={() => setActiveDropdown(index)}
-                            onMouseLeave={() => {
-                              setTimeout(() => {
-                                setActiveDropdown(null);
-                              }, 150);
-                            }}
-                          />
-                          <AnimatePresence>
-                            {activeDropdown === index && (
-                             <motion.div
-                             className="fixed left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 mt-8 origin-top"
-                           >
-                                <div className="max-w-7xl mx-auto py-4 px-6">
-                                  <h3 className="text-lg font-bold mb-4 font-os">
-                                    {item.dropdown.title}
-                                  </h3>
-                                  <div
-                                    className={`grid ${getGridColsClass(
-                                      item.dropdown.columns.length,
-                                      item.name
-                                    )} gap-8`}
-                                  >
-                                    {item.dropdown.columns.map((column, colIndex) => (
-                                      <div key={colIndex}>
-                                        {/* Replace title with specific images for certain columns */}
-                                        {(item.name === t("Consumer Electronics") && column.title === "televisions") ? (
-                                          <img src={t1} alt="Televisions" className="h-16 w-16 object-contain mb-3" />
-                                        ) : (item.name ===  t("Consumer Electronics")  && column.title === "air conditioners") ? (
-                                          <img src={t2} alt="Air Conditioners" className="h-16 w-16 object-contain mb-3" />
-                                        ) : (item.name === t("Consumer Electronics") && column.title === "cooler") ? (
-                                          <img src={t3} alt="Cooler" className="h-16 w-16 object-contain mb-3" />
-                                        ) : (item.name === t("Consumer Electronics") && column.title === "refrigerators") ? (
-                                          <img src={t4} alt="Refrigerators" className="h-16 w-16 object-contain mb-3" />
-                                        ) : (item.name === t("Consumer Electronics") && column.title === "washing") ? (
-                                          <img src={t5} alt="Washing" className="h-16 w-16 object-contain mb-3" />
-                                        ) : (item.name === t("Consumer Electronics") && column.title === "geysers") ? (
-                                          <img src={T6} alt="Geysers" className="h-16 w-16 object-contain mb-3" />
-                                        ) : (
-                                          <h4 className="  mb-3 font-os">{column.title}</h4>
-                                        )}
-                                        <ul className="space-y-2">
-                                          {column.items.map((subItem, subIndex) => (
-                                            <li key={subIndex}>
-                                              <Link
-                                                to={subItem.link}
-                                                className="text-gray-600 hover:text-gray-900 font-robo"
-                                              >
-                                                {subItem.name}
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </>
-                      )
-                    )
-                  )
-                )
-              )}
+                        <div className={`grid ${getGridColsClass(item.dropdown.columns.length, item.name)} gap-8 flex-1`}>
+                          {item.dropdown.columns.map((column, colIndex) => (
+                            <div key={colIndex}>
+                              {/* If column has a title, render as a link if first item has a link */}
+                              {column.title ? (
+                                column.titleLink ? (
+                                  <Link to={column.titleLink} className="font-medium mb-1 text-lg text-blue-700 hover:underline block">
+                                    {column.title}
+                                  </Link>
+                                ) : (
+                                  <h4 className="mb-3 font-os text-lg">{column.title}</h4>
+                                )
+                              ) : null}
+                              <ul className="space-y-2">
+                                {column.items.map((subItem, subIndex) => (
+                                  <li key={subIndex}>
+                                    <Link
+                                      to={subItem.link}
+                                      className="text-gray-600 hover:text-gray-900 font-robo text-sm"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </>
+              ) : null}
             </li>
           ))}
 

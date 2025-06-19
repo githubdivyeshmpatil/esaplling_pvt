@@ -41,39 +41,50 @@ function Lfd() {
           LFD Display Products
         </h1>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <div key={product.id} className="p-3 sm:p-4 bg-white rounded-xl shadow hover:shadow-xl transition duration-300">
-              <div className="w-full mb-3 overflow-hidden rounded">
+            <div key={product.id} className="bg-white rounded-xl shadow p-4 flex flex-col hover:shadow-xl transition duration-300">
+              <div className="w-full mb-4">
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="w-full h-[150px] sm:h-[180px] object-contain"
+                  className="w-full h-[180px] object-contain"
                 />
               </div>
 
-              <h2 className="text-sm sm:text-base font-semibold font-os">{product.name}</h2>
+              <h2 className="text-base sm:text-lg font-bold text-black mb-2 font-os">{product.name}</h2>
 
-              <p className="text-xs sm:text-sm text-gray-600 mt-2 text-justify font-robo leading-snug">
-                {expandedDescriptions[product.id]
-                  ? product.dis
-                  : `${product.dis.slice(0, 80)}...`}
+              <ul className="text-sm text-gray-700 mb-2 list-disc list-inside space-y-1 font-robo">
+                {(expandedDescriptions[product.id]
+                  ? product.dis.split('|')
+                  : product.dis.split('|').slice(0, 5)
+                ).map((line, index) => (
+                  <li key={index}>{line.trim()}</li>
+                ))}
+              </ul>
+
+              {product.dis.split('|').length > 5 && (
                 <button
                   onClick={() => toggleReadMore(product.id)}
-                  className="text-blue-600 ml-1 underline text-xs"
+                  className="text-blue-600 underline text-sm mt-1"
                 >
                   {expandedDescriptions[product.id] ? 'Read less' : 'Read more'}
                 </button>
-              </p>
+              )}
 
-              <div className="mt-3 flex flex-wrap items-center justify-between text-xs sm:text-sm font-os">
-                <span className="text-green-600 font-bold">
-                  ₹{product.price.toLocaleString()}
-                </span>
-                <span className="text-gray-400 line-through ml-2">
-                  ₹{product.cutPrice.toLocaleString()}
-                </span>
-                <span className="text-red-500 ml-2 font-medium">{product.offer}</span>
+              <div className="mt-4 flex flex-wrap items-center text-sm font-semibold font-os">
+                <span className="text-green-600">₹{product.price.toLocaleString()}</span>
+                <span className="text-gray-500 line-through ml-3">₹{product.cutPrice.toLocaleString()}</span>
+                <span className="text-red-600 ml-3">{product.offer}</span>
+              </div>
+
+              <div className="mt-4">
+                <a
+                  href="/datalfd"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"
+                >
+                  Know More
+                </a>
               </div>
             </div>
           ))}
