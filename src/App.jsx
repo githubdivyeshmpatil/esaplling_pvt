@@ -62,6 +62,7 @@ import Heating from "./components/Heating";
 import Dataled from "./components/Dataled";
 import Smallappillinace from "./components/Smallappillinace";
 import AeroStar from "./components/AeroStar";
+import Envorment_safety from "./components/Envorment_safety";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -87,6 +88,8 @@ function App() {
           <Route path="/acquisition" element={<Acquisition />} />
           <Route path="/dataled" element={<Dataled />} />
          <Route path="/consumer-electronics/small_appliances" element={<Smallappillinace />} />
+                  <Route path="/support/envorment_helth_guide" element={<Envorment_safety/>} />
+
 
 
 

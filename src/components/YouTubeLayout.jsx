@@ -42,7 +42,7 @@ const YouTubeLayout = () => {
           </p>
  <div>
             <a
-  href="/hvac/chillerDis"
+  href="/hvac/new_hvac"
   className="inline-flex items-center font-robo bg-blue-600 text-white px-6 py-3 shadow hover:bg-amber-700 transition duration-300"
 >
   Explore The more info

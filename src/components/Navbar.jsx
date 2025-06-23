@@ -188,6 +188,7 @@ export default function Navbar() {
           },
           {
             title: "Vantilation",
+            titleLink: "/hvac/heating",
             items: [
               {
                 name: " Industrial Vantilation",
@@ -497,8 +498,8 @@ export default function Navbar() {
           },
           {
             items: [
-              { name: "Environment,health and Safety", link: "/" },
-              { name: "Environment,health and Safety Guide", link: "/" },
+              { name: "Environment,health and Safety", link: "/support/envorment_helth_guide" },
+              { name: "Environment,health and Safety Guide", link: "/support/envorment_helth_guide" },
               { name: "Dresscode-Guide", link: "/" },
               { name: "Ethics and Compliances Guideline", link: "/" },
             ],

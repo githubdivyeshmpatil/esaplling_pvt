@@ -22,9 +22,13 @@ function Youtube2() {
               the rooms that are in use.
             </p>
             <div className="mt-8 ">
-          <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-xl cursor-pointer px-6 py-2  transition duration-300">
-            Read More
-          </button>
+         <a
+  href="/consumer-electronics/split-ac"
+  className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-xl cursor-pointer px-6 py-2 transition duration-300 inline-block"
+>
+  Read More
+</a>
+
         </div> 
           </div>
 
