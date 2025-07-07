@@ -229,7 +229,7 @@ function LEDPage() {
 
               <div className="mt-3">
                <a
-  href="/dataled"
+  href="/consumer-electronics/tvcomparison"
   className="inline-block bg-[#3b82f6] hover:bg-[#2563eb] text-white text-xs sm:text-sm px-4 py-2 rounded-full font-medium transition"
 >
   Know More

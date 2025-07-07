@@ -46,9 +46,12 @@ const FixedSpeedFloralACRow = () => {
             <p className="text-sm">
               <strong>Star Rating:</strong> {ac.rating}
             </p>
-            <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
-              Know More
-            </button>
+             <a
+  href="/consumer-electronics/accomparison" // replace with your actual URL
+  className="mt-4 inline-block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition"
+>
+  Know More
+</a>
           </div>
         ))}
       </div>

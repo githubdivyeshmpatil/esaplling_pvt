@@ -102,9 +102,9 @@ export default function Navbar() {
             title: "cooler",
             items: [
               { name: t("Evaporative cooler"), link: "/consumer-electronics/cooler" },
-    { name: t("New_desert"), link: "/consumer-electronics/new-desert" },
-        { name: t("Personal Cooler"), link: "/consumer-electronics/new-desert" },
-                { name: t("Commercial Cooler"), link: "/consumer-electronics/new-desert" },
+    { name: t("New_desert"), link: "/consumer-electronics/cooler" },
+        { name: t("Personal Cooler"), link: "/consumer-electronics/cooler" },
+                { name: t("Commercial Cooler"), link: "/consumer-electronics/cooler" },
 
 
             ],
@@ -113,7 +113,7 @@ export default function Navbar() {
             title: "refrigerators",
             items: [
                  { name: t("Refrigerators"), link: "/consumer-electronics/refrigerators" },
-                                  { name: t("Visi Cooler"), link: "/consumer-electronics/refrigerators" },
+                                  { name: t("Visi Cooler"), link: "/consumer-electronics/visicooler" },
 
             ],
           },
@@ -508,15 +508,15 @@ export default function Navbar() {
       },
     },
     {
-      name: "Carrier",
+      name: "Career",
       link: "/",
       dropdown: {
-        title: "ESAPLLING® carrier",
+        title: "ESAPLLING® career",
         columns: [
           {
-            title: "Carrier",
+            title: "Career",
             items: [
-              { name: "Carrier-Portls", link: "/carrier" },
+              { name: "career-Portls", link: "/carrier" },
               { name: "Campus Connect", link: "/carrier" },
               { name: "New Releases", link: "/carrier" },
               { name: "Placement Drive", link: "/carrier" },

@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Ac from '../components/Ac';
 import BackgroundSection from '../components/BackgroundSection';
+import { Link } from 'react-router-dom';
+
 
 function Cooler() {
   useEffect(() => {
@@ -11,68 +13,89 @@ function Cooler() {
   const products = [
     {
       id: 1,
-      name: "Tower Personnel",
-      dis: "Esaplling 25 Litre Room/Personal Air Cooler (White, Polar)",
+      name: 'Tower Plus',
+      capacity: '80 Litre',
       img: "/img/cooler1.png",
-      price: 15000,
-      cutPrice: 18000,
-      offer: "17% OFF",
     },
     {
       id: 2,
-      name: "Tower",
-      dis: "Esaplling 40 Litre Room/Personal Air Cooler (White, Polar)",
+      name: 'Tower',
+      capacity: '40 Litre',
       img: "/img/cooler1.png",
-      price: 15000,
-      cutPrice: 18000,
-      offer: "17% OFF",
     },
     {
       id: 3,
-      name: "Tower",
-      dis: "Esaplling 80 Litre Room/Personal Air Cooler (White, Polar)",
+      name: 'Tower Personnel',
+      capacity: '25 Litre',
       img: "/img/cooler1.png",
-      price: 15000,
-      cutPrice: 18000,
-      offer: "17% OFF",
     },
     {
       id: 4,
-      name: "Thunder",
-      dis: "Esaplling 63 Litre Room/Personal Air Cooler (White, Polar)",
-      img: "/img/cooler4.png",
-      price: 15000,
-      cutPrice: 18000,
-      offer: "17% OFF",
+      name: 'Thunder',
+      capacity: '63 Litre',
+      img: '/img/coolert1.png',
     },
     {
       id: 5,
-      name: "Curvy",
-      dis: "Esaplling 63 Litre Room/Personal Air Cooler (White, Polar)",
-      img: "/img/cooler1.png",
-      price: 15000,
-      cutPrice: 18000,
-      offer: "17% OFF",
+      name: 'Elegance Plus',
+      capacity: '63 Litre',
+      img: '/img/coolert2.png',
     },
     {
-      id: 6,
-      name: "Ultima",
-      dis: "Esaplling 63 Litre Room/Personal Air Cooler (White, Polar)",
-      img: "/img/cooler6.png",
-      price: 15000,
-      cutPrice: 18000,
-      offer: "17% OFF",
+      id: 7,
+      name: 'Cool Plus',
+      capacity: '50 Litre',
+      img: '/img/cool_plus.png',
+    },
+    {
+      id: 8,
+      name: 'Cool X',
+      capacity: '35 Litre',
+      img: '/img/cool_plus1.png',
+    },
+    {
+      id: 9,
+      name: 'Cyclone',
+      capacity: '30 Litre',
+      img: '/img/cool_plus3.png',
+    },
+    {
+      id: 10,
+      name: 'Extreme',
+      capacity: '30 Litre',
+      img: '/img/cool_plus4.png',
+    },
+    {
+      id: 11,
+      name: 'Storm',
+      capacity: '25 Litre',
+      img: '/img/cool_plus5.png',
+    },
+    {
+      id: 12,
+      name: 'Windy',
+      capacity: '30 Litre',
+      img: '/img/windy11.png',
+    },
+    {
+      id: 13,
+      name: 'Turbo',
+      capacity: '30 Litre',
+      img: '/img/windy12.png',
+    },
+    {
+      id: 14,
+      name: 'Smarty',
+      capacity: '35 Litre',
+      img: '/img/windy13.png',
     },
   ];
 
-  const [expandedDescriptions, setExpandedDescriptions] = useState({});
-
-  const toggleReadMore = (id) => {
-    setExpandedDescriptions((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
+  // Split products into groups of 3
+  const groupedProducts = [];
+  for (let i = 0; i < products.length; i += 3) {
+    groupedProducts.push(products.slice(i, i + 3));
+  }
 
   return (
     <>
@@ -81,54 +104,55 @@ function Cooler() {
         <BackgroundSection bgImage="/img/coolerbanner.jpg" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center text-[#000066]">
-          Air Cooler Products
+          THE NEW RANGE OF COOLERS:
         </h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="p-4 bg-white rounded-xl shadow hover:shadow-xl transition duration-300"
-            >
-              <div className="w-full mb-4 overflow-hidden rounded">
-                <img
-                  src={product.img}
-                  alt={product.name}
-                  className="w-full h-[150px] sm:h-[180px] object-contain"
-                />
-              </div>
-
-              <h2 className="text-base sm:text-lg font-os font-semibold">{product.name}</h2>
-
-              <p className="text-xs sm:text-sm text-gray-600 mt-2 text-justify font-robo leading-relaxed">
-                {expandedDescriptions[product.id]
-                  ? product.dis
-                  : `${product.dis.slice(0, 80)}...`}
-                <button
-                  onClick={() => toggleReadMore(product.id)}
-                  className="text-blue-600 ml-1 underline cursor-pointer text-xs sm:text-sm"
+        {groupedProducts.map((group, index) => (
+          <div key={index} className="mb-12">
+            <div className="grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+              {group.map((product) => (
+                <div
+                  key={product.id}
+                  className="p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
                 >
-                  {expandedDescriptions[product.id] ? 'Read less' : 'Read more'}
-                </button>
-              </p>
-
-              <div className="mt-3 flex items-center justify-between text-xs sm:text-sm font-os space-x-2">
-  <span className="text-green-600 font-bold">
-    ₹{product.price.toLocaleString()}
-  </span>
-  <span className="text-gray-400 line-through">
-    ₹{product.cutPrice.toLocaleString()}
-  </span>
-  <span className="text-red-500 font-medium">{product.offer}</span>
-</div>
-
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    className="w-full h-48 object-contain mb-4"
+                  />
+                  <h2 className="text-lg font-semibold">{product.name}</h2>
+                  <p className="text-gray-700 text-sm">
+                    Capacity: <span className="font-bold">{product.capacity}</span>
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+
+            {/* Compare button under every 3 products */}
+            <div className="flex justify-center mt-6">
+               <Link
+  to="/coolerspecifications"
+  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+>
+  Compare All
+</Link>
+            </div>
+          </div>
+        ))}
+
+        {/* Compare All button at bottom */}
+        <div className="flex justify-center mt-10">
+         <Link
+  to="/coolerspecifications"
+  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+>
+  Compare All
+</Link>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-20">
           <Ac />
         </div>
       </div>

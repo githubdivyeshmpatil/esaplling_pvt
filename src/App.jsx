@@ -63,6 +63,12 @@ import Dataled from "./components/Dataled";
 import Smallappillinace from "./components/Smallappillinace";
 import AeroStar from "./components/AeroStar";
 import Envorment_safety from "./components/Envorment_safety";
+import WashingMachineTable from "./components/WashingMachineTable";
+import TVComparisonTable from "./components/TVComparisonTable";
+import ACComparisonTable from "./components/ACComparisonTable";
+import CoolerSpecifications from "./components/CoolerSpecifications";
+import FridgeSpecs from "./components/FridgeSpecs";
+import VisiCooler from "./components/VisiCooler";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -89,11 +95,20 @@ function App() {
           <Route path="/dataled" element={<Dataled />} />
          <Route path="/consumer-electronics/small_appliances" element={<Smallappillinace />} />
                   <Route path="/support/envorment_helth_guide" element={<Envorment_safety/>} />
+                                    <Route path="/consumer-electronics/washingdata" element={<WashingMachineTable/>} />
+                                    <Route path="/consumer-electronics/tvcomparison" element={<TVComparisonTable/>} />
+                                    <Route path="/consumer-electronics/accomparison" element={<ACComparisonTable/>} />
+        <Route path="/coolerspecifications" element={<CoolerSpecifications />} />
+                                                <Route path="/fridgespecs" element={<FridgeSpecs />} />
+                  <Route path="/consumer-electronics/visicooler" element={<VisiCooler />} />
 
 
 
 
-        
+
+
+
+
 
 
           
@@ -132,7 +147,6 @@ function App() {
             element={<Energymanagement />}
           />
                     <Route path="/hvac/aerostar" element={<AeroStar />} />
-
           <Route path="/services/eletrical_and_lv" element={<Electric_lv />} />
           <Route path="/services/plumbing" element={<Plumbing />} />
           <Route path="/services/fireprotection" element={<Fireprotection />} />
@@ -176,6 +190,7 @@ function App() {
           <Route path="/consumer-electronics/geysers" element={<Geysers />} />
                     <Route path="/contact/contact_us" element={<Contact />} />
                                         <Route path="/hvac/heating" element={<Heating />} />
+
 
 
        

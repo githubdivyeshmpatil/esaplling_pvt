@@ -4,7 +4,7 @@ function Youtube3() {
   return (
     <>
       <section className="w-full px-4 py-10 bg-[#c2dce6]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2  gap-8 items-center">
           {/* Left Side Content */}
           <div>
             <h2 className="text-xl md:text-2xl font-bold text-black mb-4">
@@ -36,7 +36,8 @@ function Youtube3() {
           <div className="w-full h-64 md:h-96 bg-gray-100 p-2 rounded-lg shadow-md">
             <iframe
               className="w-full h-full rounded-md"
-              src="https://www.youtube.com/embed/wcCv4JKIPYM"
+            src="https://www.youtube.com/embed/oO7y0juA5ac"
+
               title="Split AC System Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

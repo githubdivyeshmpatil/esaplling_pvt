@@ -80,7 +80,7 @@ function Lfd() {
 
               <div className="mt-4">
                 <a
-                  href="/datalfd"
+                  href="/consumer-electronics/tvcomparison"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"
                 >
                   Know More
