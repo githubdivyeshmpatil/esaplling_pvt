@@ -10,10 +10,17 @@ function Certification() {
    <>
      <Navbar />
      <div className="max-w-9xl">
-       <BackgroundSection bgImage="/img/certi.png" />
-     </div>
+<div className="w-full min-h-screen bg-white flex items-center justify-center px-4 sm:px-6 md:px-10"
+     style={{
+       backgroundImage: "url('/img/certi.png')", // ← Yahan apni image ka path daalo
+       backgroundRepeat: 'no-repeat',
+       backgroundPosition: 'center',
+       backgroundSize: 'contain',
+     }}>
+  {/* Optional Content Here */}
+</div>     </div>
 
-     <section className="bg-white py-10 px-4 sm:px-8 lg:px-16">
+     <section className="bg-white   sm:px-8 lg:px-16">
        <div className="max-w-7xl mx-auto text-justify">
          <h2 className="text-3xl md:text-4xl font-bold text-[#000066] mb-6 font-os">Certification</h2>
          

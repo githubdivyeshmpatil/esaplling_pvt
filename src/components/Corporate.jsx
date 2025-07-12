@@ -16,8 +16,7 @@ function Corporate() {
       <div className="px-4 sm:px-6 lg:px-16 py-12 bg-gray-50">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 text-black font-os">
-          Our Achievements
-        </h2>
+Our Inception	        </h2>
 
         {/* Justified Paragraph (start from left) */}
         <div className="max-w-7xl w-full text-justify text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-10 font-robo">

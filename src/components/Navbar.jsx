@@ -48,7 +48,7 @@ export default function Navbar() {
     columns: [
       {
         items: [
-          { name: t("know_us"), link: "/consumer-electronics/led" },
+          { name: t("know_us"), link: "" },
           { name: t("about_us"), link: "/about" },
           { name: t("vision_mission"), link: "/vison" },
           { name: t("acquisition"), link: "/acquisition" },

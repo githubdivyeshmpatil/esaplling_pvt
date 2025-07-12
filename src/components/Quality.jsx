@@ -10,8 +10,17 @@ function Quality() {
     <>
     <Navbar />
      <div className="max-w-9xl">
-       <BackgroundSection bgImage="/img/banner-quality.jpg" />
-     </div>
+      
+<div className="w-full min-h-screen bg-white flex items-center justify-center px-4 sm:px-6 md:px-10"
+     style={{
+       backgroundImage: "url('/img/banner-quality.jpg')", // ← Yahan apni image ka path daalo
+       backgroundRepeat: 'no-repeat',
+       backgroundPosition: 'center',
+       backgroundSize: 'contain',
+     }}>
+  {/* Optional Content Here */}
+</div>     </div>
+    
      <div className="max-w-7xl mx-auto text-justify">
          <h2 className="text-3xl font-bold text-[#000066] mb-6 font-os">Quality Assurance:</h2>
          

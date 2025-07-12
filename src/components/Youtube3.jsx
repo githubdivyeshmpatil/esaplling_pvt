@@ -11,15 +11,7 @@ function Youtube3() {
               Air Conditioning Solutions
             </h2>
             <p className="text-gray-700 text-justify text-base md:text-lg leading-relaxed font-robo">
-              Split AC systems are often more cost-effective for cooling smaller spaces, such as a single room or small apartment. 
-              They are typically less expensive to purchase and install than VRF systems. Installing a split AC system is relatively 
-              straightforward, and it doesn't require complex ductwork. This makes it a good option for retrofitting existing buildings 
-              or for situations where you need a quick cooling solution.
-              <br /><br />
-              Many modern split AC units are designed with energy-efficient features, such as inverter technology, which can help 
-              reduce energy consumption and lower your utility bills. You can install multiple split AC units in different rooms, 
-              allowing for individual temperature control in each space. This can lead to energy savings because you can cool only 
-              the rooms that are in use.
+             Transport air conditioning solutions are designed to provide efficient and comfortable climate control within various types of vehicles, such as buses, trucks, trains, and other modes of transportation. These systems are essential for maintaining a comfortable environment for passengers and operators, as well as ensuring the safe transportation of temperature-sensitive cargo.
             </p>
              <div className="mt-8 ">
           <a
