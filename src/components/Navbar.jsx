@@ -151,10 +151,10 @@ export default function Navbar() {
             title: "Product",
             titleLink: "/hvac/product",
             items: [
-              { name: "New Ac Product", link: "/chiller" },
-              { name: "Solar", link: "/server-airconditioning" },
-              { name: "Elavator", link: "/server-airconditioning" },
-              { name: "Aero-Star", link: "/hvac/aerostar" },
+              { name: "New Ac Product", link: "/" },
+              { name: "Solar", link: "/" },
+              { name: "Elavator", link: "/" },
+              { name: "Air Monitor - Aero Star", link: "/hvac/aerostar" },
             ],
           },
           {
