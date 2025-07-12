@@ -75,6 +75,7 @@ export default function Navbar() {
         columns: [
           {
             title: "televisions",
+            titleImage: t1,
             items: [
                { name: t("led"), link: "/consumer-electronics/led" },
                 { name: t("LED 65"), link: "/consumer-electronics/led" },
@@ -90,6 +91,7 @@ export default function Navbar() {
           },
           {
             title: t("air conditioners"),
+            titleImage: t2,
             items: [
               { name: t("Air Conditioner"), link: "/consumer-electronics/split-ac" },
                  { name: t("Cassate"), link: "/consumer-electronics/split-ac" },
@@ -100,6 +102,7 @@ export default function Navbar() {
           },
           {
             title: "cooler",
+            titleImage: t3,
             items: [
               { name: t("Evaporative cooler"), link: "/consumer-electronics/cooler" },
     { name: t("New_desert"), link: "/consumer-electronics/cooler" },
@@ -111,6 +114,7 @@ export default function Navbar() {
           },
           {
             title: "refrigerators",
+            titleImage: t4,
             items: [
                  { name: t("Refrigerators"), link: "/consumer-electronics/refrigerators" },
                                   { name: t("Visi Cooler"), link: "/consumer-electronics/visicooler" },
@@ -119,12 +123,14 @@ export default function Navbar() {
           },
           {
             title: "washing",
+            titleImage: t5,
             items: [{ name: t("washing Machine"), link: "/consumer-electronics/washing" },
               { name: t("Automatic washing Machine"), link: "/consumer-electronics/washing" },
             ],
           },
           {
             title: "geysers",
+            titleImage: T6,
             items: [ { name: t("Insta Geyser - 2L"), link: "/consumer-electronics/geysers" },
               { name: t("Geyser 5L-25L "), link: "/consumer-electronics/geysers" },
                { name: t("Commerical Geyser 100L-500L "), link: "/consumer-electronics/geysers" },
@@ -697,7 +703,17 @@ export default function Navbar() {
                                     {column.title}
                                   </Link>
                                 ) : (
-                                  <h4 className="mb-3 font-os text-lg">{column.title}</h4>
+                                  <div className="mb-3">
+                                    {column.titleImage ? (
+                                      <img 
+                                        src={column.titleImage} 
+                                        alt={column.title} 
+                                        className="h-12 w-auto object-contain mb-2"
+                                      />
+                                    ) : (
+                                      <h4 className="font-os text-lg">{column.title}</h4>
+                                    )}
+                                  </div>
                                 )
                               ) : null}
                               <ul className="space-y-2">
