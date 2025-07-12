@@ -50,7 +50,7 @@ Being ESAPLLING, we apply innovative techniques and ideas in an ever changing in
     <div>
       <a
         href="/about"
-        className="inline-block bg-[#428aff] text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
+        className="inline-block bg-[#428aff] rounded-xl text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
       >
 Explore The Success Story      </a>
     </div>
@@ -70,7 +70,9 @@ Explore The Success Story      </a>
 
           <FeatureS />
 
-          <Heading text='Behind the Scenes: Manufacturing at Esaplling'/>
+<h1 class="text-4xl font-bold text-center text-black">
+ESAPLLING: Revolutionizing the HVAC Industry through Expertise and Technology
+</h1>
           <YouTubeLayout />
           <Youtube2/>
 
