@@ -576,7 +576,7 @@ export default function Navbar() {
       itemName === "Innovation" ||
       itemName === "Innovation" ||
       itemName === "Support" ||
-      itemName === "Carrier"
+      itemName === "Career"
     ) {
       return "grid-cols-6";
     }
@@ -724,17 +724,7 @@ export default function Navbar() {
           ))}
 
           <li className="relative group cursor-pointer">
-          <select
-  onChange={(e) => changeLanguage(e.target.value)}
-  className="p-2 border rounded font-robo text-base"
->
-  <option value="en">English</option>
-  <option value="hi">हिन्दी</option>
-  <option value="gu">ગુજરાતી</option>
-  <option value="mr">मराठी</option>
-  <option value="or">ଓଡ଼ିଆ (Odia)</option>
-</select>
-
+         
 
           </li>
         </ul>
@@ -813,66 +803,7 @@ export default function Navbar() {
             </li>
           ))}
 
-          <div className="pt-4 border-t">
-            <p className="text-xs text-gray-500 font-robo">Select Language</p>
-            <ul className="space-y-2 mt-2">
-              <li>
-                <button 
-                  onClick={() => {
-                    changeLanguage('en');
-                    setIsOpen(false);
-                  }}
-                  className="hover:text-blue-600 font-robo w-full text-left text-xs sm:text-sm"
-                >
-                  English
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    changeLanguage('hi');
-                    setIsOpen(false);
-                  }}
-                  className="hover:text-blue-600 font-robo w-full text-left text-xs sm:text-sm"
-                >
-                  हिन्दी
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    changeLanguage('gu');
-                    setIsOpen(false);
-                  }}
-                  className="hover:text-blue-600 font-robo w-full text-left text-xs sm:text-sm"
-                >
-                  ગુજરાતી
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    changeLanguage('mr');
-                    setIsOpen(false);
-                  }}
-                  className="hover:text-blue-600 font-robo w-full text-left text-xs sm:text-sm"
-                >
-                  मराठी
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    changeLanguage('or');
-                    setIsOpen(false);
-                  }}
-                  className="hover:text-blue-600 font-robo w-full text-left text-xs sm:text-sm"
-                >
-                  ଓଡ଼ିଆ (Odia)
-                </button>
-              </li>
-            </ul>
-          </div>
+          
         </ul>
       </div>
     </nav>

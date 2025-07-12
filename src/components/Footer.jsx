@@ -235,9 +235,9 @@ const Footer = () => {
               {[
                 { to: "/automotive/automotive_page", label: "Automotive" },
                 { to: "/services/eletrical_and_lv", label: "Multi purpose AC DC" },
-                { to: "#", label: "Generator & Transmission" },
-                { to: "#", label: "Consumer Electronics & Telecom" },
-                { to: "#", label: "Power System" },
+                { to: "/automotive/automotive_page", label: "Generator & Transmission" },
+                { to: "/automotive/automotive_page", label: "Consumer Electronics & Telecom" },
+                { to: "/automotive/automotive_page", label: "Power System" },
               ].map((item, i) => (
                 <motion.li
                   key={item.to}

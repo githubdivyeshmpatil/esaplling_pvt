@@ -1,5 +1,5 @@
 // tailwind.config.js
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["'Roboto'", "sans-serif"], // name must match what you imported
+        roboto: ["Roboto", "sans-serif"], // ✅ no quotes around Roboto
       },
     },
   },

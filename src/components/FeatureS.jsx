@@ -85,7 +85,7 @@ const FeatureS = () => {
       img: 'img/serv7.png',
       name: 'Information Technology',
       link: '/information-technology',
-      discription: 'Generate a professional and engaging business...',
+      discription: 'We are a technology-driven company specializing in custom software development, helping businesses transform their digital vision into reality. Our IT solutions are designed to be scalable, secure, and future-ready.',
     },
   ];
 
