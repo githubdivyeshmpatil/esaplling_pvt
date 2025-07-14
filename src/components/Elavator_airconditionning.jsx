@@ -10,9 +10,18 @@ function ElevatorAirConditioning() {
   return (
     <>
       <Navbar />
-      <div className="max-w-full">
-        <BackgroundSection bgImage="/img/elevator_banner.jpg" />
-      </div>
+      
+<div
+  className="w-full min-h-screen bg-white flex items-center justify-center"
+  style={{
+    backgroundImage: "url('/img/elevator_banner.jpg')",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover', // 'contain' → 'cover' for full background coverage
+  }}
+>
+  {/* Optional Content Here */}
+</div>
 
       <section className="max-w-5xl mx-auto p-6 md:p-12">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center font-os">

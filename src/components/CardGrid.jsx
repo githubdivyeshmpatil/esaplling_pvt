@@ -1,4 +1,11 @@
+
+
+
+
+
+
 import React, { useEffect } from "react";
+
 
 const cards = [
   {
@@ -80,34 +87,36 @@ const cards = [
     text: "Dampers are designed to prevent fire and smoke from spreading from a fire source through the ventilation system and into other parts of the building. Depending on their application, fire dampers have different fire-resistance classes called fire-duration ratings and can be installed in concrete or masonry walls and in lightweight partition walls.",
   },
 ];
-
 export default function CardGrid() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-justify">
-        {cards.map(({ id, image, title, text }) => (
-          <div
-            key={id}
-            className="bg-white rounded-lg overflow-hidden flex flex-col"
-          >
-            <div className="flex items-center justify-center h-48">
-              <img
-                src={image}
-                alt={title}
-                className="max-h-full w-auto object-contain"
-              />
-            </div>
-            <div className="p-4 flex flex-col flex-grow">
-              <h3 className="text-lg md:text-xl font-semibold mb-2 font-os">{title}</h3>
-              <p className="text-gray-600 flex-grow font-robo text-base sm:text-base md:text-lg">{text}</p>
-            </div>
+    <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      {cards.map(({ id, image, title, text }, index) => (
+        <div
+          key={id}
+          className={`flex flex-col md:flex-row ${
+            index % 2 !== 0 ? "md:flex-row-reverse" : ""
+          } bg-white rounded-lg overflow-hidden shadow-md`}
+        >
+          {/* Image Section */}
+          <div className="md:w-1/2 flex items-center justify-center bg-gray-100">
+            <img
+              src={image}
+              alt={title}
+              className="object-contain w-full h-64 md:h-80"
+            />
           </div>
-        ))}
-      </div>
+
+          {/* Text Section */}
+          <div className="md:w-1/2 p-6 flex flex-col justify-center text-justify">
+            <h3 className="text-xl md:text-2xl font-semibold mb-3 font-os">{title}</h3>
+            <p className="text-gray-900 font-robo text-base sm:text-base md:text-lg">{text}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

@@ -9,9 +9,18 @@ function Airhandling() {
   return (
    <>
      <Navbar />
+  
       <div className="max-w-9xl">
-        <BackgroundSection bgImage="/img/airhandling.jpg" />
-      </div>
+        <div className="w-full min-h-screen bg-white flex items-center justify-center px-4 sm:px-6 md:px-10"
+     style={{
+       backgroundImage: "url('/img/airhandling.jpg')", // ← Yahan apni image ka path daalo
+       backgroundRepeat: 'no-repeat',
+       backgroundPosition: 'center',
+       backgroundSize: 'contain',
+     }}>
+  {/* Optional Content Here */}
+</div> </div>
+
          <div className="container mx-auto px-4 py-10">
       <div className="space-y-6 text-black text-justify font-robo">
         <h2 className="text-3xl md:text-4xl font-bold font-os">Air Handling Unit</h2>

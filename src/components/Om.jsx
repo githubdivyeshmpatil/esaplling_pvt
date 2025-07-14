@@ -9,9 +9,33 @@ function Om() {
   return (
    <>
      <Navbar />
-      <div className="max-w-9xl">
-        <BackgroundSection bgImage="/img/om.jpg" />
-      </div>
+    <div
+  className="w-full min-h-screen bg-white flex items-center justify-center"
+  style={{
+    backgroundImage: "url('/img/om.jpg')",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'top center',
+    backgroundSize: 'cover',
+  }}
+>
+  {/* Content Here */}
+</div>
+ <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-white">
+      
+      {/* Left Column – Image */}
+     <div className="w-full md:w-1/2 h-64 md:h-screen flex items-center justify-center">
+  <img
+    src="/img/parking.jpg" // ← Apni image ka path daalein
+    alt="OM"
+    className="w-3/4 h-3/4 object-cover" // ← Image chhoti ho gayi
+  />
+</div>
+
+
+      {/* Right Column – Text / Content */}
+    
+
+    </div>
        <div className="max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 font-os">
         MEETING ALL YOUR OPERATION MAINTENANCE NEEDS IN TIME AND ON YOUR BUDGET

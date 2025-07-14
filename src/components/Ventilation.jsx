@@ -10,9 +10,17 @@ function Ventilation() {
   return (
    <>
     <Navbar />
-      <div className="max-w-9xl">
-        <BackgroundSection bgImage="/img/ventilation.jpg" />
-      </div>
+   
+       <div
+        className="w-full min-h-screen bg-white flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/img/ventilation.jpg')",
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
+      ></div>
+
       <section className="max-w-4xl mx-auto px-6 py-10 text-gray-800 text-justify">
       <h1 className="text-4xl font-bold mb-6 font-os">Ventilation</h1>
       

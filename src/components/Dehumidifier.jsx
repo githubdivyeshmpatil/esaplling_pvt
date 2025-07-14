@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Navbar from './Navbar'
-import BackgroundSection from './BackgroundSection'
 
 function Dehumidifier() {
    useEffect(() => {
@@ -9,9 +8,19 @@ function Dehumidifier() {
   return (
  <>
   <Navbar />
-     <div className="max-w-9xl">
-       <BackgroundSection bgImage="/img/dehumidifier.jpg" />
-     </div>
+     
+
+   <div className="max-w-9xl">
+        <div className="w-full min-h-screen bg-white flex items-center justify-center px-4 sm:px-6 md:px-10"
+     style={{
+       backgroundImage: "url('/img/dehumidifier.jpg')", // ← Yahan apni image ka path daalo
+       backgroundRepeat: 'no-repeat',
+       backgroundPosition: 'center',
+       backgroundSize: 'contain',
+     }}>
+  {/* Optional Content Here */}
+</div> </div>
+
         <div className="container mx-auto px-4 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
