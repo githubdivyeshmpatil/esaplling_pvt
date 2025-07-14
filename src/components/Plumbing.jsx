@@ -61,8 +61,8 @@ function Plumbing() {
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold text-black mb-4 font-os">Fire Fighting:</h3>
               <ul className="list-disc list-inside space-y-2 text-base font-robo text-gray-700">
-                <li className="text-base sm:text-base md:text-lg lg:text-lg">To design and prepare base drawings for firefighting facilities: underground & overhead tanks, wet riser/downcomer, hydrants, hose boxes, sprinklers, pumps (main, booster, jockey), pipe sizing, alarm system etc., based on fire Provisional N.O.C.</li>
-                <li className="text-base sm:text-base md:text-lg lg:text-lg">To provide technical specifications for all site works.</li>
+                <li className="text-base sm:text-base md:text-lg lg:text-lg">To design and prepare Base drawings to include all aspects of fire fighting facilities such as underground and overhead water storage tanks, wet riser cum    down comer, hydrants, rose reel and hose box, sprinkler system design, main pump, sprinkler pump, booster pump, jockey pump design, pipe sizing, fire    alarm system etc. based on fire Provisional N.O.C.</li>
+                <li className="text-base sm:text-base md:text-lg lg:text-lg"> • To provide technical specifications for all the works to be done at site.</li>
               </ul>
             </div>
 

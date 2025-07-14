@@ -332,7 +332,7 @@ export default function Navbar() {
             items: [
               { name: "LED TV", link: "/" },
               { name: "Appliances", link: "/" },
-              { name: "Harness", link: "/" },
+              { name: "Harness", link: "/automotive/automotive_page" },
               { name: "Cooler", link: "/" },
             ],
           },
@@ -374,7 +374,7 @@ export default function Navbar() {
           {
             title: "Accessories & Spare",
             items: [
-              { name: "HAVC", link: "/" },
+              { name: "HAVC", link: "/hvac/new_hvac" },
               { name: "Aircondtioning", link: "/" },
             ],
           },

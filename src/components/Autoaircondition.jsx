@@ -20,9 +20,9 @@ function Autoaircondition() {
             Automobile Air Conditioning System
           </h1>
 
-          <p className="text-gray-700 text-lg mb-8 text-center font-robo">
-            Automotive air conditioning cools and cleans the air inside a vehicle, reduces humidity,
-            and maintains a comfortable environment. The system also manages air quality and quantity.
+          <p className="text-gray-700 text-lg mb-8 font-robo text-justify">
+           Automobile air conditioning systems cool the occupants of a vehicle in hot weather. Automotive air conditioning is the process by which the air is cooled and cleaned, the humidity lowered and the air circulated. The quantity and quality of the air is also controlled. Under ideal conditions the air-conditioning system can be expected to accomplish all these tasks at the same time.
+The air-conditioning system in modern vehicles is designed to lower the temperature to therefore assess the system’s performance. The manifold and hand valves allow the system to be purged of refrigerant, evacuated of air and moisture, and recharged with new refrigerant. Most modern gauge sets use two gauges, but some airconditioning systems that use a pressure control regulator for the evaporator may require a second low-pressure gauge.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -69,6 +69,10 @@ function Autoaircondition() {
           </div>
         </div>
           <Ac />
+          <h3 class="text-center text-lg text-blue-500 font-semibold">
+Automobile Air Conditioning System Comming Soon...
+</h3>
+
       </div>
       
     </>
