@@ -1,4 +1,5 @@
 import React from 'react'
+import ab from "../assets/images/home_ab.png";
 
 function TechArticles() {
   return (
@@ -12,29 +13,15 @@ function TechArticles() {
             The Breath of Life: Exploring Oxygen Plants and their Vital Role
           </h2>
           <p>
-            In the intricate tapestry of life on Earth, few elements are as essential as oxygen.
-            It is the very breath of life, the element that sustains not only human existence
-            but also that of countless other organisms. As our world evolves, the demand for
-            this life-sustaining gas continues to rise, and this is where the remarkable world
-            of oxygen plants comes into focus.
-          </p>
-          <p>
-            Oxygen plants, also known as oxygen generation units or oxygen production facilities,
-            are the unsung heroes of modern healthcare, industry, and emergency services.
-          </p>
-          <p>
-            As we embark on this exploration of oxygen plants, we venture into the heart of a
-            technology that plays a pivotal role in preserving and enhancing human life.
-          </p>
-          <p>
-            Furthermore, this journey will lead us to understand the broader implications of
-            oxygen plant technology. In the face of global challenges such as the COVID-19 pandemic,
-            the importance of a robust oxygen supply has come into stark focus.
-          </p>
-          <p>
-            Join us as we navigate the fascinating world of oxygen plants, where the quest to
-            harness this vital element is not merely a matter of science and engineering,
-            but a lifeline that connects us all.
+            In the intricate tapestry of life on Earth, few elements are as essential as oxygen. It is the very breath of life, the element that sustains not only human existence but also that of countless other organisms. As our world evolves, the demand for this life-sustaining gas continues to rise, and this is where the remarkable world of oxygen plants comes into focus.
+
+Oxygen plants, also known as oxygen generation units or oxygen production facilities, are the unsung heroes of modern healthcare, industry, and emergency services. These facilities are responsible for the extraction, purification, and distribution of oxygen to meet the ever-growing needs of society. From supporting critical medical procedures to enabling industrial processes and emergency response, oxygen plants are the silent pillars of our infrastructure.
+
+As we embark on this exploration of oxygen plants, we venture into the heart of a technology that plays a pivotal role in preserving and enhancing human life. We will delve into the science behind oxygen production, understanding how air, a seemingly abundant resource, can be transformed into the life-sustaining gas that fills our lungs.
+
+Furthermore, this journey will lead us to understand the broader implications of oxygen plant technology. In the face of global challenges, such as the COVID-19 pandemic, the importance of a robust oxygen supply has come into stark focus. We will explore the critical role oxygen plants play in times of crisis, their impact on healthcare systems, and the measures taken to ensure their reliability and accessibility.
+
+Join us as we navigate the fascinating world of oxygen plants, where the quest to harness this vital element is not merely a matter of science and engineering, but a lifeline that connects us all. Together, we will uncover the ingenuity, dedication, and far-reaching implications of this life-supporting technology, gaining a newfound appreciation for the breath of life itself.
           </p>
         </div>
 
@@ -44,39 +31,30 @@ function TechArticles() {
             Unveiling the World of HVAC: Where Comfort Meets Efficiency
           </h2>
           <p>
-            The air we breathe and the climate we experience in our homes, offices, and buildings
-            have a profound impact on our well-being and productivity. Enter the world of
-            Heating, Ventilation, and Air Conditioning (HVAC), an essential and often underappreciated
-            facet of modern living.
-          </p>
-          <p>
-            In this exploration of HVAC, we venture into the intricate and fascinating realm where
-            engineering, thermodynamics, and environmental consciousness converge.
-          </p>
-          <p>
-            As we journey through the world of HVAC, we will uncover the pivotal role these systems
-            play in our daily lives — from the advanced technologies that enable precise temperature
-            control to sustainable practices that reduce energy consumption.
-          </p>
-          <p>
-            Furthermore, this exploration will extend beyond the technical aspects. We will delve
-            into the environmental considerations and ethical implications associated with heating
-            and cooling our indoor spaces.
-          </p>
-          <p>
-            Join us on this enlightening expedition as we unveil the multifaceted world of HVAC —
-            where comfort meets efficiency.
+           The air we breathe and the climate we experience in our homes, offices, and buildings have a profound impact on our well-being and productivity. Enter the world of Heating, Ventilation, and Air Conditioning (HVAC), an essential and often underappreciated facet of modern living. HVAC systems are the unsung heroes that quietly ensure our indoor environments remain comfortable, healthy, and energy-efficient, regardless of the weather outside.
+
+In this exploration of HVAC, we venture into the intricate and fascinating realm where engineering, thermodynamics, and environmental consciousness converge. HVAC systems, consisting of complex networks of heating, cooling, and ventilation components, are designed to create a harmonious equilibrium between indoor comfort and energy efficiency. They not only regulate temperature but also manage humidity, air quality, and circulation.
+
+As we journey through the world of HVAC, we will uncover the pivotal role these systems play in our daily lives. From the advanced technologies that enable precise temperature control to the sustainable practices that reduce energy consumption and environmental impact, we will delve into the innovation driving this critical industry forward.
+
+Furthermore, this exploration will extend beyond the technical aspects of HVAC. We will delve into the environmental considerations and ethical implications associated with heating and cooling our indoor spaces. Energy-efficient HVAC systems are not only cost-effective but also integral to mitigating climate change and reducing our carbon footprint.
+
+Join us on this enlightening expedition as we unveil the multifaceted world of HVAC. Together, we will explore the principles of thermal comfort, the intricacies of system design, and the evolving trends that are shaping the future of indoor environments. Whether you are a homeowner seeking to optimize your living space, a building manager focused on sustainability, or simply intrigued by the science behind indoor climate control, this journey promises to provide valuable insights into the world of HVAC, where comfort meets efficiency. 
           </p>
         </div>
       </div>
 
       {/* Full width Section Below the Columns */}
-      <div className="mt-16 max-w-4xl mx-auto text-justify">
-        <h2 className="text-2xl font-bold text-red-700 mb-4">
-          Chilling Innovations: Exploring Automotive Air Conditioning
-        </h2>
-        <p>
-          Picture yourself driving on a scorching summer day, the sun beating down mercilessly. In such moments, there is one automotive feature that stands as a beacon of relief and comfort: the automotive air conditioning system. As you reach for the controls and feel the cool, refreshing breeze, you are tapping into a marvel of engineering and innovation that has become an indispensable part of modern driving.
+     <div className="mt-16 max-w-7xl mx-auto px-4 md:px-8">
+  <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+    
+    {/* Left Column - Text */}
+    <div className="md:w-1/2 text-justify">
+      <h2 className="text-2xl font-bold text-red-700 mb-4">
+        Chilling Innovations: Exploring Automotive Air Conditioning
+      </h2>
+      <p>
+        Picture yourself driving on a scorching summer day, the sun beating down mercilessly. In such moments, there is one automotive feature that stands as a beacon of relief and comfort: the automotive air conditioning system. As you reach for the controls and feel the cool, refreshing breeze, you are tapping into a marvel of engineering and innovation that has become an indispensable part of modern driving.
 
 Automotive air conditioning is more than just a luxury; it is a testament to human ingenuity and adaptability. In this exploration, we will journey into the realm where thermodynamics, refrigeration, and automotive engineering converge to provide us with climate control on wheels. From the early rudimentary attempts to cool the cabin of a vehicle to the sophisticated and energy-efficient systems of today, automotive air conditioning has come a long way.
 
@@ -87,10 +65,23 @@ Moreover, we will explore the innovations that have transformed automotive air c
 This exploration will also extend beyond the technical aspects. We will delve into the impact of automotive air conditioning on driving habits, energy consumption, and carbon emissions. It's a reminder that even the small comforts we take for granted while driving have a broader impact on the environment and society.
 
 Join us on this journey through the world of automotive air conditioning, where chilling innovations have made driving in extreme weather conditions not just bearable but enjoyable. Together, we will uncover the science, engineering, and sustainable practices behind this automotive marvel and gain a deeper appreciation for the cool comfort it brings to our journeys on the road.
-        </p>
-      </div>
-    </section>
+      </p>
+    </div>
 
+    {/* Right Column - Image */}
+    <div className="md:w-1/2 flex justify-center">
+      <img
+        src={ab}
+        alt="Company Image"
+        className="w-full max-w-[400px] h-auto object-contain rounded-xl shadow-lg"
+      />
+    </div>
+    
+  </div>
+</div>
+    </section>
+  {/* Image Section */}
+ 
     {/* youtube -------------------------video----------------------------------- */}
    <section className="px-4 py-8 bg-gray-100">
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
