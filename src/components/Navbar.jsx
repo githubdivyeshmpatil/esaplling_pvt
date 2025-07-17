@@ -82,11 +82,6 @@ export default function Navbar() {
                  { name: ("LED 75-85"), link: "/consumer-electronics/led" },
                 { name: ("Small Appliances"), link: "/consumer-electronics/small_appliances" },
 
-    { name: t("iptv"), link: "/consumer-electronics/iptv" },
-    { name: t("interactive_panel"), link: "/consumer-electronics/interactive-panel" },
-    { name: t("video_display"), link: "/consumer-electronics/video-display-system" },
-    { name: t("large_display"), link: "/consumer-electronics/large-format-display" },
-    { name: t("board_room"), link: "/consumer-electronics/board-room-solution" },
             ],
           },
           {
