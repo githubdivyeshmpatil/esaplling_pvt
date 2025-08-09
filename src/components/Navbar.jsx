@@ -336,7 +336,7 @@ export default function Navbar() {
     },
     {
       name: "Intractive Panal",
-      link: "https://esaplling-intractive-panel.vercel.app/",
+      link: "https://esaplling-panel.vercel.app/",
       dropdown: {
         title: "ESAPLLING® OEM",
         columns: [
