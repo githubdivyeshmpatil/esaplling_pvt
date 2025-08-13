@@ -9,6 +9,11 @@ import YouTubeLayout from '../components/YouTubeLayout';
 import MakeInIndiaBanner from '../components/MakeInIndiaBanner';
 import Youtube2 from '../components/Youtube2';
 import Youtube3 from '../components/Youtube3';
+import bg3 from "../assets/images/new_banner.png";
+
+import KeyFeaturesSection from '../components/KeyFeaturesSection';
+import ExploreCarousel from '../components/ExploreCarousel';
+import ExploreSection from '../components/ExploreSection';
 
 function Home() {
   const { t } = useTranslation();
@@ -45,11 +50,11 @@ function Home() {
 
     <p className="text-black text-base md:text-lg text-justify font-robo">
 Since our inception, we have been driven by a single vision — innovation at the core of everything we do. Over the years, we have evolved into a trusted name in the electronics industry, backed by unmatched expertise, advanced technology, and a relentless commitment to quality.
-
-Our diverse manufacturing capabilities span across LED displays, air conditioners, washing machines, interactive panels, and sound systems, catering to both residential and commercial needs. Every product we create reflects our dedication to cutting-edge design, energy efficiency, and user-friendly technology.
+<br></br><br></br>
+Our diverse manufacturing capabilities span across LED displays, air conditioners, washing machines, interactive panels, and sound systems, catering to both residential and commercial needs. <br></br>Every product we create reflects our dedication to cutting-edge design, energy efficiency, and user-friendly technology.
 
 With a team of seasoned professionals and a state-of-the-art production facility, we continuously invest in research, development, and innovation, ensuring our offerings remain ahead of industry trends. From the very first day, our mission has been to deliver excellence that enhances everyday life, combining durability, performance, and style.
-
+<br></br><br></br>
 Today, we proudly stand as a brand synonymous with trust, technology, and transformation — shaping the future of electronics, one innovation at a time.    </p>
 
     <div>
@@ -65,6 +70,55 @@ Explore The Success Story      </a>
 
           <div className="px-4 pt-2 sm:pt-4">
             <Heading text='Products and Services' />
+            <KeyFeaturesSection/>
+            <div className="relative w-full h-[80vh] overflow-hidden">
+          {/* Background Image */}
+          <img
+            src={bg3}
+            alt="Display Background"
+            className="w-full h-full object-cover object-center"
+          />
+
+          {/* Overlay for darkening image (optional) */}
+          <div className="absolute " />
+
+          {/* Text Content */}
+          <div className="absolute inset-0 flex items-center justify-start px-6 md:px-16 text-left">
+            <div className="w-full md:w-2/3 flex items-center justify-center sm:p-6">
+              <div className="text-left w-full px-2 sm:px-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                  <span className="block">Space that transforms </span>
+                  <span className="block"> your brand value</span>
+                </h1>
+
+                <button
+                  className="px-5 py-2 sm:px-6 sm:py-3 mt-4 bg-[#09c] text-white font-semibold rounded-md shadow hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  data-aos="fade-right"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div><br></br>
+     <h1
+  className="
+   text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 text-center
+  "
+>
+  Products that transforms your approach for future of Conferencing Solutions
+</h1>
+
+<ExploreCarousel />
+
+ <h1
+  className="
+  text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 text-center
+  "
+>
+Display Solutions
+</h1>
+<ExploreSection/>
             <div className="flex items-center w-full px-4 sm:px-6 md:px-10 lg:px-14 py-4 sm:py-6 md:py-8 lg:py-10">
               <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold font-robo">
                 FEATURED SERVICES
@@ -79,7 +133,7 @@ Explore The Success Story      </a>
 ESAPLLING: Revolutionizing the HVAC Industry through Expertise and Technology
 </h1>
           <YouTubeLayout />
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-left p-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-left p-8 ml-22">
 Future of Air-Conditoning Solution
 </h1>
 

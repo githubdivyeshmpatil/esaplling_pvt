@@ -392,13 +392,16 @@ export default function TabContentSwitcher() {
 
       {/* Scrollable Content Over Background */}
       <section className="relative z-10  bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4 py-12">
+        <div className="max-w-7xl mx-auto text-center px-4 py-12">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Our Mission
+            Our Vision
           </h2>
-          <p className="mt-4 text-lg text-gray-600 sm:text-xl">
-            Esaplling Pvt Ltd aims to create a landmark in the horizon of air-conditioning and ventilation,
-            by introducing the best-in-class practices across the industries.
+          <p className="mt-4 text-lg text-gray-600 sm:text-xl text-justify">
+           At Esaplling Pvt. Ltd., our vision is to redefine the standards of <b>air-conditioning</b> and ventilation by delivering<b> best-in-class</b> practices that set new industry benchmarks. From cutting-edge technology to sustainable engineering, we strive to create solutions that are efficient, reliable, and future-ready.
+<br/><br></br>
+<b>Our mission goes beyond products</b> — we aim to<b> create a landmark </b>in the<b> industry horizon,</b> ensuring comfort, energy efficiency, and superior air quality across diverse sectors. Backed by expert knowledge, innovative design, and uncompromising quality control, Esaplling is committed to transforming the way the world experiences air and ventilation.
+
+With every project, we bring together precision engineering, advanced technology, and<b> customer-focused solutions</b> — making us a trusted partner for industries seeking performance without compromise.
           </p>
         </div>
 

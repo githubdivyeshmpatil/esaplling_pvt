@@ -33,15 +33,15 @@ function Youtube2() {
           </div>
 
           {/* Right Side YouTube Video with background */}
-          <div className="w-full h-64 md:h-96 bg-gray-100 p-2 rounded-lg shadow-md">
-            <iframe
-              className="w-full h-full rounded-md"
-              src="https://www.youtube.com/embed/wcCv4JKIPYM"
-              title="Split AC System Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div className="w-[700px] h-64 md:h-96 bg-gray-100 p-2 rounded-lg shadow-md mx-auto">
+  <iframe
+    className="w-full h-full rounded-md"
+    src="https://www.youtube.com/embed/wcCv4JKIPYM"
+    title="Split AC System Video"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
           </div>
         </div>
       </section>

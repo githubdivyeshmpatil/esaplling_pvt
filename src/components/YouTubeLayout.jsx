@@ -35,20 +35,25 @@ const YouTubeLayout = () => {
           <h2 className="text-base sm:text-base md:text-2xl lg:text-2xl font-bold mb-4">
             Next-Gen HVAC: Sustainable Engineering, Smart Controls, and Energy Optimization
           </h2>
+          <p>At Esaplling Pvt. Ltd., we’re shaping the future of HVAC with advanced technologies that combine sustainability, intelligence, and efficiency. Our systems are engineered to deliver superior climate control while minimizing environmental impact and operational costs.
+
+Through smart controls, real-time monitoring, and precision engineering, we ensure optimal performance for every project — whether it’s a commercial facility, industrial plant, or large-scale residential development.
+
+Our commitment to energy optimization means reduced carbon footprint, lower energy bills, and a greener tomorrow — without compromising comfort or quality.</p><br></br>
           <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
-            <strong className="text-blue-700">Expertise in Sustainable Solutions:</strong> ESAPLLING brings a wealth
+            <strong className="text-black">Expertise in Sustainable Solutions:</strong> ESAPLLING brings a wealth
             of expertise in sustainable HVAC solutions. With a team of engineers and experts who understand the
             principles of energy efficiency and environmental responsibility, ESAPLLING ensures that their HVAC
             systems are designed to minimize energy consumption and reduce the carbon footprint.
           </p>
           <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
-            <strong className="text-blue-700">Innovative Design and Engineering:</strong> They leverage state-of-the-art tools and simulation techniques...
+            <strong className="text-black">Innovative Design and Engineering:</strong> They leverage state-of-the-art tools and simulation techniques...
           </p>
           <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
-            <strong className="text-blue-700">Smart HVAC Technology:</strong> Embracing IoT and analytics for better energy efficiency and comfort...
+            <strong className="text-black">Smart HVAC Technology:</strong> Embracing IoT and analytics for better energy efficiency and comfort...
           </p>
           <p className="text-base sm:text-base md:text-base lg:text-base mb-2 text-gray-700">
-            <strong className="text-blue-700">Energy Management:</strong> Advanced energy management systems help reduce cost and carbon footprint.
+            <strong className="text-black">Energy Management:</strong> Advanced energy management systems help reduce cost and carbon footprint.
           </p>
           <div>
             <a
@@ -72,18 +77,18 @@ const YouTubeLayout = () => {
       </div>
 
       {/* Bottom 3 Thumbnail Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {videos.map((video, index) => (
           <div
             key={index}
             className="relative cursor-pointer group"
             onClick={() => setSelectedVideo(video.url)}
           >
-            <img
-              src={`https://img.youtube.com/vi/${video.url.split('/embed/')[1]}/0.jpg`}
-              alt={`Video ${index + 1}`}
-              className="rounded-xl w-full aspect-video object-cover"
-            />
+           <img
+  src={`https://img.youtube.com/vi/${video.url.split('/embed/')[1]}/0.jpg`}
+  alt={`Video ${index + 1}`}
+  className="rounded-xl w-full aspect-video object-cover border border-gray-500 p-5"
+/>
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-xl opacity-0 group-hover:opacity-100 transition">
               <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
