@@ -44,6 +44,7 @@ const Footer = () => {
   const inView = useInView(footerRef, { once: true, amount: 0.2 });
 
   return (
+    <>
     <footer
       className="relative bg-[#000066] bg-cover bg-center bg-no-repeat text-white pt-12 pb-4 px-4 sm:px-6 lg:px-8"
       style={{ backgroundImage: `url('/img/footer_newbg.png')` }}
@@ -259,75 +260,39 @@ const Footer = () => {
         </div>
 
         {/* Social & Footer */}
-        <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-700 pt-6 gap-4 sm:gap-0 text-center sm:text-left">
-          <div className="text-gray-400 text-sm order-2 sm:order-1">
-            esaplling© 2025 All Rights Reserved
-          </div>
-          <div className="flex flex-wrap justify-center sm:justify-end gap-4 order-1 sm:order-2">
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaFacebook />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaTwitter />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaInstagram />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaLinkedin />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaYoutube />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaGoogle />
-            </a>
-             <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaDiscord />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaPinterest />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaVimeoV />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaSnapchatGhost />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaSkype />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaAndroid />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaDribbble />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaTumblr />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaWifi />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaVine />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaFoursquare />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaStumbleupon />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaDiscord />
-            </a>
-             <a href="#" className="text-gray-400 hover:text-white text-xl">
-              <FaYCombinator />
-            </a>
-          </div>
-        </div>
+        
       </div>
     </footer>
+    {/* Social & Footer */}
+<div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-300 pt-6 pb-6 px-6 gap-4 sm:gap-0 text-center sm:text-left bg-white">
+  <div className="text-black text-sm order-2 sm:order-1">
+    Esaplling© 2025 All Rights Reserved
+  </div>
+  <div className="flex flex-wrap justify-center sm:justify-end gap-4 order-1 sm:order-2">
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaFacebook /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaTwitter /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaInstagram /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaLinkedin /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaYoutube /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaGoogle /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaDiscord /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaPinterest /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaVimeoV /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaSnapchatGhost /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaSkype /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaAndroid /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaDribbble /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaTumblr /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaWifi /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaVine /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaFoursquare /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaStumbleupon /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaDiscord /></a>
+    <a href="#" className="text-black hover:text-gray-700 text-xl"><FaYCombinator /></a>
+  </div>
+</div>
+
+</>
   );
 };
 
