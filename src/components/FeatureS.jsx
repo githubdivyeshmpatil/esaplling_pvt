@@ -70,7 +70,7 @@ const FeatureS = () => {
       discription: 'Automotive air conditioning is more than just a luxury; it is a testament to human ingenuity and adaptability. In this exploration, we will journey into the realm where thermodynamics, refrigeration, and automotive engineering converge to provide us with climate control on wheels. From the early rudimentary attempts to cool the cabin of a vehicle to the sophisticated and energy-efficient systems of today, automotive air conditioning has come a long way.',
     },
     {
-      img: 'img/serv5.png',
+      img: 'img/oxygen.png',
       name: 'Oxygen Plant',
       link: '/innovation/plant_setup',
       discription: 'Oxygen plants, also known as oxygen generation units or oxygen production facilities, are the unsung heroes of modern healthcare, industry, and emergency services. These facilities are responsible for the extraction, purification, and distribution of oxygen to meet the ever-growing needs of society. From supporting critical medical procedures to enabling industrial processes and emergency response, oxygen plants are the silent pillars of our infrastructure.',

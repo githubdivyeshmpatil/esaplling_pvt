@@ -44,8 +44,13 @@ function Home() {
     </span>
 
     <p className="text-black text-base md:text-lg text-justify font-robo">
-Being ESAPLLING, we apply innovative techniques and ideas in an ever changing industry, one of our major strength is our capability and confidence to provide value-added service – product installation, site commissioning, to handle any project, regardless of size or complexity, from inspection, through budgeting, to design, execution, validation and hand over.
-    </p>
+Since our inception, we have been driven by a single vision — innovation at the core of everything we do. Over the years, we have evolved into a trusted name in the electronics industry, backed by unmatched expertise, advanced technology, and a relentless commitment to quality.
+
+Our diverse manufacturing capabilities span across LED displays, air conditioners, washing machines, interactive panels, and sound systems, catering to both residential and commercial needs. Every product we create reflects our dedication to cutting-edge design, energy efficiency, and user-friendly technology.
+
+With a team of seasoned professionals and a state-of-the-art production facility, we continuously invest in research, development, and innovation, ensuring our offerings remain ahead of industry trends. From the very first day, our mission has been to deliver excellence that enhances everyday life, combining durability, performance, and style.
+
+Today, we proudly stand as a brand synonymous with trust, technology, and transformation — shaping the future of electronics, one innovation at a time.    </p>
 
     <div>
       <a
