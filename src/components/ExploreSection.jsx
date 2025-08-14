@@ -2,6 +2,7 @@ import React from "react";
 import product1 from "../assets/images/livecon.jpg";
 import product2 from "../assets/images/three.jpg";
 import product3 from "../assets/images/studio.jpg";
+import product4 from "../assets/images/studio.jpg"; // <-- Add your 4th image
 
 const products = [
   {
@@ -10,7 +11,7 @@ const products = [
     image: product1,
   },
   {
-    name: "Live - 360 ",
+    name: "Live - 360",
     desc: "Streamlined entertainment",
     image: product2,
   },
@@ -19,14 +20,17 @@ const products = [
     desc: "Large format visual displays",
     image: product3,
   },
+  {
+    name: "Live - Event",
+    desc: "Immersive live event experience",
+    image: product4, // <-- 4th card image
+  },
 ];
 
 export default function ExploreSection() {
   return (
     <div className="bg-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-     
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-[-20px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-[-20px]">
         {products.map((item, index) => (
           <div
             key={index}
@@ -44,7 +48,9 @@ export default function ExploreSection() {
               <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-2">
                 {item.name}
               </h4>
-              <p1 className="text-sm sm:text-base md:text-lg text-justify text-gray-600">{item.desc}</p1>
+              <p className="text-sm sm:text-base md:text-lg text-justify text-gray-600">
+                {item.desc}
+              </p>
             </div>
           </div>
         ))}

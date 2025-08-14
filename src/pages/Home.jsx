@@ -133,8 +133,17 @@ Display Solutions
 ESAPLLING: Revolutionizing the HVAC Industry through Expertise and Technology
 </h1>
           <YouTubeLayout />
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-left p-8 ml-22">
-Future of Air-Conditoning Solution
+         <h1
+  className="
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+    font-bold
+    text-center
+    px-4 sm:px-8
+    mx-auto
+    max-w-4xl
+  "
+>
+  Future of Air-Conditioning Solution
 </h1>
 
           <Youtube2/>
@@ -144,7 +153,12 @@ Future of Air-Conditoning Solution
           </div>
         </div>
       </div>
-       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-left p-8">
+       <h1 className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+    font-bold
+    text-center
+    px-4 sm:px-8
+    mx-auto
+    max-w-4xl">
 Future of Transport Air-Conditoning Solution
 </h1>
       <Youtube3/>
