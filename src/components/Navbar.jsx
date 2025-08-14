@@ -704,7 +704,7 @@ export default function Navbar() {
                               {/* If column has a title, render as a link if first item has a link */}
                               {column.title ? (
                                 column.titleLink ? (
-                                  <Link to={column.titleLink} className="font-medium mb-1 text-lg text-blue-700 hover:underline block">
+                                  <Link to={column.titleLink} className="font-medium mb-1 text-gray-600 hover:text-gray-900 font-robo text-sm hover:underline block">
                                     {column.title}
                                   </Link>
                                 ) : (

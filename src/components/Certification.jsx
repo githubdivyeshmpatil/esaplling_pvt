@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import BackgroundSection from './BackgroundSection'
+import ImageGrid12 from './ImageGrid12';
 
 function Certification() {
    useEffect(() => {
@@ -18,7 +19,11 @@ function Certification() {
        backgroundSize: 'contain',
      }}>
   {/* Optional Content Here */}
-</div>     </div>
+</div>   
+  </div>
+   <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+Environmental Health and Safety (EHS)      </h1>
+  <ImageGrid12/>
 
      <section className="bg-white   sm:px-8 lg:px-16">
        <div className="max-w-7xl mx-auto text-justify">

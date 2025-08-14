@@ -69,6 +69,7 @@ import ACComparisonTable from "./components/ACComparisonTable";
 import CoolerSpecifications from "./components/CoolerSpecifications";
 import FridgeSpecs from "./components/FridgeSpecs";
 import VisiCooler from "./components/VisiCooler";
+import Training from "./components/Training";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -79,6 +80,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/carrier" element={<CareerPage />} />
+                    <Route path="/training" element={<Training />} />
+
           <Route path="/about" element={<AboutUs />} />
           <Route path="/vison" element={<Vison />} />
           <Route path="/certification" element={<Certification />} />
@@ -197,7 +200,7 @@ function App() {
         </Routes>
          <Footer/>
       </Router>
-        <TawkMessenger />
+        {/* <TawkMessenger /> */}
      
     </>
   );
