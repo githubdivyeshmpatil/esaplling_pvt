@@ -129,9 +129,10 @@ Display Solutions
 
           <FeatureS />
 
-<h1 class="text-4xl font-bold text-center text-black">
-ESAPLLING: Revolutionizing the HVAC Industry through Expertise and Technology
+<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-black px-4 leading-snug">
+  ESAPLLING: Revolutionizing the HVAC Industry through Expertise and Technology
 </h1>
+
           <YouTubeLayout />
          <h1
   className="
