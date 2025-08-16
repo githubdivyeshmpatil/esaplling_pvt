@@ -325,10 +325,11 @@ export default function Navbar() {
           {
             title: "Products",
             items: [
-              { name: "LED TV", link: "/" },
-              { name: "Appliances", link: "/" },
+              { name: "LED TV", link: "/consumer-electronics/led" },
+            
               { name: "Harness", link: "/automotive/automotive_page" },
-              { name: "Cooler", link: "/" },
+              { name: "Cooler", link: "/consumer-electronics/cooler" },
+                { name: "Appliances", link: "/" },
             ],
           },
         ],
@@ -340,7 +341,36 @@ export default function Navbar() {
       dropdown: {
         title: "ESAPLLING® OEM",
         columns: [
-          
+          {
+            title: "Series",
+            items: [
+              { name: "Digital Signage", link: "https://esaplling-panel.vercel.app/" },
+              { name: "Slim Board", link: "https://esaplling-panel.vercel.app/" },
+              { name: "Digital Standee", link: "https://esaplling-panel.vercel.app/" },
+                { name: "Impression Series", link: "https://esaplling-panel.vercel.app/" },
+            ],
+          },
+           {
+            title: "Display",
+            items: [
+              { name: "Digital Signage", link: "https://esaplling-panel.vercel.app/" },
+              { name: "LCD Vidio Wall", link: "https://esaplling-panel.vercel.app/" },
+              { name: "LED Vidio Wall Indoor  ", link: "https://esaplling-panel.vercel.app/" },
+                { name: "LED Vidio Wall Outdoor", link: "https://esaplling-panel.vercel.app/" },
+               { name: "LED Commercial Display", link: "https://esaplling-panel.vercel.app/" },
+
+            ],
+          },
+           {
+            title: "Technology",
+            items: [
+              { name: "Intractive Panel", link: "https://esaplling-panel.vercel.app/" },
+              { name: "Conferencing Solution", link: "https://esaplling-panel.vercel.app/" },
+              { name: "Digital Volume ", link: "https://esaplling-panel.vercel.app/" },
+                { name: "Active LED", link: "https://esaplling-panel.vercel.app/" },
+
+            ],
+          },
         ],
       },
     },
