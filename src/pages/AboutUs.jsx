@@ -47,29 +47,7 @@ const AboutUs = () => {
         </section>
         <div className="flex flex-col md:flex-row items-center p-4 max-w-7xl mx-auto  md:space-x-8 space-y-6 md:space-y-0">
           {/* Left Column - Text */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl font-semibold mb-2 text-blue-700 font-os">🔹 Founding Story</h2>
-
-            <p className="text-base text-black text-justify font-robo">
-              Our journey began with a vision to innovate and impact the
-              industry. Founded by passionate individuals, we aimed to bring
-              cutting-edge solutions that solve real-world problems.Being
-              ESAPLLING, we apply innovative techniques and ideas in an ever
-              changing industry, one of our major strength is our capability and
-              confidence to provide value-added service product installation,
-              site commissioning, to handle any project, regardless of size or
-              complexity, from inspection, through budgeting, to design,
-              execution, validation and transfer. Understanding the market
-              challenge and enabling the technology, bring it to affordable
-              price range for being part of everyone's life been our objective
-              and motto. Evaluating and redesigning the product service frame
-              work, tools and automating things with cutting edge technology was
-              our prime focus. We are not a simple design company, we are a
-              Design, Build, operate and transfer enabler, So enabling the
-              succession and enabling thru right approach been in our prime
-              focus .
-            </p>
-          </div>
+         
           {/* Right Column - Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
@@ -81,72 +59,9 @@ const AboutUs = () => {
         </div>
 
         {/* Leadership Team */}
-        <section className="mb-10">
-  {/* Left Column - Image */}
- <div className="flex flex-col  md:flex-row items-start p-4 max-w-7xl mx-auto space-y-6 md:space-y-0 md:space-x-8">
-  {/* Left Side - Image */}
-  <div className="w-full md:w-1/2 flex justify-center">
-    <img
-      src="/img/sir.jpg" // your image path here
-      alt="Manager"
-              className="max-w-[450px] w-full h-auto object-contain"
-    />
-  </div>
-
-  {/* Right Side - Text aligned to top */}
-  <div className="w-full md:w-1/2 md:text-left">
-    <h2 className="text-2xl font-bold text-[#000066] mb-2 font-os">ESAPLLING Pvt Ltd</h2>
-    <h3 className="text-xl font-semibold text-black mb-1 font-robo">The CEO. Satya Patri | Director | </h3>
-    <p className="text-sm text-gray-500 mb-4 font-robo">Head of Operations</p>
-    <p className="text-base text-gray-800 text-justify font-robo">
-At ESAPLLING Pvt. Ltd., we are driven by a singular vision — to understand real-world market challenges and transform them through innovative and accessible technology. Our mission is to bring cutting-edge solutions into the lives of everyday people by making them affordable, scalable, and efficient.
-
-We go beyond conventional design services. ESAPLLING is a Design, Build, Operate, and Transfer (DBOT) enabler. Our end-to-end approach empowers businesses by engineering sustainable, high-performing systems, products, and infrastructure.    </p>
-      <h3 className="text-xl font-semibold text-black mt-3 font-os">Our focus lies in: </h3>
-
- <ul className="list-disc text-[#000066] mt-3 font-medium pl-5 space-y-2 font-robo">
- 
-  <li>Reimagining and optimizing product-service frameworks</li>
-  <li>Automating operations through AI, IoT, and modern tools
-
-</li>
-  <li>Enabling scalable transformation through design innovation
-
-</li>
-  <li>Ensuring knowledge and process transfer for long-term success
-
-</li>
-</ul>
-
-
-  </div>
-  
-</div>
-
-
-
-        </section>
-  
-        {/* Core Values */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-2 font-robo">🔹 Core Values</h2>
-          <ul className="list-disc pl-5 text-gray-600 space-y-1 font-robo">
-            <li>Innovation</li>
-            <li>Integrity</li>
-            <li>Customer-Centric</li>
-            <li>Collaboration</li>
-          </ul>
-        </section>
-
+        
         {/* Company Culture */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-2 font-robo">🔹 Company Culture</h2>
-          <p className="text-base text-gray-600 font-robo">
-            We nurture a collaborative and inclusive culture where creativity
-            and teamwork thrive. Our team is empowered to learn, lead, and grow
-            every day.
-          </p>
-        </section>
+        
       </div>
        <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-10 bg-white">
       
@@ -200,27 +115,20 @@ Join us on this enlightening expedition into the realm of biomedical science, wh
 <section className="bg-white px-4 py-10 md:px-12">
       <div className="max-w-4xl mx-auto text-gray-800 space-y-6 text-justify">
         <p>
-          We possess in-house design knowledge for Cleanrooms, HVAC, MEP, and Automation systems, supported by advanced 3D automatic MEP software. This enables us to produce highly accurate and coordinated designs.
-        </p>
-
-        <p>
-          Our designs strictly adhere to ASHRAE and Carrier standards. Ducting and drawing work is executed in compliance with SMACNA guidelines, enhanced by 3D capabilities for better planning and visualization.
-        </p>
-
-        <p>
-          Our team is focused on executing projects with complete compliance to approved design standards, ensuring every element is built exactly as envisioned.
-        </p>
-
-        <p>
-          We carry out effective commissioning, testing, and validation of systems according to approved Standard Operating Procedures (SOPs), ensuring full operational readiness.
-        </p>
-
-        <p>
-          Our Operations & Maintenance (O&M) team has a proven track record of success, providing dedicated support 24×7, 365 days a year, to ensure uninterrupted operations.
-        </p>
+        Esaplling Pvt Ltd aims to create a land mark in the horizon of air-conditioning and ventilation, by introducing the best in class practices across the industries. Esaplling Team comprises of four major verticals like Consulting & Design, Research & Development, Execution, O & M which enables the company to resolve and redefine solutions approaches. Team comprises of highly experienced resources, who have daring to provide cutting edge solutions for better and clean Environment in working and production area. Esaplling?s core focus is to carefully evaluate business needs, targets, goals, budget, interest and work closely with customer to develop a customized solution that incorporates the most appropriate and cost-effective project and fulfill all needs with quality, excellent resource team of Architects, Solution designers, Quality Analysis, Industry experts and design consultants to understand the business needs and functionalities, these resources have been engaged in several engagements and have delivered world class solutions as well.</p>
       </div>
     </section>
     <TireCarousell/>
+    <p className="text-center">Project Planning, Design,Build,Operation & Maintenance
+</p>
+<p class="text-base sm:text-lg md:text-xl lg:text-xl text-gray-800 leading-relaxed md:leading-loose max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
+  In-house design knowledge for Cleanrooms, HVAC, MEP, and Automation, along with in-house drafting capabilities using 3D automatic MEP software.
+  Precise designing as per ASHRAE & Carrier Standards, and ducting & drawings as per SMACNA, with 3D capabilities.
+  Focused on effective execution compliance as per design.
+  Effective commissioning, testing, and validation of systems as per approved SOP.
+  O & M team with a track record of success, supporting 24x7 operations, 365 days a year.
+</p>
+
     </>
   );
 };

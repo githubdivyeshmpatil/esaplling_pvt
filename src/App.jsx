@@ -70,6 +70,7 @@ import CoolerSpecifications from "./components/CoolerSpecifications";
 import FridgeSpecs from "./components/FridgeSpecs";
 import VisiCooler from "./components/VisiCooler";
 import Training from "./components/Training";
+import Carrier_portal_new from "./components/Carrier_portal_new";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -181,6 +182,8 @@ function App() {
           <Route path="/consumer-electronics/chiller" element={<Chiller />} />
           {/* ac----cooler routes------- */}
           <Route path="/consumer-electronics/cooler" element={<Cooler />} />
+                    <Route path="/carrier_portal" element={<Carrier_portal_new />} />
+
           <Route
             path="/consumer-electronics/new-desert"
             element={<NewdesertCooler />}

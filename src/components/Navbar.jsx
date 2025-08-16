@@ -497,7 +497,7 @@ export default function Navbar() {
             items: [
               { name: "Service", link: "/" },
              
-              { name: "E", link: "/" },
+              { name: "Brochure", link: "/" },
             ],
           },
           {
@@ -527,7 +527,7 @@ export default function Navbar() {
           {
             title: "Career",
             items: [
-              { name: "Career-Portal", link: "/carrier" },
+              { name: "Career-Portal", link: "/carrier_portal" },
               { name: "Campus Connect", link: "/carrier" },
               { name: "New Releases", link: "/carrier" },
               { name: "Placement Drive", link: "/carrier" },
