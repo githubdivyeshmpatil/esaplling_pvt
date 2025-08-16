@@ -490,14 +490,14 @@ export default function Navbar() {
           {
             items: [
               { name: "Sales", link: "/" },
-              { name: "Raise a Ticket", link: "/" },
+            
             ],
           },
           {
             items: [
               { name: "Service", link: "/" },
-              { name: "Track Your Service", link: "/" },
-              { name: "Track Your Dispatch", link: "/" },
+             
+              { name: "E", link: "/" },
             ],
           },
           {

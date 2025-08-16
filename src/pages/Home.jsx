@@ -109,9 +109,10 @@ function Home() {
                 <div className="text-left w-full px-2 sm:px-4">
                   <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-white">
                     <span className="block">
-                      Transformation and adoptability for next move:
+                     Space that transforms
                     </span>
-                    <span className="block">Brand Transformation</span>
+                    <span className="block">your brand value
+</span>
                   </h1>
                   <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                     Beling change is the only constraint

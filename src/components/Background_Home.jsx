@@ -37,7 +37,7 @@ function Background_Home() {
   }, [direction]);
 
   return (
-    <div className="relative w-full h-auto sm:h-auto md:h-[700px] overflow-hidden">
+    <div className="relative w-full h-auto sm:h-auto md:h-[800px] overflow-hidden">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
