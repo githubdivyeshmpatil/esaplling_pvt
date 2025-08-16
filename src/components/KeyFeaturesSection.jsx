@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // React Router ke liye import
 
 // Sample image imports — replace with actual paths or URLs
 import tvImage from "../assets/images/key1.jpg";
@@ -10,26 +11,30 @@ const features = [
   {
     image: tvImage,
     image2: audioImage,
-    title: "Interactive TV Display",
+    title: "Interactive Panal",
     desc: "Engage participants like never before with high-resolution touch-enabled interactive displays. Annotate, present, and collaborate in real time—whether in-person or remote.",
+    link: "https://esaplling-panel.vercel.app/", // unique link
   },
   {
     image: audioImage,
     image2: callImage,
     title: "Surround Sound Audio System",
     desc: "Experience crystal-clear audio with our professionally tuned surround sound systems. Every voice is heard, every word matters—making meetings more productive and engaging.",
+    link: "https://esaplling-panel.vercel.app/",
   },
   {
     image: callImage,
     image2: controlImage,
-    title: "Telephone & Video Conferencing",
+    title: "Conferencing Solution",
     desc: "Supports VoIP, SIP, and PSTN calling with high-fidelity microphones and echo-cancelling speakers. Connect globally with confidence.",
+    link: "https://esaplling-panel.vercel.app/",
   },
   {
     image: controlImage,
     image2: tvImage,
-    title: "All-in-One Control & Automation",
+    title: "Active Led",
     desc: "Control lighting, display, sound, and calling from a single smart panel or mobile device—ensuring a seamless, tech-forward meeting experience.",
+    link: "https://esaplling-panel.vercel.app/",
   },
 ];
 
@@ -38,7 +43,7 @@ export default function KeyFeaturesSection() {
     <div className="bg-white py-12 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
       {/* Heading Section */}
       <div className="text-center mb-12">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
           Let’s transform your meetings into powerful, interactive experiences
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-5xl mx-auto text-center leading-relaxed">
@@ -73,15 +78,18 @@ export default function KeyFeaturesSection() {
             <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-black mb-2">
               {feature.title}
             </h4>
-<p1 className="text-sm sm:text-base md:text-lg text-justify mb-4 flex-grow text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg text-justify mb-4 flex-grow text-gray-600">
               {feature.desc}
-            </p1>
+            </p>
 
-            {/* Left-Aligned Button (Fixed at bottom) */}
+            {/* Explore Button with Link */}
             <div className="mt-auto">
-              <button className="px-4 py-2 bg-blue-600 text-white  hover:bg-blue-700 transition duration-300 w-fit">
-               Explore Now
-              </button>
+              <Link
+                to={feature.link}
+                className="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 transition duration-300 w-fit inline-block rounded"
+              >
+                Explore Now
+              </Link>
             </div>
           </div>
         ))}

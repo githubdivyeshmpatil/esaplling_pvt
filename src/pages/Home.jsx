@@ -11,9 +11,9 @@ import Youtube2 from '../components/Youtube2';
 import Youtube3 from '../components/Youtube3';
 import bg3 from "../assets/images/new_banner.png";
 
-import KeyFeaturesSection from '../components/KeyFeaturesSection';
 import ExploreCarousel from '../components/ExploreCarousel';
 import ExploreSection from '../components/ExploreSection';
+import KeyFeaturesSection from '../components/KeyFeaturesSection';
 
 function Home() {
   const { t } = useTranslation();
@@ -70,7 +70,7 @@ Explore The Success Story      </a>
 
           <div className="px-4 pt-2 sm:pt-4">
             <Heading text='Products and Services' />
-            <KeyFeaturesSection/>
+           <KeyFeaturesSection/>
             <div className="relative w-full h-[80vh] overflow-hidden">
           {/* Background Image */}
           <img
@@ -119,12 +119,12 @@ Explore The Success Story      </a>
 Display Solutions
 </h1>
 <ExploreSection/>
-            <div className="flex items-center w-full px-4 sm:px-6 md:px-10 lg:px-14 py-4 sm:py-6 md:py-8 lg:py-10">
+            {/* <div className="flex items-center w-full px-4 sm:px-6 md:px-10 lg:px-14 py-4 sm:py-6 md:py-8 lg:py-10">
               <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold font-robo">
                 FEATURED SERVICES
               </p>
               <div className="flex-1 h-[2px] bg-gray-500 ml-4" />
-            </div>
+            </div> */}
           </div>
 
           <FeatureS />

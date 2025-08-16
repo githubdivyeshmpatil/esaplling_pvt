@@ -3,9 +3,62 @@ import Navbar from './Navbar'
 import BackgroundSection from './BackgroundSection'
 
 function Corporate() {
-   useEffect(() => {
-          window.scrollTo(0, 0);
-        }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+  const cards = [
+    {
+      img: "/img/room_ac.jpg",
+      title: "ROOM AIR CONDITIONERS",
+      desc: "The most technologically advanced and energy efficient air conditioning solutions for small spaces.",
+      btn: "View Products →"
+    },
+    {
+      img: "/img/water_purifier.jpg",
+      title: "WATER PURIFIERS",
+      desc: "Presenting a range of water purifiers, obsessed with purity.",
+      btn: "View Products →"
+    },
+    {
+      img: "/img/air_purifier.jpg",
+      title: "AIR PURIFIERS",
+      desc: "An array of purifiers built with superior technology for clean and healthy air in your home.",
+      btn: "View Products →"
+    },
+    {
+      img: "/img/air_cooler.jpg",
+      title: "AIR COOLERS",
+      desc: "Sleek and elegant air coolers packed with smart features to provide efficient cooling.",
+      btn: "View Products →"
+    },
+    {
+      img: "/img/electro_mechanical.jpg",
+      title: "ELECTRO-MECHANICAL PROJECTS",
+      desc: "Blue Star is India’s leading integrated MEP service provider with over seven decades of experience.",
+      btn: "Know More →"
+    },
+    {
+      img: "/img/central_ac.jpg",
+      title: "CENTRAL AIR CONDITIONING PRODUCTS",
+      desc: "End-to-end solutions with a comprehensive range of VRF systems, ducted and packaged ACs, and Chillers, among others.",
+      btn: "View Products →"
+    },
+    {
+      img: "/img/commercial_ref.jpg",
+      title: "COMMERCIAL REFRIGERATION",
+      desc: "Leaders in commercial refrigeration providing freezers, coolers, water dispensers, and more.",
+      btn: "View Products →"
+    },
+    {
+      img: "/img/water_cooler.jpg",
+      title: "WATER COOLERS",
+      desc: "Get surprisingly fast cool water with this range of durable, value-for-money and eco-friendly coolers for commercial spaces.",
+      btn: "Know More →"
+    }
+  ];
+
   return (
     <>
       <Navbar />
@@ -13,52 +66,27 @@ function Corporate() {
         <BackgroundSection bgImage="/img/aboutus_banner.png" />
       </div>
 
+      {/* Section */}
       <div className="px-4 sm:px-6 lg:px-16 py-12 bg-gray-50">
-        {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 text-black font-os">
-Our Inception	        </h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 text-black font-os">
+         
+        </h2>
 
-        {/* Justified Paragraph (start from left) */}
-        <div className="max-w-7xl w-full text-justify text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-10 font-robo">
-          <p>
-            Being ESAPLLING, we apply innovative techniques and ideas in an ever-changing industry. One of our major strengths is our capability and confidence to provide value-added service—product installation, site commissioning, to handle any project, regardless of size or complexity, from inspection, through budgeting, to design, execution, validation, and transfer. Understanding the market challenge and enabling the technology, bringing it to an affordable price range for being part of everyone's life has been our objective and motto. Evaluating and redesigning the product service framework, tools, and automating things with cutting-edge technology was our prime focus. We are not a simple design company; we are a Design, Build, Operate, and Transfer enabler, so enabling the succession and enabling through the right approach has been our prime focus.
-          </p>
+        {/* Grid Layout */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {cards.map((card, idx) => (
+            <div key={idx} className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+              <img src={card.img} alt={card.title} className="w-full h-48 object-cover" />
+              <div className="p-4 flex-1 flex flex-col">
+                <h3 className="text-lg font-bold mb-2 text-gray-900">{card.title}</h3>
+                <p className="text-sm text-gray-600 flex-1">{card.desc}</p>
+                <button className="mt-4 text-blue-600 font-semibold hover:underline text-sm self-start">
+                  {card.btn}
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-         <div className="max-w-7xl w-full text-justify text-gray-800 text-sm sm:text-base lg:text-lg leading-relaxed mb-10 font-robo">
-          <p>
-Esaplling Pvt Ltd aims to create a landmark in the horizon of air-conditioning and ventilation, by introducing the best-in-class practices across the industries. Esaplling Team comprises of four major verticals like Consulting & Design, Research & Development, Execution, O & M which enables the company to resolve and redefine solutions approaches. Team comprises of highly experienced resources, who have daring to provide cutting edge solutions for better and clean Environment in working and production area. Esaplling?s core focus is to carefully evaluate business needs, targets, goals, budget, interest and work closely with customer to develop a customized solution that incorporates the most appropriate and cost-effective project and fulfill all needs with quality, excellent resource team of Architects, Solution designers, Quality Analysis, Industry experts and design consultants to understand the business needs and functionalities, these resources have been engaged in several engagements and have delivered world class solutions as well.
-In-house design knowledge for Cleanrooms, HVAC, MEP and Automation also In house drafting capabilities with 3D automatic MEP software
-Precise Designing as per ASHARE & Carrier Standards also Ducting & Drawing as per SMACNA, along with 3D Capabilities
-Focused on Effective execution compliance as per Design
-Effective Commissioning Testing and validation of system as per approved SOP
-O & M team having track record of success, supporting 24 X 7 operations 365 days a Year
-
-          </p>
-          
-        </div>
-
-        {/* Responsive Image Grid (2x2) */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
- <div className="w-full">
-  <img
-    src="/img/china.png"
-    alt="Achievement 1"
-    className="w-full h-auto"
-  />
-</div>
-
-</div>
-<div className="container mx-auto px-4 py-8">
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-    <img src="/img/china2.jpg" alt="Image 1" className="w-full h-auto rounded-lg shadow-md" />
-    <img src="/img/china1.jpg" alt="Image 2" className="w-full h-auto rounded-lg shadow-md" />
-    <img src="/img/china3.jpg" alt="Image 3" className="w-full h-auto rounded-lg shadow-md" />
-    <img src="/img/china4.jpg" alt="Image 4" className="w-full h-auto rounded-lg shadow-md" />
-    <img src="/img/china5.jpg" alt="Image 5" className="w-full h-auto rounded-lg shadow-md" />
-  </div>
-</div>
-
-
       </div>
     </>
   )
