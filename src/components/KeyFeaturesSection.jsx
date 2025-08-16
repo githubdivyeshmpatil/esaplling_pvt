@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // React Router ke liye import
+import { Link } from "react-router-dom";
 
 // Sample image imports — replace with actual paths or URLs
 import tvImage from "../assets/images/key1.jpg";
@@ -11,9 +11,9 @@ const features = [
   {
     image: tvImage,
     image2: audioImage,
-    title: "Interactive Panal",
+    title: "Interactive Panel",
     desc: "Engage participants like never before with high-resolution touch-enabled interactive displays. Annotate, present, and collaborate in real time—whether in-person or remote.",
-    link: "https://esaplling-panel.vercel.app/", // unique link
+    link: "https://esaplling-panel.vercel.app/",
   },
   {
     image: audioImage,
@@ -60,8 +60,8 @@ export default function KeyFeaturesSection() {
             key={idx}
             className="bg-gray-50 rounded-2xl shadow hover:shadow-lg transition duration-300 p-4 flex flex-col h-full group"
           >
-            {/* Hover Image Effect */}
-            <div className="relative w-full h-44 sm:h-48 rounded-xl overflow-hidden mb-4">
+            {/* Image Section */}
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4">
               <img
                 src={feature.image}
                 alt={feature.title}
@@ -69,20 +69,20 @@ export default function KeyFeaturesSection() {
               />
               <img
                 src={feature.image2}
-                alt={feature.title + " hover"}
+                alt={feature.title + ' hover'}
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
               />
             </div>
 
             {/* Text Content */}
-            <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-black mb-2">
+            <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-black mb-2">
               {feature.title}
             </h4>
             <p className="text-sm sm:text-base md:text-lg text-justify mb-4 flex-grow text-gray-600">
               {feature.desc}
             </p>
 
-            {/* Explore Button with Link */}
+            {/* Explore Button */}
             <div className="mt-auto">
               <Link
                 to={feature.link}
