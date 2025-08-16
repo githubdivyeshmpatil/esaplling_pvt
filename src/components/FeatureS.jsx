@@ -121,7 +121,7 @@ const FeatureS = () => {
                 <div className="mt-2">
                   <Link
                     to={item.link}
-        className="inline-block bg-[#428aff] rounded-xl text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
+        className="inline-block bg-[#428aff]  text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
                   >
                     Explore More
                   </Link>

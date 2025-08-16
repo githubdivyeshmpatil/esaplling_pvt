@@ -19,7 +19,7 @@ const YouTubeLayout = () => {
   ];
 
   return (
-    <div className="p-2 md:p-6 space-y-10 min-h-screen">
+    <div className="p-2 md:p-6 space-y-10 min-h-screen ">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row gap-6 bg-white rounded-2xl p-6">
         <div className="md:w-1/2 w-full aspect-video">
@@ -58,7 +58,7 @@ Our commitment to energy optimization means reduced carbon footprint, lower ener
           <div>
             <a
               href="/hvac/new_hvac"
-              className="inline-flex items-center font-robo bg-[#428aff] rounded-xl text-white px-6 py-3 shadow hover:bg-amber-700 transition duration-300"
+              className="inline-flex items-center font-robo bg-[#428aff]  text-white px-6 py-3 shadow hover:bg-amber-700 transition duration-300"
             >
               Explore The more info
               <svg

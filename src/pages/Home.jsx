@@ -78,7 +78,7 @@ function Home() {
               <div>
                 <a
                   href="/about"
-                  className="inline-block bg-[#428aff] rounded-xl text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
+                  className="inline-block bg-[#428aff]  text-white px-6 py-3 font-robo shadow hover:bg-amber-700 transition duration-300"
                 >
                   Explore The Success Story{" "}
                 </a>
@@ -194,18 +194,21 @@ function Home() {
           </h1>
 
           <YouTubeLayout />
-          <h1
-            className="
-    text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+<h1
+  className="
+    text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
     font-bold
     text-center
-    px-4 sm:px-8
+    whitespace-nowrap
+    px-2 sm:px-4 md:px-6
     mx-auto
-    max-w-4xl
+    overflow-x-auto
   "
-          >
-            Future of Air-Conditioning Solution
-          </h1>
+>
+  Future of Air-Conditioning Solution
+</h1>
+
+
 
           <Youtube2 />
 
@@ -213,15 +216,18 @@ function Home() {
         </div>
  
       <h1
-        className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+  className="
+    text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl
     font-bold
     text-center
-    px-4 sm:px-8
+    whitespace-nowrap
+    px-2 sm:px-4 md:px-6
     mx-auto
-    max-w-4xl"
-      >
+    overflow-x-auto
+  "
+>
         Future of Transport Air-Conditoning Solution
-      </h1>
+</h1>
       <Youtube3 />
 
       <MakeInIndiaBanner />

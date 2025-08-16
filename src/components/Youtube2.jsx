@@ -2,8 +2,9 @@ import React from 'react';
 
 function Youtube2() {
   return (
-    <section className="w-full px-4 py-10 bg-[#FFE5B4]">
-<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-20 items-center">
+    <section className="w-full bg-[#FFE5B4] py-10 mt-7">
+      <div className="max-w-8xl mx-auto px-3 sm:px-6 md:px-8 lg:px-10 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        
         {/* Left Side Content */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 text-center md:text-left">
@@ -41,6 +42,7 @@ function Youtube2() {
             allowFullScreen
           ></iframe>
         </div>
+
       </div>
     </section>
   );
