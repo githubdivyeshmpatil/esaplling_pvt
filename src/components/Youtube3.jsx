@@ -20,7 +20,7 @@ function Youtube3() {
           <div className="mt-8 text-center md:text-left">
             <a
               href="/automotive/autoaircondition"
-              className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-xl cursor-pointer px-6 py-2 transition duration-300 inline-block"
+              className="bg-blue-700 hover:bg-blue-800 text-white font-medium  cursor-pointer px-6 py-2 transition duration-300 inline-block"
             >
               Read More
             </a>

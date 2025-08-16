@@ -24,7 +24,7 @@ function Youtube2() {
           <div className="mt-8 text-center md:text-left">
             <a
               href="/consumer-electronics/split-ac"
-              className="bg-[#428aff] text-white font-medium rounded-xl cursor-pointer px-6 py-2 transition duration-300 inline-block hover:bg-blue-600"
+              className="bg-[#428aff] text-white font-medium  cursor-pointer px-6 py-2 transition duration-300 inline-block hover:bg-blue-600"
             >
               Read More
             </a>
