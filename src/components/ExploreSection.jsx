@@ -29,8 +29,8 @@ const products = [
 
 export default function ExploreSection() {
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-[-20px]">
+    <div className="bg-white py-12 px-6 sm:px-8 md:px-10 lg:px-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {products.map((item, index) => (
           <div
             key={index}
@@ -40,15 +40,15 @@ export default function ExploreSection() {
             <img
               src={item.image}
               alt={item.name}
-              className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
             />
 
             {/* Text Content */}
-            <div className="p-5 text-center">
-              <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-2">
+            <div className="p-6 text-center">
+              <h4 className="text-base sm:text-lg md:text-xl font-medium text-gray-800 mb-3">
                 {item.name}
               </h4>
-              <p className="text-sm sm:text-base md:text-lg text-justify text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600 text-justify">
                 {item.desc}
               </p>
             </div>

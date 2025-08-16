@@ -40,13 +40,13 @@ const features = [
 
 export default function KeyFeaturesSection() {
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+    <div className="bg-white py-10 px-3 sm:px-6 md:px-8 lg:px-12">
       {/* Heading Section */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+      <div className="text-center mb-10">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3">
           Let’s transform your meetings into powerful, interactive experiences
         </h2>
-        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-5xl mx-auto text-center leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto text-center leading-relaxed">
           Elevate your meetings with our all-in-one Conference Room Solution
           designed for modern businesses. Combining Interactive Display
           Technology, Immersive Audio, and Advanced Communication Systems.
@@ -54,14 +54,14 @@ export default function KeyFeaturesSection() {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6">
         {features.map((feature, idx) => (
           <div
             key={idx}
-            className="bg-gray-50 rounded-2xl shadow hover:shadow-lg transition duration-300 p-4 flex flex-col h-full group"
+            className="bg-gray-50 rounded-xl shadow hover:shadow-lg transition duration-300 p-4 flex flex-col h-full group"
           >
             {/* Image Section */}
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4">
+            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-4">
               <img
                 src={feature.image}
                 alt={feature.title}
