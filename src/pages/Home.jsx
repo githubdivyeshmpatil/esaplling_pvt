@@ -232,6 +232,7 @@ function Home() {
       <Youtube3 />
 
       <MakeInIndiaBanner />
+   
     </>
   );
 }
